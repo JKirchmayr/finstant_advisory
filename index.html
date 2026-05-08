@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finstant Advisory — M&A Beratung DACH Mittelstand</title>
+  <meta name="description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen im DACH-Mittelstand. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung. Basiert in Zürich." />
+  <meta name="keywords" content="M&A Beratung, Unternehmensverkauf, DACH Mittelstand, IT-Services, Buy-and-Build, Private Equity, Zürich, Nachfolge, Off-market, Deal Origination" />
+  <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.finstantadvisory.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.finstantadvisory.com" />
+  <meta property="og:title" content="Finstant Advisory — M&A Beratung DACH Mittelstand" />
+  <meta property="og:description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen im DACH-Mittelstand. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung." />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Finstant Advisory — M&A Beratung DACH Mittelstand" />
+  <meta name="twitter:description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen im DACH-Mittelstand." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Finstant Advisory",
+    "description": "Diskrete M&A-Beratung für eigentümergeführte Unternehmen im DACH-Mittelstand. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung.",
+    "url": "https://www.finstantadvisory.com",
+    "email": "johannes@finstantadvisory.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zürich",
+      "addressCountry": "CH"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Johannes Kirchmayr",
+      "jobTitle": "Partner",
+      "description": "CFA, 7+ Jahre Direct Private Equity bei CMP und Unigestion"
+    },
+    "areaServed": ["DE", "AT", "CH"],
+    "serviceType": ["M&A Advisory", "Sell-side Advisory", "Buy-side Deal Origination", "Transaktionsvorbereitung"]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0b;
+      --white: #f9f8f5;
+      --off-white: #f2f1ed;
+      --gray-light: #eceae4;
+      --gray-text: #8a8880;
+      --gray-mid: #c8c6be;
+      --border: rgba(0,0,0,0.10);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(249,248,245,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      font-size: 13px;
+      color: var(--gray-text);
+      margin-left: 0.5rem;
+      text-transform: none;
+      vertical-align: middle;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 0.5px solid var(--black);
+      padding: 9px 22px;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--black);
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--black); color: var(--white); }
+
+    /* HERO */
+    .hero {
+      padding: 7rem 3.5rem 6rem;
+      border-bottom: 0.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif);
+      font-size: clamp(120px, 18vw, 220px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.025);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--gray-text);
+      max-width: 460px;
+      line-height: 1.85;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 2rem; align-items: center; }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      padding: 14px 32px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: var(--sans);
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { opacity: 0.72; }
+
+    .btn-ghost {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--gray-mid);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover { color: var(--black); border-color: var(--black); }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .stat {
+      padding: 3rem 3.5rem;
+      border-right: 0.5px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--gray-text);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 0.5px solid var(--border);
+    }
+
+    .service {
+      padding: 2.5rem 3rem 2.5rem 0;
+      border-right: 0.5px solid var(--border);
+    }
+
+    .service:first-child { padding-left: 0; }
+    .service:last-child { border-right: none; }
+    .service:not(:first-child) { padding-left: 3rem; }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: 12px;
+      color: var(--gray-mid);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.08em;
+    }
+
+    .service-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .service-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* WHY — dark */
+    .why {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .why .label { color: rgba(255,255,255,0.3); }
+
+    .why-title {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .why-title em { font-style: italic; }
+
+    .why-body {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .why-items { display: flex; flex-direction: column; }
+
+    .why-item {
+      padding: 1.75rem 0;
+      border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    }
+
+    .why-item:first-child { padding-top: 0; }
+    .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .why-item-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+
+    .why-item-body {
+      font-size: 13px;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* MARKET */
+    .market {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+    }
+
+    .market-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      align-items: end;
+    }
+
+    .market-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .market-card {
+      background: var(--off-white);
+      padding: 2.25rem 2.5rem;
+    }
+
+    .market-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .market-card-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* TEAM */
+    .team {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .team-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding-top: 3rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 0.5px solid var(--border);
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .team-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-role {
+      font-size: 10px;
+      color: var(--gray-text);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      max-width: 560px;
+      font-weight: 300;
+    }
+
+    .team-logos {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+      align-items: center;
+    }
+
+    .team-logo-item {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 7rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: clamp(80px, 16vw, 200px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.022);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .contact-inner { position: relative; z-index: 2; }
+
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-title em { font-style: italic; }
+
+    .contact-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--black);
+      padding-bottom: 3px;
+      margin-bottom: 3rem;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .contact-email:hover { opacity: 0.5; }
+
+    .contact-note {
+      font-size: 10px;
+      color: var(--gray-mid);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-text {
+      font-size: 11px;
+      color: var(--gray-text);
+      letter-spacing: 0.04em;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      nav { padding: 1.25rem 1.75rem; }
+      .nav-links { display: none; }
+      .hero { padding: 4rem 1.75rem 3.5rem; }
+      .stats { grid-template-columns: 1fr; }
+      .stat { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2.25rem 1.75rem; }
+      .stat:last-child { border-bottom: none; }
+      .section { padding: 3.5rem 1.75rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2rem 0; }
+      .service:last-child { border-bottom: none; }
+      .why { grid-template-columns: 1fr; padding: 3.5rem 1.75rem; gap: 2.5rem; }
+      .market { padding: 3.5rem 1.75rem; }
+      .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .market-grid { grid-template-columns: 1fr; }
+      .team { padding: 3.5rem 1.75rem; }
+      .team-card { grid-template-columns: 1fr; gap: 1.5rem; }
+      .contact { padding: 4.5rem 1.75rem; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
+    }
+
+    /* INTRO */
+    #intro {
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      cursor: default;
+    }
+
+    #intro.dismissed {
+      opacity: 0;
+      transition: opacity 0.95s ease;
+      pointer-events: none;
+    }
+
+    .intro-inner { text-align: center; max-width: 700px; }
+
+    .intro-line {
+      font-family: var(--serif);
+      font-size: clamp(26px, 4.5vw, 54px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--black);
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 1s ease, transform 1s ease;
+      display: block;
+    }
+
+    .intro-line.italic { font-style: italic; }
+    .intro-line.visible { opacity: 1; transform: translateY(0); }
+    .intro-line.out { opacity: 0; transform: translateY(-14px); transition: opacity 0.55s ease, transform 0.55s ease; }
+
+    .intro-rule {
+      width: 0;
+      height: 0.5px;
+      background: var(--gray-mid);
+      margin: 1.75rem auto;
+      transition: width 1s ease;
+    }
+
+    .intro-rule.visible { width: 60px; }
+
+    .intro-hint {
+      position: fixed;
+      bottom: 2.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      opacity: 0;
+      transition: opacity 0.7s ease;
+      z-index: 10000;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .intro-hint.visible { opacity: 1; }
+
+    .intro-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 28px;
+      background: var(--gray-mid);
+      margin: 0.85rem auto 0;
+      animation: drop 1.6s ease-in-out infinite;
+    }
+
+    @keyframes drop {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      20%  { opacity: 1; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    body.no-scroll { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="intro-inner">
+      <span class="intro-line" id="iline1">Sie haben Ihr Unternehmen aufgebaut.</span>
+      <div class="intro-rule" id="irule"></div>
+      <span class="intro-line italic" id="iline2">Wir helfen Ihnen, es erfolgreich zu übergeben.</span>
+    </div>
+  </div>
+  <div class="intro-hint" id="ihint">Scrollen</div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">Finstant</a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#markt">Markt</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt" class="nav-cta">Gespräch anfragen</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text">M&A</div>
+    <div class="label reveal">M&A Advisory · DACH Mittelstand</div>
+    <h1 class="hero-title reveal reveal-delay-1">
+      Sie haben Ihr Unternehmen aufgebaut.<br>
+      <em>Wir helfen Ihnen, es erfolgreich zu übergeben.</em>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">Diskrete Unternehmensverkäufe und Buy-side Deal Origination für eigentümergeführte Unternehmen im deutschsprachigen Mittelstand.</p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#kontakt" class="btn-primary">Erstgespräch anfragen</a>
+      <a href="#leistungen" class="btn-ghost">Mehr erfahren</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat reveal">
+      <div class="stat-num">7+</div>
+      <div class="stat-label">Jahre Direct Private Equity<br>Erfahrung im DACH Markt</div>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <div class="stat-num">57%</div>
+      <div class="stat-label">Mittelständischer Unternehmer<br>über 55 Jahre (KfW 2025)</div>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <div class="stat-num">€53 Mrd.</div>
+      <div class="stat-label">IT-Services Marktvolumen<br>Deutschland 2025</div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <section class="section" id="leistungen">
+    <div class="label reveal">Leistungen</div>
+    <h2 class="section-title reveal">Was wir für Sie tun</h2>
+    <div class="services-grid">
+      <div class="service reveal">
+        <div class="service-num">01</div>
+        <div class="service-title">Sell-side Advisory</div>
+        <p class="service-body">Diskrete Begleitung des Unternehmensverkaufs — von der Bewertung bis zum Closing. Kein Auktionsprozess, kein unnötiger Lärm im Markt. Wir sprechen mit den richtigen Käufern.</p>
+      </div>
+      <div class="service reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-title">Buy-side Origination</div>
+        <p class="service-body">Systematische Identifikation off-market Targets für PE-Plattformen im DACH IT-Services und Engineering Markt. Proprietäres Screening, direkter Inhaberdialog.</p>
+      </div>
+      <div class="service reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-title">Transaktionsvorbereitung</div>
+        <p class="service-body">Bewertungsoptimierung, Finanzreporting und Positionierung vor dem Verkaufsprozess — damit Sie mit dem maximalen Preis in den Prozess gehen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY — dark section -->
+  <div class="why">
+    <div>
+      <div class="label reveal">Warum Finstant</div>
+      <h2 class="why-title reveal">Wir denken wie<br><em>Investoren —<br>weil wir es waren.</em></h2>
+      <p class="why-body reveal">Unser Team kommt aus dem Direct Private Equity. Wir haben auf der Käuferseite gesessen — und wissen genau, was institutionelle Investoren suchen und wie man ein Unternehmen so positioniert, dass es den bestmöglichen Preis erzielt.</p>
+    </div>
+    <div class="why-items">
+      <div class="why-item reveal">
+        <div class="why-item-title">Off-market Zugang</div>
+        <p class="why-item-body">Kein Bieterverfahren. Wir arbeiten direkt mit Entscheidungsträgern — diskret, vertraulich und auf Augenhöhe.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-item-title">Aktives PE-Netzwerk</div>
+        <p class="why-item-body">Direkter Zugang zu den aktivsten Buy-and-Build Plattformen im DACH-Raum. Wir wissen, wer wirklich kauft.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-item-title">Proprietäres Sourcing</div>
+        <p class="why-item-body">Systematisches Markt-Mapping weit über klassische Datenbanken und öffentliche Auktionsprozesse hinaus.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-item-title">Mittelstands-Mentalität</div>
+        <p class="why-item-body">Wir verstehen inhabergeführte Unternehmen. Direkte Kommunikation, keine Berater-Sprache.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARKT -->
+  <section class="market" id="markt">
+    <div class="market-intro">
+      <div>
+        <div class="label reveal">Markt</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Die Nachfolgewelle<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">hat begonnen.</em></h2>
+      </div>
+      <p class="market-sub reveal">Tausende eigentümergeführte Unternehmen im DACH-Mittelstand stehen vor der Nachfolgefrage — viele ohne klaren Plan. Das schafft ein einzigartiges Zeitfenster für diskrete, gut vorbereitete Transaktionen.</p>
+    </div>
+    <div class="market-grid">
+      <div class="market-card reveal">
+        <div class="market-card-title">Generationswechsel als Treiber</div>
+        <p class="market-card-body">57% der mittelständischen Unternehmer sind über 55 Jahre alt. Die Verkaufsbereitschaft steigt — der Zeitdruck wächst.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">Fragmentierter Markt</div>
+        <p class="market-card-body">Über 9.800 eigentümergeführte IT-KMUs in Deutschland. Die Mehrzahl ohne Nachfolger — noch nicht von PE erreicht.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">Steigende PE-Aktivität</div>
+        <p class="market-card-body">11+ aktive Buy-and-Build Plattformen im DACH IT-Markt. Off-market Zugang wird zum entscheidenden Differenzierungsfaktor.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-2">
+        <div class="market-card-title">Engineering Services</div>
+        <p class="market-card-body">Gleiche Dynamik, weniger institutionell durchdrungen. Wir kartieren aktiv dieses Segment mit einer aufgebauten Pipeline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="label reveal">Team</div>
+    <h2 class="section-title reveal">Erfahrung, die zählt</h2>
+    <div class="team-card reveal">
+      <img class="avatar" src="/photo.jpg" alt="Johannes Kirchmayr, CFA" width="64" height="64">
+      <div>
+        <div class="team-name">Johannes Kirchmayr, CFA</div>
+        <div class="team-role">Gründer & Partner</div>
+        <p class="team-bio">7+ Jahre Direct Private Equity bei CMP Capital Management Partners und Unigestion mit Fokus auf DACH Mid-Market Transaktionen. Spezialist für eigentümergeführte IT-Services, Engineering und Buy-and-Build Strategien. Zuvor Stifel. Basiert in Zürich.</p>
+        <div class="team-logos">
+          <span class="team-logo-item">Unigestion</span>
+          <span class="team-logo-item">·</span>
+          <span class="team-logo-item">CMP</span>
+          <span class="team-logo-item">·</span>
+          <span class="team-logo-item">Stifel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontakt">
+    <div class="contact-bg">Kontakt</div>
+    <div class="contact-inner">
+      <div class="label reveal">Kontakt</div>
+      <h2 class="contact-title reveal">Bereit für den<br><em>nächsten Schritt?</em></h2>
+      <p class="contact-sub reveal">Diskrete Erstgespräche — ohne Verpflichtung, ohne Lärm. Wir nehmen uns die Zeit, Ihre Situation zu verstehen.</p>
+      <div class="reveal" style="margin-bottom: 1rem;">
+        <a href="mailto:johannes@finstantadvisory.com" class="contact-email">
+          johannes@finstantadvisory.com
+        </a>
+      </div>
+      <p class="contact-note reveal">Zürich, Schweiz &nbsp;·&nbsp; Alle Anfragen streng vertraulich</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Finstant</div>
+    <div class="footer-text">© 2025 Finstant Advisory · Zürich</div>
+    <div class="footer-text">johannes@finstantadvisory.com</div>
+  </footer>
+
+  <script>
+    // SCROLL REVEAL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // INTRO
+    (function() {
+      const intro = document.getElementById('intro');
+      const line1 = document.getElementById('iline1');
+      const line2 = document.getElementById('iline2');
+      const rule  = document.getElementById('irule');
+      const hint  = document.getElementById('ihint');
+      let gone = false;
+
+      document.body.classList.add('no-scroll');
+
+      function dismiss() {
+        if (gone) return;
+        gone = true;
+        hint.classList.remove('visible');
+        line1.classList.add('out');
+        line2.classList.add('out');
+        rule.style.width = '0';
+        setTimeout(() => {
+          intro.classList.add('dismissed');
+          document.body.classList.remove('no-scroll');
+          setTimeout(() => intro.style.display = 'none', 1000);
+        }, 350);
+      }
+
+      setTimeout(() => line1.classList.add('visible'), 600);
+      setTimeout(() => rule.classList.add('visible'), 2300);
+      setTimeout(() => line2.classList.add('visible'), 3000);
+      setTimeout(() => hint.classList.add('visible'), 4800);
+      setTimeout(dismiss, 9500);
+
+      window.addEventListener('scroll', dismiss, { once: true });
+      intro.addEventListener('click', dismiss);
+      document.addEventListener('keydown', dismiss, { once: true });
+    })();
+  </script>
+
+</body>
+</html>
