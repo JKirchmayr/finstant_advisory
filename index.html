@@ -9,6 +9,8 @@
   <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.finstantadvisory.com" />
+  <link rel="icon" href="/favi.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/favi.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -30,7 +32,7 @@
     "name": "Finstant Advisory",
     "description": "Diskrete M&A-Beratung für eigentümergeführte Unternehmen im DACH-Mittelstand. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung.",
     "url": "https://www.finstantadvisory.com",
-    "email": "johannes@finstantadvisory.com",
+    "email": "jkirchmayr@finstant.ai",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Zürich",
@@ -40,7 +42,7 @@
       "@type": "Person",
       "name": "Johannes Kirchmayr",
       "jobTitle": "Partner",
-      "description": "CFA, 7+ Jahre Direct Private Equity bei CMP und Unigestion"
+      "description": "Turnaround Private Equity, anschließend DACH Mid-Market an einem führenden institutionellen Asset Manager der Schweiz; Gründer von Finstant Advisory."
     },
     "areaServed": ["DE", "AT", "CH"],
     "serviceType": ["M&A Advisory", "Sell-side Advisory", "Buy-side Deal Origination", "Transaktionsvorbereitung"]
@@ -101,23 +103,16 @@
     }
 
     .logo {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--black);
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      color: var(--black);
     }
 
-    .logo span {
-      font-weight: 300;
-      letter-spacing: 0.05em;
-      font-size: 13px;
-      color: var(--gray-text);
-      margin-left: 0.5rem;
-      text-transform: none;
-      vertical-align: middle;
+    .logo img {
+      height: 28px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -434,14 +429,23 @@
       border-top: 0.5px solid var(--border);
     }
 
-    .avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 0.5px solid var(--border);
-      object-fit: cover;
+    .team-photo-wrap {
       flex-shrink: 0;
+      align-self: start;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 8px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
+    }
+
+    .team-photo {
       display: block;
+      width: min(240px, 52vw);
+      aspect-ratio: 4 / 5;
+      height: auto;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(1) contrast(1.06);
     }
 
     .team-name {
@@ -464,21 +468,6 @@
       line-height: 1.8;
       max-width: 560px;
       font-weight: 300;
-    }
-
-    .team-logos {
-      display: flex;
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-      align-items: center;
-    }
-
-    .team-logo-item {
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--gray-mid);
-      text-transform: uppercase;
-      font-weight: 500;
     }
 
     /* CONTACT */
@@ -556,12 +545,11 @@
       align-items: center;
     }
 
-    .footer-logo {
-      font-family: var(--serif);
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .footer-logo img {
+      height: 22px;
+      width: auto;
+      display: block;
+      opacity: 0.92;
     }
 
     .footer-text {
@@ -580,14 +568,27 @@
       .stat:last-child { border-bottom: none; }
       .section { padding: 3.5rem 1.75rem; }
       .services-grid { grid-template-columns: 1fr; }
-      .service { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2rem 0; }
+      .service {
+        border-right: none;
+        border-bottom: 0.5px solid var(--border);
+        padding: 2rem 0;
+        text-align: left;
+      }
+      .service:not(:first-child) { padding-left: 0; }
       .service:last-child { border-bottom: none; }
       .why { grid-template-columns: 1fr; padding: 3.5rem 1.75rem; gap: 2.5rem; }
       .market { padding: 3.5rem 1.75rem; }
       .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
       .market-grid { grid-template-columns: 1fr; }
       .team { padding: 3.5rem 1.75rem; }
-      .team-card { grid-template-columns: 1fr; gap: 1.5rem; }
+      .team-card { grid-template-columns: 1fr; gap: 1.75rem; }
+      .team-photo-wrap {
+        width: 100%;
+        max-width: min(280px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .team-photo { width: 100%; max-width: 280px; }
       .contact { padding: 4.5rem 1.75rem; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
     }
@@ -692,10 +693,11 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="logo">Finstant</a>
+    <a href="#" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#markt">Markt</a></li>
+      <li><a href="#unternehmer">Unternehmer</a></li>
+      <li><a href="#markt">Investoren</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
@@ -720,16 +722,16 @@
   <!-- STATS -->
   <div class="stats">
     <div class="stat reveal">
-      <div class="stat-num">7+</div>
-      <div class="stat-label">Jahre Direct Private Equity<br>Erfahrung im DACH Markt</div>
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Jahre M&amp;A und PE<br>Erfahrung</div>
     </div>
     <div class="stat reveal reveal-delay-1">
-      <div class="stat-num">57%</div>
-      <div class="stat-label">Mittelständischer Unternehmer<br>über 55 Jahre (KfW 2025)</div>
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Abgeschlossene Transaktionen<br>im DACH Mittelstand</div>
     </div>
     <div class="stat reveal reveal-delay-2">
-      <div class="stat-num">€53 Mrd.</div>
-      <div class="stat-label">IT-Services Marktvolumen<br>Deutschland 2025</div>
+      <div class="stat-num">€500M+</div>
+      <div class="stat-label">Begleitetes Transaktionsvolumen</div>
     </div>
   </div>
 
@@ -761,53 +763,82 @@
     <div>
       <div class="label reveal">Warum Finstant</div>
       <h2 class="why-title reveal">Wir denken wie<br><em>Investoren —<br>weil wir es waren.</em></h2>
-      <p class="why-body reveal">Unser Team kommt aus dem Direct Private Equity. Wir haben auf der Käuferseite gesessen — und wissen genau, was institutionelle Investoren suchen und wie man ein Unternehmen so positioniert, dass es den bestmöglichen Preis erzielt.</p>
+      <p class="why-body reveal">Unser Team kommt aus dem Private Equity. Wir haben auf der Käuferseite gesessen und wissen genau, was institutionelle Investoren suchen und wie man ein Unternehmen so positioniert.</p>
     </div>
     <div class="why-items">
       <div class="why-item reveal">
-        <div class="why-item-title">Off-market Zugang</div>
-        <p class="why-item-body">Kein Bieterverfahren. Wir arbeiten direkt mit Entscheidungsträgern — diskret, vertraulich und auf Augenhöhe.</p>
-      </div>
-      <div class="why-item reveal reveal-delay-1">
         <div class="why-item-title">Aktives PE-Netzwerk</div>
         <p class="why-item-body">Direkter Zugang zu den aktivsten Buy-and-Build Plattformen im DACH-Raum. Wir wissen, wer wirklich kauft.</p>
       </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-item-title">Mittelstand-Mentalität</div>
+        <p class="why-item-body">Wir verstehen inhabergeführte Unternehmen: klare Ansagen, keine Berater-Sprache — Gespräche auf Augenhöhe mit Unternehmern und Familien.</p>
+      </div>
       <div class="why-item reveal reveal-delay-2">
-        <div class="why-item-title">Proprietäres Sourcing</div>
-        <p class="why-item-body">Systematisches Markt-Mapping weit über klassische Datenbanken und öffentliche Auktionsprozesse hinaus.</p>
+        <div class="why-item-title">Proprietäres Sourcing · Direkte Beziehungen</div>
+        <p class="why-item-body">Kein anonymes Screening aus Datenbanken. Wir sourcen über persönliche Kontakte und langjährige Mandate — gezielt, diskret und über direkte Beziehungen zu Entscheidungsträgern.</p>
       </div>
       <div class="why-item reveal reveal-delay-3">
-        <div class="why-item-title">Mittelstands-Mentalität</div>
-        <p class="why-item-body">Wir verstehen inhabergeführte Unternehmen. Direkte Kommunikation, keine Berater-Sprache.</p>
+        <div class="why-item-title">Off-market Zugänge</div>
+        <p class="why-item-body">Kein klassisches Bieterverfahren. Wir nutzen vertrauliche Kanäle zu Investoren und Gesellschaftern — diskret, ohne öffentlichen Druck.</p>
       </div>
     </div>
   </div>
 
-  <!-- MARKT -->
-  <section class="market" id="markt">
+  <!-- FÜR UNTERNEHMER -->
+  <section class="market" id="unternehmer">
     <div class="market-intro">
       <div>
-        <div class="label reveal">Markt</div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">Die Nachfolgewelle<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">hat begonnen.</em></h2>
+        <div class="label reveal">Für Unternehmer</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Ihr Lebenswerk verdient<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">den richtigen Abschluss.</em></h2>
       </div>
-      <p class="market-sub reveal">Tausende eigentümergeführte Unternehmen im DACH-Mittelstand stehen vor der Nachfolgefrage — viele ohne klaren Plan. Das schafft ein einzigartiges Zeitfenster für diskrete, gut vorbereitete Transaktionen.</p>
+      <p class="market-sub reveal">Ein Unternehmensverkauf ist die wichtigste Transaktion Ihres Lebens. Wir begleiten Sie diskret, erfahren und auf Augenhöhe — vom ersten Gespräch bis zum Closing.</p>
     </div>
     <div class="market-grid">
       <div class="market-card reveal">
+        <div class="market-card-title">Der richtige Zeitpunkt</div>
+        <p class="market-card-body">Wir unterstützen Sie bei der Planung. Gemeinsam erarbeiten wir den richtigen Zeitpunkt und sorgen für einen reibungslosen Übergang sowie den bestmöglichen Kaufpreis.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">Fairer Preis, kein Kompromiss</div>
+        <p class="market-card-body">Wir kennen beide Seiten des Tisches und verhandeln für Sie auf Augenhöhe mit institutionellen Käufern.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">Absolute Diskretion</div>
+        <p class="market-card-body">Kein Auktionsprozess, keine Gerüchte, keine Unruhe bei Mitarbeitern oder Kunden. Vertraulichkeit ist kein Versprechen — es ist unsere Arbeitsweise.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-2">
+        <div class="market-card-title">Der richtige Käufer</div>
+        <p class="market-card-body">Nicht jeder Käufer passt zu jedem Unternehmen. Wir finden den Partner, der zum Unternehmen, zur Belegschaft und zum Lebenswerk passt — nicht nur zum Preis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÜR INVESTOREN -->
+  <section class="market" id="markt" style="background: var(--white);">
+    <div class="market-intro">
+      <div>
+        <div class="label reveal">Für Investoren</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Der Markt konsolidiert sich —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">wir haben den Zugang.</em></h2>
+      </div>
+      <p class="market-sub reveal">Tausende eigentümergeführte Unternehmen im DACH-Mittelstand stehen vor der Nachfolgefrage. Wir identifizieren die besten Targets bevor sie in den Markt kommen.</p>
+    </div>
+    <div class="market-grid" style="background: rgba(0,0,0,0.06);">
+      <div class="market-card reveal" style="background: var(--white);">
         <div class="market-card-title">Generationswechsel als Treiber</div>
         <p class="market-card-body">57% der mittelständischen Unternehmer sind über 55 Jahre alt. Die Verkaufsbereitschaft steigt — der Zeitdruck wächst.</p>
       </div>
-      <div class="market-card reveal reveal-delay-1">
-        <div class="market-card-title">Fragmentierter Markt</div>
-        <p class="market-card-body">Über 9.800 eigentümergeführte IT-KMUs in Deutschland. Die Mehrzahl ohne Nachfolger — noch nicht von PE erreicht.</p>
+      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
+        <div class="market-card-title">Business Services Fokus</div>
+        <p class="market-card-body">Unser Schwerpunkt liegt auf inhabergeführten Business-Services-Unternehmen. Asset-light Modelle und fragmentierte Märkte sind unsere Domäne.</p>
       </div>
-      <div class="market-card reveal reveal-delay-1">
+      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
         <div class="market-card-title">Steigende PE-Aktivität</div>
-        <p class="market-card-body">11+ aktive Buy-and-Build Plattformen im DACH IT-Markt. Off-market Zugang wird zum entscheidenden Differenzierungsfaktor.</p>
+        <p class="market-card-body">Sie suchen systematischen Zugang zu einer Vertical — wir liefern die Branchenexpertise und den proprietären Marktzugang, um dort konsistent zu sourcen.</p>
       </div>
-      <div class="market-card reveal reveal-delay-2">
-        <div class="market-card-title">Engineering Services</div>
-        <p class="market-card-body">Gleiche Dynamik, weniger institutionell durchdrungen. Wir kartieren aktiv dieses Segment mit einer aufgebauten Pipeline.</p>
+      <div class="market-card reveal reveal-delay-2" style="background: var(--white);">
+        <div class="market-card-title">Direkter Marktzugang</div>
+        <p class="market-card-body">Wir sprechen direkt mit Eigentümern in ausgewählten Märkten — ohne Auktionsdruck und ohne anonymes Screening. So entsteht greifbarer Zugang zu Off-market-Gelegenheiten.</p>
       </div>
     </div>
   </section>
@@ -817,18 +848,13 @@
     <div class="label reveal">Team</div>
     <h2 class="section-title reveal">Erfahrung, die zählt</h2>
     <div class="team-card reveal">
-      <img class="avatar" src="/photo.jpg" alt="Johannes Kirchmayr, CFA" width="64" height="64">
+      <div class="team-photo-wrap">
+        <img class="team-photo" src="/photo.jpg" alt="Johannes Kirchmayr, CFA" width="240" height="300" decoding="async">
+      </div>
       <div>
         <div class="team-name">Johannes Kirchmayr, CFA</div>
         <div class="team-role">Gründer & Partner</div>
-        <p class="team-bio">7+ Jahre Direct Private Equity bei CMP Capital Management Partners und Unigestion mit Fokus auf DACH Mid-Market Transaktionen. Spezialist für eigentümergeführte IT-Services, Engineering und Buy-and-Build Strategien. Zuvor Stifel. Basiert in Zürich.</p>
-        <div class="team-logos">
-          <span class="team-logo-item">Unigestion</span>
-          <span class="team-logo-item">·</span>
-          <span class="team-logo-item">CMP</span>
-          <span class="team-logo-item">·</span>
-          <span class="team-logo-item">Stifel</span>
-        </div>
+        <p class="team-bio">Johannes Kirchmayr begann seine Karriere im Turnaround Private Equity, bevor er zu einem der führenden institutionellen Asset Manager der Schweiz wechselte. Dort verantwortete er über mehrere Jahre DACH Mid-Market Transaktionen und erlernte das Handwerk von Grund auf — von der ersten Ansprache bis zum Closing. Die eigene unternehmerische Energie und der Wunsch nach einem direkten, vertrauensvollen Austausch mit Unternehmern und Mandanten führten zur Gründung von Finstant Advisory.</p>
       </div>
     </div>
   </section>
@@ -841,8 +867,8 @@
       <h2 class="contact-title reveal">Bereit für den<br><em>nächsten Schritt?</em></h2>
       <p class="contact-sub reveal">Diskrete Erstgespräche — ohne Verpflichtung, ohne Lärm. Wir nehmen uns die Zeit, Ihre Situation zu verstehen.</p>
       <div class="reveal" style="margin-bottom: 1rem;">
-        <a href="mailto:johannes@finstantadvisory.com" class="contact-email">
-          johannes@finstantadvisory.com
+        <a href="mailto:jkirchmayr@finstant.ai" class="contact-email">
+          jkirchmayr@finstant.ai
         </a>
       </div>
       <p class="contact-note reveal">Zürich, Schweiz &nbsp;·&nbsp; Alle Anfragen streng vertraulich</p>
@@ -851,9 +877,9 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Finstant</div>
+    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
     <div class="footer-text">© 2025 Finstant Advisory · Zürich</div>
-    <div class="footer-text">johannes@finstantadvisory.com</div>
+    <div class="footer-text">jkirchmayr@finstant.ai</div>
   </footer>
 
   <script>
@@ -900,6 +926,8 @@
       setTimeout(dismiss, 9500);
 
       window.addEventListener('scroll', dismiss, { once: true });
+      window.addEventListener('wheel', dismiss, { once: true, passive: true });
+      window.addEventListener('touchmove', dismiss, { once: true, passive: true });
       intro.addEventListener('click', dismiss);
       document.addEventListener('keydown', dismiss, { once: true });
     })();
