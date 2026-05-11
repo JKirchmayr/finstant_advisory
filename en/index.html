@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finstant Advisory — M&A Advisory with Local Market Expertise</title>
+  <meta name="description" content="Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness. Based in Zurich." />
+  <meta name="keywords" content="M&A advisory, business sale, mid-market, Italy, Switzerland, Europe, IT services, buy-and-build, private equity, Zurich, succession, off-market, deal origination" />
+  <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.finstantadvisory.com/en/" />
+  <link rel="alternate" hreflang="de" href="https://www.finstantadvisory.com/de/" />
+  <link rel="alternate" hreflang="en" href="https://www.finstantadvisory.com/en/" />
+  <link rel="alternate" hreflang="it" href="https://www.finstantadvisory.com/it/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.finstantadvisory.com/de/" />
+  <link rel="icon" href="/favi.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/favi.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.finstantadvisory.com/en/" />
+  <meta property="og:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
+  <meta property="og:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
+  <meta name="twitter:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Finstant Advisory",
+    "description": "Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness.",
+    "url": "https://www.finstantadvisory.com/en/",
+    "email": "jkirchmayr@finstant.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zürich",
+      "addressCountry": "CH"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Johannes Kirchmayr",
+      "jobTitle": "Partner",
+      "description": "Turnaround private equity, then mid-market transactions in Switzerland and Europe at a leading Swiss institutional asset manager; founder of Finstant Advisory."
+    },
+    "areaServed": ["CH", "IT", "DE", "AT"],
+    "serviceType": ["M&A Advisory", "Sell-side Advisory", "Buy-side Deal Origination", "Transaktionsvorbereitung"]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0b;
+      --white: #f9f8f5;
+      --off-white: #f2f1ed;
+      --gray-light: #eceae4;
+      --gray-text: #8a8880;
+      --gray-mid: #c8c6be;
+      --border: rgba(0,0,0,0.10);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(249,248,245,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 0.5px solid var(--black);
+      padding: 9px 22px;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--black);
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--black); color: var(--white); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-lang-link {
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-lang-link:hover { color: var(--black); }
+
+    .nav-lang-link.is-active {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .nav-lang-sep {
+      color: var(--gray-mid);
+      font-weight: 300;
+      user-select: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 7rem 3.5rem 6rem;
+      border-bottom: 0.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif);
+      font-size: clamp(120px, 18vw, 220px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.025);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--gray-text);
+      max-width: 460px;
+      line-height: 1.85;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .hero-actions { display: flex; gap: 2rem; align-items: center; }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      padding: 14px 32px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: var(--sans);
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { opacity: 0.72; }
+
+    .btn-ghost {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--gray-mid);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover { color: var(--black); border-color: var(--black); }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .stat {
+      padding: 3rem 3.5rem;
+      border-right: 0.5px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--gray-text);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 0.5px solid var(--border);
+    }
+
+    .service {
+      padding: 2.5rem 3rem 2.5rem 0;
+      border-right: 0.5px solid var(--border);
+    }
+
+    .service:first-child { padding-left: 0; }
+    .service:last-child { border-right: none; }
+    .service:not(:first-child) { padding-left: 3rem; }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: 12px;
+      color: var(--gray-mid);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.08em;
+    }
+
+    .service-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .service-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* WHY — dark */
+    .why {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .why .label { color: rgba(255,255,255,0.3); }
+
+    .why-title {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .why-title em { font-style: italic; }
+
+    .why-body {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .why-items { display: flex; flex-direction: column; }
+
+    .why-item {
+      padding: 1.75rem 0;
+      border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    }
+
+    .why-item:first-child { padding-top: 0; }
+    .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .why-item-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+
+    .why-item-body {
+      font-size: 13px;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* MARKET */
+    .market {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+    }
+
+    .market-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      align-items: end;
+    }
+
+    .market-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .market-card {
+      background: var(--off-white);
+      padding: 2.25rem 2.5rem;
+    }
+
+    .market-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .market-card-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    /* TEAM */
+    .team {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .team-shell {
+      padding-top: 3rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .team-layout {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.5rem 3rem;
+      align-items: start;
+    }
+
+    .team-portraits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 2.75rem;
+      align-items: flex-start;
+    }
+
+    .team-pick {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+      font: inherit;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .team-pick:focus-visible .team-photo-wrap {
+      outline: 2px solid var(--black);
+      outline-offset: 4px;
+    }
+
+    .team-pick-name {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      max-width: min(240px, 42vw);
+      line-height: 1.35;
+      color: var(--black);
+    }
+
+    .team-pick:not(.is-selected) .team-photo-wrap {
+      opacity: 0.78;
+    }
+
+    .team-pick:not(.is-selected) .team-pick-name {
+      color: var(--gray-text);
+    }
+
+    .team-pick.is-selected .team-photo-wrap {
+      border-color: rgba(0, 0, 0, 0.22);
+      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.09);
+    }
+
+    .team-panels {
+      margin-top: 0;
+      padding: 0 0 0 2.5rem;
+      border-top: none;
+      border-left: 0.5px solid var(--border);
+      min-height: 12rem;
+    }
+
+    .team-panel:focus-visible {
+      outline: none;
+    }
+
+    .team-photo-wrap {
+      flex-shrink: 0;
+      align-self: start;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 8px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
+      transition: opacity 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      border-radius: 2px;
+    }
+
+    .team-photo-frame {
+      position: relative;
+      display: block;
+      width: min(220px, 40vw);
+      max-width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .team-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      filter: grayscale(1) contrast(1.06);
+    }
+
+    .team-photo--riccardo {
+      object-position: center 14%;
+    }
+
+    .team-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .team-role {
+      font-size: 10px;
+      color: var(--gray-text);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      max-width: 640px;
+      font-weight: 300;
+    }
+
+    .team-bio strong {
+      color: var(--black);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .team-link {
+      display: inline-block;
+      margin-top: 1.15rem;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--black);
+      padding-bottom: 3px;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .team-link:hover { opacity: 0.5; }
+
+    /* CONTACT */
+    .contact {
+      padding: 7rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: clamp(80px, 16vw, 200px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.022);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .contact-inner { position: relative; z-index: 2; }
+
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-title em { font-style: italic; }
+
+    .contact-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--black);
+      padding-bottom: 3px;
+      margin-bottom: 3rem;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .contact-email:hover { opacity: 0.5; }
+
+    .contact-note {
+      font-size: 10px;
+      color: var(--gray-mid);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      height: 22px;
+      width: auto;
+      display: block;
+      opacity: 0.92;
+    }
+
+    .footer-text {
+      font-size: 11px;
+      color: var(--gray-text);
+      letter-spacing: 0.04em;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      nav { padding: 1.25rem 1.75rem; flex-wrap: wrap; row-gap: 0.75rem; }
+      .nav-links { display: none; }
+      .nav-right { margin-left: auto; gap: 0.85rem; }
+      .nav-lang { font-size: 10px; letter-spacing: 0.1em; }
+      .nav-cta { padding: 8px 16px; font-size: 11px; }
+      .hero { padding: 4rem 1.75rem 3.5rem; }
+      .stats { grid-template-columns: 1fr; }
+      .stat { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2.25rem 1.75rem; }
+      .stat:last-child { border-bottom: none; }
+      .section { padding: 3.5rem 1.75rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service {
+        border-right: none;
+        border-bottom: 0.5px solid var(--border);
+        padding: 2rem 0;
+        text-align: left;
+      }
+      .service:not(:first-child) { padding-left: 0; }
+      .service:last-child { border-bottom: none; }
+      .why { grid-template-columns: 1fr; padding: 3.5rem 1.75rem; gap: 2.5rem; }
+      .market { padding: 3.5rem 1.75rem; }
+      .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .market-grid { grid-template-columns: 1fr; }
+      .team { padding: 3.5rem 1.75rem; }
+      .team-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .team-panels {
+        padding: 2.25rem 0 0;
+        border-left: none;
+        border-top: 0.5px solid var(--border);
+        margin-top: 0.25rem;
+      }
+      .team-portraits {
+        justify-content: center;
+        gap: 1.75rem;
+      }
+      .team-pick { align-items: center; }
+      .team-pick-name { text-align: center; max-width: 280px; }
+      .team-photo-wrap {
+        width: 100%;
+        max-width: min(260px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .team-photo-frame {
+        width: 100%;
+      }
+      .contact { padding: 4.5rem 1.75rem; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
+    }
+
+    /* INTRO */
+    #intro {
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      cursor: default;
+    }
+
+    #intro.dismissed {
+      opacity: 0;
+      transition: opacity 0.95s ease;
+      pointer-events: none;
+    }
+
+    .intro-inner { text-align: center; max-width: 700px; }
+
+    .intro-line {
+      font-family: var(--serif);
+      font-size: clamp(26px, 4.5vw, 54px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--black);
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 1s ease, transform 1s ease;
+      display: block;
+    }
+
+    .intro-line.italic { font-style: italic; }
+    .intro-line.visible { opacity: 1; transform: translateY(0); }
+    .intro-line.out { opacity: 0; transform: translateY(-14px); transition: opacity 0.55s ease, transform 0.55s ease; }
+
+    .intro-rule {
+      width: 0;
+      height: 0.5px;
+      background: var(--gray-mid);
+      margin: 1.75rem auto;
+      transition: width 1s ease;
+    }
+
+    .intro-rule.visible { width: 60px; }
+
+    .intro-hint {
+      position: fixed;
+      bottom: 2.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      opacity: 0;
+      transition: opacity 0.7s ease;
+      z-index: 10000;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .intro-hint.visible { opacity: 1; }
+
+    .intro-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 28px;
+      background: var(--gray-mid);
+      margin: 0.85rem auto 0;
+      animation: drop 1.6s ease-in-out infinite;
+    }
+
+    @keyframes drop {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      20%  { opacity: 1; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    body.no-scroll { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="intro-inner">
+      <span class="intro-line" id="iline1">You built your company.</span>
+      <div class="intro-rule" id="irule"></div>
+      <span class="intro-line italic" id="iline2">We help you hand it over successfully.</span>
+    </div>
+  </div>
+  <div class="intro-hint" id="ihint">Scroll</div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/en/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Services</a></li>
+      <li><a href="#unternehmer">Founders</a></li>
+      <li><a href="#markt">Investors</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#kontakt">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang" role="navigation" aria-label="Language">
+        <a href="/en/" class="nav-lang-link is-active" hreflang="en" lang="en" aria-current="true">EN</a>
+        <span class="nav-lang-sep">/</span>
+        <a href="/de/" class="nav-lang-link" hreflang="de" lang="de">DE</a>
+        <span class="nav-lang-sep">/</span>
+        <a href="/it/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
+      </div>
+      <a href="#kontakt" class="nav-cta">Request a conversation</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text">M&A</div>
+    <div class="label reveal">M&A Advisory · Local market expertise</div>
+    <h1 class="hero-title reveal reveal-delay-1">
+      You built your company.<br>
+      <em>We help you hand it over successfully.</em>
+    </h1>
+    <p class="hero-sub reveal reveal-delay-2">Discreet company sales and buy-side deal origination for owner-managed businesses — with deep understanding of local markets in Switzerland, Italy, and Europe.</p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#kontakt" class="btn-primary">Book an introductory call</a>
+      <a href="#leistungen" class="btn-ghost">Learn more</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat reveal">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Years of M&amp;A and PE<br>experience</div>
+    </div>
+    <div class="stat reveal reveal-delay-1">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Completed transactions<br>in Switzerland and Europe</div>
+    </div>
+    <div class="stat reveal reveal-delay-2">
+      <div class="stat-num">€500M+</div>
+      <div class="stat-label">Transaction volume advised</div>
+    </div>
+  </div>
+
+  <!-- LEISTUNGEN -->
+  <section class="section" id="leistungen">
+    <div class="label reveal">Services</div>
+    <h2 class="section-title reveal">What we do for you</h2>
+    <div class="services-grid">
+      <div class="service reveal">
+        <div class="service-num">01</div>
+        <div class="service-title">Sell-side advisory</div>
+        <p class="service-body">Discreet support through your company sale — from valuation to closing. No auction process, no unnecessary noise in the market. We speak with the right buyers.</p>
+      </div>
+      <div class="service reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-title">Buy-side origination</div>
+        <p class="service-body">Systematic identification of off-market targets for PE platforms in IT services and engineering across Switzerland, Italy, and Europe. Proprietary screening and direct dialogue with owners.</p>
+      </div>
+      <div class="service reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-title">Transaction readiness</div>
+        <p class="service-body">Value optimisation, financial reporting, and positioning ahead of the sale — so you enter the process at the strongest possible price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY — dark section -->
+  <div class="why">
+    <div>
+      <div class="label reveal">Why Finstant</div>
+      <h2 class="why-title reveal">We think like<br><em>investors —<br>because we were.</em></h2>
+      <p class="why-body reveal">Our team comes from private equity. We have sat on the buyer side and know exactly what institutional investors look for and how to position a business accordingly.</p>
+    </div>
+    <div class="why-items">
+      <div class="why-item reveal">
+        <div class="why-item-title">Active PE network</div>
+        <p class="why-item-body">Direct access to the most active buy-and-build platforms across Switzerland, Italy, and Europe. We know who actually buys.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-item-title">Mid-market mindset</div>
+        <p class="why-item-body">We understand owner-managed businesses: clear answers, no consultant jargon — conversations at eye level with founders and families.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-item-title">Proprietary sourcing · Direct relationships</div>
+        <p class="why-item-body">No anonymous database screening. We source through personal contacts and long-standing mandates — targeted, discreet, and through direct relationships with decision-makers.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-item-title">Off-market access</div>
+        <p class="why-item-body">No classic auction process. We use confidential channels to investors and shareholders — discreet, without public pressure.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FÜR UNTERNEHMER -->
+  <section class="market" id="unternehmer">
+    <div class="market-intro">
+      <div>
+        <div class="label reveal">For founders</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Your life’s work deserves<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">the right outcome.</em></h2>
+      </div>
+      <p class="market-sub reveal">Selling your company is the most important transaction of your life. We support you discreetly and at eye level — from the first conversation to closing.</p>
+    </div>
+    <div class="market-grid">
+      <div class="market-card reveal">
+        <div class="market-card-title">The right timing</div>
+        <p class="market-card-body">We help you plan. Together we define the right moment and work toward a smooth transition and the best achievable price.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">A fair price, no compromise</div>
+        <p class="market-card-body">We know both sides of the table and negotiate for you at eye level with institutional buyers.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1">
+        <div class="market-card-title">Absolute discretion</div>
+        <p class="market-card-body">No auction process, no rumours, no unrest among staff or customers. Confidentiality is not a slogan — it is how we work.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-2">
+        <div class="market-card-title">The right buyer</div>
+        <p class="market-card-body">Not every buyer fits every business. We find the partner that fits the company, the team, and your legacy — not only the price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÜR INVESTOREN -->
+  <section class="market" id="markt" style="background: var(--white);">
+    <div class="market-intro">
+      <div>
+        <div class="label reveal">For investors</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">The market is consolidating —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">we have the access.</em></h2>
+      </div>
+      <p class="market-sub reveal">Thousands of owner-managed businesses across Europe face succession questions. We identify the best targets before they come to market — with local market knowledge and direct relationships.</p>
+    </div>
+    <div class="market-grid" style="background: rgba(0,0,0,0.06);">
+      <div class="market-card reveal" style="background: var(--white);">
+        <div class="market-card-title">Generational change as a driver</div>
+        <p class="market-card-body">57% of mid-market owners are over 55. Readiness to sell is rising — time pressure is growing.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
+        <div class="market-card-title">Business services focus</div>
+        <p class="market-card-body">We focus on owner-managed business services companies. Asset-light models and fragmented markets are our domain.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
+        <div class="market-card-title">Rising PE activity</div>
+        <p class="market-card-body">You want systematic access to a vertical — we bring sector expertise and proprietary market access to source there consistently.</p>
+      </div>
+      <div class="market-card reveal reveal-delay-2" style="background: var(--white);">
+        <div class="market-card-title">Direct market access</div>
+        <p class="market-card-body">We speak directly with owners in selected markets — without auction pressure or anonymous screening. That yields tangible access to off-market opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team" id="team">
+    <div class="label reveal">Team</div>
+    <h2 class="section-title reveal">Experience that counts</h2>
+    <div class="team-shell reveal">
+      <div class="team-layout">
+      <div class="team-portraits" role="tablist" aria-label="Team portraits">
+        <button type="button" class="team-pick is-selected" id="tab-johannes" role="tab" aria-selected="true" aria-controls="panel-johannes" data-member="johannes" tabindex="0">
+          <span class="team-photo-wrap">
+            <span class="team-photo-frame">
+              <img class="team-photo" src="/photo.jpg" alt="" width="220" height="275" decoding="async" aria-hidden="true">
+            </span>
+          </span>
+          <span class="team-pick-name">Johannes Kirchmayr, CFA</span>
+        </button>
+        <button type="button" class="team-pick" id="tab-riccardo" role="tab" aria-selected="false" aria-controls="panel-riccardo" data-member="riccardo" tabindex="-1">
+          <span class="team-photo-wrap">
+            <span class="team-photo-frame">
+              <img class="team-photo team-photo--riccardo" src="/photo2.jpg" alt="" width="220" height="275" decoding="async" aria-hidden="true">
+            </span>
+          </span>
+          <span class="team-pick-name">Riccardo Cunego</span>
+        </button>
+      </div>
+      <div class="team-panels">
+        <div id="panel-johannes" class="team-panel is-active" role="tabpanel" aria-labelledby="tab-johannes">
+          <div class="team-name">Johannes Kirchmayr, CFA</div>
+          <div class="team-role">Founder &amp; Partner</div>
+          <p class="team-bio">Johannes Kirchmayr began his career in turnaround private equity before joining one of Switzerland’s leading institutional asset managers. There he led mid-market transactions in Switzerland and Europe for several years and learned the craft end to end — from first approach to closing. His entrepreneurial drive and desire for a direct, trusted dialogue with founders and clients led him to found Finstant Advisory. At Finstant Advisory, his focus is the <strong>DACH market</strong>.</p>
+          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div id="panel-riccardo" class="team-panel" role="tabpanel" aria-labelledby="tab-riccardo" hidden>
+          <div class="team-name">Riccardo Cunego</div>
+          <div class="team-role">Founder &amp; Partner</div>
+          <p class="team-bio">PE and M&amp;A background across Schroders, Promethiem and BNP Paribas, focused on European industrials and financial services. Riccardo covers <strong>Italy and France</strong> — combining on-the-ground market depth with cross-border M&amp;A execution.</p>
+          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontakt">
+    <div class="contact-bg">Contact</div>
+    <div class="contact-inner">
+      <div class="label reveal">Contact</div>
+      <h2 class="contact-title reveal">Ready for the<br><em>next step?</em></h2>
+      <p class="contact-sub reveal">Discreet introductory conversations — no obligation, no noise. We take the time to understand your situation.</p>
+      <div class="reveal" style="margin-bottom: 1rem;">
+        <a href="mailto:jkirchmayr@finstant.ai" class="contact-email">
+          jkirchmayr@finstant.ai
+        </a>
+      </div>
+      <p class="contact-note reveal">Zurich, Switzerland &nbsp;·&nbsp; All enquiries strictly confidential</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
+    <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
+    <div class="footer-text">jkirchmayr@finstant.ai</div>
+  </footer>
+
+  <script>
+    // SCROLL REVEAL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // INTRO
+    (function() {
+      const intro = document.getElementById('intro');
+      const line1 = document.getElementById('iline1');
+      const line2 = document.getElementById('iline2');
+      const rule  = document.getElementById('irule');
+      const hint  = document.getElementById('ihint');
+      let gone = false;
+
+      document.body.classList.add('no-scroll');
+
+      function dismiss() {
+        if (gone) return;
+        gone = true;
+        hint.classList.remove('visible');
+        line1.classList.add('out');
+        line2.classList.add('out');
+        rule.style.width = '0';
+        setTimeout(() => {
+          intro.classList.add('dismissed');
+          document.body.classList.remove('no-scroll');
+          setTimeout(() => intro.style.display = 'none', 1000);
+        }, 350);
+      }
+
+      setTimeout(() => line1.classList.add('visible'), 600);
+      setTimeout(() => rule.classList.add('visible'), 2300);
+      setTimeout(() => line2.classList.add('visible'), 3000);
+      setTimeout(() => hint.classList.add('visible'), 4800);
+      setTimeout(dismiss, 9500);
+
+      window.addEventListener('scroll', dismiss, { once: true });
+      window.addEventListener('wheel', dismiss, { once: true, passive: true });
+      window.addEventListener('touchmove', dismiss, { once: true, passive: true });
+      intro.addEventListener('click', dismiss);
+      document.addEventListener('keydown', dismiss, { once: true });
+    })();
+
+    // TEAM — portrait tabs (click to show bio)
+    (function() {
+      const picks = document.querySelectorAll('.team-pick');
+      const panels = document.querySelectorAll('.team-panel');
+      if (!picks.length || !panels.length) return;
+
+      function activate(memberId) {
+        picks.forEach((btn) => {
+          const on = btn.dataset.member === memberId;
+          btn.classList.toggle('is-selected', on);
+          btn.setAttribute('aria-selected', on ? 'true' : 'false');
+          btn.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach((panel) => {
+          const show = panel.id === 'panel-' + memberId;
+          panel.hidden = !show;
+          panel.classList.toggle('is-active', show);
+        });
+      }
+
+      picks.forEach((btn) => {
+        btn.addEventListener('click', () => activate(btn.dataset.member));
+      });
+
+      const tablist = document.querySelector('.team-portraits');
+      if (tablist) {
+        tablist.addEventListener('keydown', (e) => {
+          const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+          if (!keys.includes(e.key)) return;
+          const order = Array.from(picks);
+          const i = order.findIndex((b) => b.classList.contains('is-selected'));
+          if (i < 0) return;
+          let next = i;
+          if (e.key === 'ArrowRight') next = (i + 1) % order.length;
+          else if (e.key === 'ArrowLeft') next = (i - 1 + order.length) % order.length;
+          else if (e.key === 'Home') next = 0;
+          else if (e.key === 'End') next = order.length - 1;
+          if (next !== i) {
+            e.preventDefault();
+            activate(order[next].dataset.member);
+            order[next].focus();
+          }
+        });
+      }
+    })();
+
+    // Preserve #anchor when switching language
+    document.querySelectorAll('.nav-lang-link').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var h = location.hash;
+        if (!h) return;
+        e.preventDefault();
+        var base = a.getAttribute('href') || '';
+        location.href = base.replace(/\/?$/, '/') + h;
+      });
+    });
+  </script>
+
+</body>
+</html>
