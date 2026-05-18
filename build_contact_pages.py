@@ -12,10 +12,9 @@ LANGS = {
         "description": "Get in touch with Finstant Advisory for a discreet introductory conversation about M&A advisory and buy-side origination.",
         "canonical": "https://www.finstantadvisory.com/en/contact/",
         "nav": {
+            "home": "Home",
             "services": ("Services", "#leistungen"),
-            "founders": ("Founders", "#unternehmer"),
-            "investors": ("Investors", "#markt"),
-            "team": ("Team", "#team"),
+            "who": ("Who We Are", "#team"),
             "contact": "Contact",
             "cta": "Contact us",
         },
@@ -30,10 +29,9 @@ LANGS = {
         "description": "Kontaktieren Sie Finstant Advisory für ein diskretes Erstgespräch zu M&A-Beratung und Buy-side Origination.",
         "canonical": "https://www.finstantadvisory.com/de/kontakt/",
         "nav": {
+            "home": "Home",
             "services": ("Leistungen", "#leistungen"),
-            "founders": ("Unternehmer", "#unternehmer"),
-            "investors": ("Investoren", "#markt"),
-            "team": ("Team", "#team"),
+            "who": ("Wer wir sind", "#team"),
             "contact": "Kontakt",
             "cta": "Kontaktieren Sie uns",
         },
@@ -48,10 +46,9 @@ LANGS = {
         "description": "Contattate Finstant Advisory per un primo colloquio discreto su consulenza M&A e origination buy-side.",
         "canonical": "https://www.finstantadvisory.com/it/contatto/",
         "nav": {
+            "home": "Home",
             "services": ("Servizi", "#leistungen"),
-            "founders": ("Imprenditori", "#unternehmer"),
-            "investors": ("Investitori", "#markt"),
-            "team": ("Team", "#team"),
+            "who": ("Chi siamo", "#team"),
             "contact": "Contatto",
             "cta": "Contattaci",
         },
@@ -121,10 +118,9 @@ def build_nav(lang: str, cfg: dict) -> str:
     return f"""  <nav>
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
+      <li><a href="{home}">{n['home']}</a></li>
       <li><a href="{home}{n['services'][1]}">{n['services'][0]}</a></li>
-      <li><a href="{home}{n['founders'][1]}">{n['founders'][0]}</a></li>
-      <li><a href="{home}{n['investors'][1]}">{n['investors'][0]}</a></li>
-      <li><a href="{home}{n['team'][1]}">{n['team'][0]}</a></li>
+      <li><a href="{home}{n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{cfg['contact_url']}" aria-current="page">{n['contact']}</a></li>
     </ul>
     <div class="nav-right">

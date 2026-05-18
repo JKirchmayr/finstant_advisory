@@ -8,10 +8,9 @@ NAV = {
     "en": {
         "home": "/en/",
         "contact": "/en/contact/",
+        "home_label": "Home",
         "services": ("Services", "#leistungen"),
-        "founders": ("Founders", "#unternehmer"),
-        "investors": ("Investors", "#markt"),
-        "team": ("Team", "#team"),
+        "who": ("Who We Are", "#team"),
         "contact_label": "Contact",
         "cta": "Contact us",
         "back": "All services",
@@ -22,10 +21,9 @@ NAV = {
     "de": {
         "home": "/de/",
         "contact": "/de/kontakt/",
+        "home_label": "Home",
         "services": ("Leistungen", "#leistungen"),
-        "founders": ("Unternehmer", "#unternehmer"),
-        "investors": ("Investoren", "#markt"),
-        "team": ("Team", "#team"),
+        "who": ("Wer wir sind", "#team"),
         "contact_label": "Kontakt",
         "cta": "Kontaktieren Sie uns",
         "back": "Alle Leistungen",
@@ -36,10 +34,9 @@ NAV = {
     "it": {
         "home": "/it/",
         "contact": "/it/contatto/",
+        "home_label": "Home",
         "services": ("Servizi", "#leistungen"),
-        "founders": ("Imprenditori", "#unternehmer"),
-        "investors": ("Investitori", "#markt"),
-        "team": ("Team", "#team"),
+        "who": ("Chi siamo", "#team"),
         "contact_label": "Contatto",
         "cta": "Contattaci",
         "back": "Tutti i servizi",
@@ -359,10 +356,9 @@ def build_nav_html(lang: str, service_key: str) -> str:
     return f"""  <nav>
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
+      <li><a href="{home}">{n['home_label']}</a></li>
       <li><a href="{home}{n['services'][1]}">{n['services'][0]}</a></li>
-      <li><a href="{home}{n['founders'][1]}">{n['founders'][0]}</a></li>
-      <li><a href="{home}{n['investors'][1]}">{n['investors'][0]}</a></li>
-      <li><a href="{home}{n['team'][1]}">{n['team'][0]}</a></li>
+      <li><a href="{home}{n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{n['contact']}">{n['contact_label']}</a></li>
     </ul>
     <div class="nav-right">
