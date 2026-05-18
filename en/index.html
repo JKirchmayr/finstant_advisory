@@ -65,6 +65,7 @@
       --gray-text: #8a8880;
       --gray-mid: #c8c6be;
       --border: rgba(0,0,0,0.10);
+      --nav-height: 5.25rem;
       --serif: 'Cormorant Garamond', Georgia, serif;
       --sans: 'DM Sans', system-ui, sans-serif;
     }
@@ -97,13 +98,30 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.6rem 3.5rem;
-      border-bottom: 0.5px solid var(--border);
-      position: sticky;
+      border-bottom: 0.5px solid transparent;
+      position: fixed;
       top: 0;
-      background: rgba(249,248,245,0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: transparent !important;
       z-index: 100;
+      transition: border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    }
+
+    nav.is-blurred:not(.is-scrolled) {
+      background: rgba(13, 13, 11, 0.32) !important;
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px) saturate(1.15);
+      -webkit-backdrop-filter: blur(16px) saturate(1.15);
+    }
+
+    nav.is-scrolled {
+      background: rgba(249, 248, 245, 0.96) !important;
+      border-bottom-color: var(--border);
+      backdrop-filter: blur(16px) saturate(1.15);
+      -webkit-backdrop-filter: blur(16px) saturate(1.15);
+      transition: border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
     }
 
     .logo {
@@ -114,9 +132,14 @@
     }
 
     .logo img {
-      height: 28px;
+      height: 34px;
       width: auto;
       display: block;
+      transition: filter 0.35s ease;
+    }
+
+    nav:not(.is-scrolled) .logo img {
+      filter: brightness(0) invert(1);
     }
 
     .nav-links {
@@ -131,10 +154,18 @@
       letter-spacing: 0.04em;
       color: var(--gray-text);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.25s;
     }
 
     .nav-links a:hover { color: var(--black); }
+
+    nav:not(.is-scrolled) .nav-links a {
+      color: rgba(249, 248, 245, 0.78);
+    }
+
+    nav:not(.is-scrolled) .nav-links a:hover {
+      color: var(--white);
+    }
 
     .nav-cta {
       font-size: 12px;
@@ -146,10 +177,22 @@
       cursor: pointer;
       text-decoration: none;
       color: var(--black);
-      transition: background 0.25s, color 0.25s;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
     }
 
     .nav-cta:hover { background: var(--black); color: var(--white); }
+
+    nav:not(.is-scrolled) .nav-cta {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    nav:not(.is-scrolled) .nav-cta:hover {
+      background: rgba(249, 248, 245, 0.88);
+      color: var(--black);
+      border-color: rgba(249, 248, 245, 0.88);
+    }
 
     .nav-right {
       display: flex;
@@ -170,7 +213,7 @@
     .nav-lang-link {
       color: var(--gray-text);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.25s;
     }
 
     .nav-lang-link:hover { color: var(--black); }
@@ -180,35 +223,65 @@
       font-weight: 500;
     }
 
+    nav:not(.is-scrolled) .nav-lang-link {
+      color: rgba(249, 248, 245, 0.65);
+    }
+
+    nav:not(.is-scrolled) .nav-lang-link:hover,
+    nav:not(.is-scrolled) .nav-lang-link.is-active {
+      color: var(--white);
+    }
+
     .nav-lang-sep {
       color: var(--gray-mid);
       font-weight: 300;
       user-select: none;
+      transition: color 0.25s;
+    }
+
+    nav:not(.is-scrolled) .nav-lang-sep {
+      color: rgba(249, 248, 245, 0.35);
     }
 
     /* HERO */
     .hero {
-      padding: 7rem 3.5rem 6rem;
+      padding: calc(6rem + var(--nav-height)) 3.5rem 3rem;
       border-bottom: 0.5px solid var(--border);
       position: relative;
       overflow: hidden;
+      background: url('/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg') center 42% / cover no-repeat;
+      min-height: 100vh;
+      min-height: 100dvh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .hero-bg-text {
+    .hero::before {
+      content: '';
       position: absolute;
-      right: -1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: var(--serif);
-      font-size: clamp(120px, 18vw, 220px);
-      font-weight: 300;
-      color: rgba(0,0,0,0.025);
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
-      line-height: 1;
+      inset: 0;
+      background: linear-gradient(
+        100deg,
+        rgba(13, 13, 11, 0.96) 0%,
+        rgba(13, 13, 11, 0.88) 25%,
+        rgba(13, 13, 11, 0.52) 52%,
+        rgba(13, 13, 11, 0.08) 100%
+      );
+      z-index: 0;
     }
 
+    .hero > *:not(nav) { position: relative; z-index: 1; }
+
+    .hero .label { color: rgba(249, 248, 245, 0.65); }
+    .hero .hero-title { color: var(--white); }
+    .hero .hero-sub { color: rgba(249, 248, 245, 0.78); }
+    .hero .btn-primary {
+      background: var(--white);
+      color: var(--black);
+    }
+    .hero .btn-primary:hover { opacity: 0.88; }
     .label {
       font-size: 10px;
       letter-spacing: 0.22em;
@@ -270,35 +343,6 @@
 
     .btn-ghost:hover { color: var(--black); border-color: var(--black); }
 
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .stat {
-      padding: 3rem 3.5rem;
-      border-right: 0.5px solid var(--border);
-    }
-
-    .stat:last-child { border-right: none; }
-
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 48px;
-      font-weight: 300;
-      line-height: 1;
-      margin-bottom: 0.75rem;
-    }
-
-    .stat-label {
-      font-size: 12px;
-      color: var(--gray-text);
-      line-height: 1.65;
-      font-weight: 300;
-    }
-
     /* SECTIONS */
     .section {
       padding: 5rem 3.5rem;
@@ -316,7 +360,7 @@
     /* SERVICES */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       border-top: 0.5px solid var(--border);
     }
 
@@ -348,6 +392,11 @@
       color: var(--gray-text);
       line-height: 1.8;
       font-weight: 300;
+    }
+
+    .service .btn-ghost {
+      display: inline-block;
+      margin-top: 1.75rem;
     }
 
     /* WHY — dark */
@@ -457,6 +506,15 @@
     .team {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
+    }
+
+    .team-intro {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+      max-width: 42rem;
+      margin: -1.5rem 0 2.5rem;
     }
 
     .team-shell {
@@ -678,6 +736,82 @@
       text-transform: uppercase;
     }
 
+    .contact-form {
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+
+    .contact-honeypot {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .contact-field { margin-bottom: 1.25rem; }
+
+    .contact-field label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+      width: 100%;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--black);
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 12px 14px;
+      transition: border-color 0.2s;
+    }
+
+    .contact-field input:focus,
+    .contact-field textarea:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+
+    .contact-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    .contact-form-status {
+      margin-top: 1rem;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .contact-form-status.is-success { color: var(--black); }
+    .contact-form-status.is-error { color: #8b3a3a; }
+
+    .contact-direct { margin-bottom: 2.5rem; }
+
+    .contact-direct-label {
+      font-size: 12px;
+      color: var(--gray-text);
+      margin-bottom: 0.75rem;
+      font-weight: 300;
+    }
+
+    .contact-direct .contact-email { margin-bottom: 0; }
+
     /* FOOTER */
     footer {
       padding: 2rem 3.5rem;
@@ -706,10 +840,13 @@
       .nav-right { margin-left: auto; gap: 0.85rem; }
       .nav-lang { font-size: 10px; letter-spacing: 0.1em; }
       .nav-cta { padding: 8px 16px; font-size: 11px; }
-      .hero { padding: 4rem 1.75rem 3.5rem; }
-      .stats { grid-template-columns: 1fr; }
-      .stat { border-right: none; border-bottom: 0.5px solid var(--border); padding: 2.25rem 1.75rem; }
-      .stat:last-child { border-bottom: none; }
+      :root { --nav-height: 4.25rem; }
+      .hero {
+        padding: calc(4rem + var(--nav-height)) 1.75rem 2.5rem;
+        min-height: 100vh;
+        min-height: 100dvh;
+        background-position: center 40%;
+      }
       .section { padding: 3.5rem 1.75rem; }
       .services-grid { grid-template-columns: 1fr; }
       .service {
@@ -754,113 +891,21 @@
       footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
     }
 
-    /* INTRO */
-    #intro {
-      position: fixed;
-      inset: 0;
-      background: var(--white);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      cursor: default;
-    }
-
-    #intro.dismissed {
-      opacity: 0;
-      transition: opacity 0.95s ease;
-      pointer-events: none;
-    }
-
-    .intro-inner { text-align: center; max-width: 700px; }
-
-    .intro-line {
-      font-family: var(--serif);
-      font-size: clamp(26px, 4.5vw, 54px);
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--black);
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 1s ease, transform 1s ease;
-      display: block;
-    }
-
-    .intro-line.italic { font-style: italic; }
-    .intro-line.visible { opacity: 1; transform: translateY(0); }
-    .intro-line.out { opacity: 0; transform: translateY(-14px); transition: opacity 0.55s ease, transform 0.55s ease; }
-
-    .intro-rule {
-      width: 0;
-      height: 0.5px;
-      background: var(--gray-mid);
-      margin: 1.75rem auto;
-      transition: width 1s ease;
-    }
-
-    .intro-rule.visible { width: 60px; }
-
-    .intro-hint {
-      position: fixed;
-      bottom: 2.75rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gray-text);
-      opacity: 0;
-      transition: opacity 0.7s ease;
-      z-index: 10000;
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    .intro-hint.visible { opacity: 1; }
-
-    .intro-hint::after {
-      content: '';
-      display: block;
-      width: 1px;
-      height: 28px;
-      background: var(--gray-mid);
-      margin: 0.85rem auto 0;
-      animation: drop 1.6s ease-in-out infinite;
-    }
-
-    @keyframes drop {
-      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
-      20%  { opacity: 1; }
-      50%  { transform: scaleY(1); transform-origin: top; }
-      51%  { transform: scaleY(1); transform-origin: bottom; }
-      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-    }
-
-    body.no-scroll { overflow: hidden; }
   </style>
 </head>
 <body>
 
-  <!-- INTRO -->
-  <div id="intro">
-    <div class="intro-inner">
-      <span class="intro-line" id="iline1">You built your company.</span>
-      <div class="intro-rule" id="irule"></div>
-      <span class="intro-line italic" id="iline2">We help you hand it over successfully.</span>
-    </div>
-  </div>
-  <div class="intro-hint" id="ihint">Scroll</div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="/en/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+  <!-- HERO -->
+  <section class="hero">
+    <nav>
+      <a href="/en/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="#leistungen">Services</a></li>
       <li><a href="#unternehmer">Founders</a></li>
       <li><a href="#markt">Investors</a></li>
       <li><a href="#team">Team</a></li>
-      <li><a href="#kontakt">Contact</a></li>
+      <li><a href="/en/contact/">Contact</a></li>
     </ul>
     <div class="nav-right">
       <div class="nav-lang" role="navigation" aria-label="Language">
@@ -870,40 +915,15 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
-      <a href="#kontakt" class="nav-cta">Request a conversation</a>
+      <a href="/en/contact/" class="nav-cta">Contact us</a>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg-text">M&A</div>
-    <div class="label reveal">M&A Advisory · Local market expertise</div>
-    <h1 class="hero-title reveal reveal-delay-1">
-      You built your company.<br>
-      <em>We help you hand it over successfully.</em>
-    </h1>
-    <p class="hero-sub reveal reveal-delay-2">Discreet company sales and buy-side deal origination for owner-managed businesses — with deep understanding of local markets in Switzerland, Italy, and Europe.</p>
+    </nav>
+    <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
+    <p class="hero-sub reveal reveal-delay-2">Buy-side origination and sell-side advisory for the European mid-market. Led by former private equity investors.</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="#kontakt" class="btn-primary">Book an introductory call</a>
-      <a href="#leistungen" class="btn-ghost">Learn more</a>
+      <a href="/en/contact/" class="btn-primary">Book an introductory call</a>
     </div>
   </section>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat reveal">
-      <div class="stat-num">10+</div>
-      <div class="stat-label">Years of M&amp;A and PE<br>experience</div>
-    </div>
-    <div class="stat reveal reveal-delay-1">
-      <div class="stat-num">5+</div>
-      <div class="stat-label">Completed transactions<br>in Switzerland and Europe</div>
-    </div>
-    <div class="stat reveal reveal-delay-2">
-      <div class="stat-num">€500M+</div>
-      <div class="stat-label">Transaction volume advised</div>
-    </div>
-  </div>
 
   <!-- LEISTUNGEN -->
   <section class="section" id="leistungen">
@@ -912,18 +932,15 @@
     <div class="services-grid">
       <div class="service reveal">
         <div class="service-num">01</div>
-        <div class="service-title">Sell-side advisory</div>
-        <p class="service-body">Discreet support through your company sale — from valuation to closing. No auction process, no unnecessary noise in the market. We speak with the right buyers.</p>
+        <div class="service-title">Buy-side origination</div>
+        <p class="service-body">Systematic identification of off-market targets for PE platforms in IT services and engineering across Switzerland, Italy, and Europe. Proprietary screening and direct dialogue with owners.</p>
+        <a href="/en/buy-side-origination/" class="btn-ghost">Learn more</a>
       </div>
       <div class="service reveal reveal-delay-1">
         <div class="service-num">02</div>
-        <div class="service-title">Buy-side origination</div>
-        <p class="service-body">Systematic identification of off-market targets for PE platforms in IT services and engineering across Switzerland, Italy, and Europe. Proprietary screening and direct dialogue with owners.</p>
-      </div>
-      <div class="service reveal reveal-delay-2">
-        <div class="service-num">03</div>
-        <div class="service-title">Transaction readiness</div>
-        <p class="service-body">Value optimisation, financial reporting, and positioning ahead of the sale — so you enter the process at the strongest possible price.</p>
+        <div class="service-title">Sell-side advisory</div>
+        <p class="service-body">We provide comprehensive support to business owners looking to sell their companies. Our services include valuation, marketing, buyer identification, and negotiation to ensure the best possible outcome for our clients.</p>
+        <a href="/en/sell-side-advisory/" class="btn-ghost">Learn more</a>
       </div>
     </div>
   </section>
@@ -1017,6 +1034,7 @@
   <section class="team" id="team">
     <div class="label reveal">Team</div>
     <h2 class="section-title reveal">Experience that counts</h2>
+    <p class="team-intro reveal">We combine over 12 years of experience in Private Equity and M&amp;A, a deep network across Europe's leading financial sponsors, and hands-on operational knowledge of the deal origination process — embedded in everything we build.</p>
     <div class="team-shell reveal">
       <div class="team-layout">
       <div class="team-portraits" role="tablist" aria-label="Team portraits">
@@ -1031,7 +1049,7 @@
         <button type="button" class="team-pick" id="tab-riccardo" role="tab" aria-selected="false" aria-controls="panel-riccardo" data-member="riccardo" tabindex="-1">
           <span class="team-photo-wrap">
             <span class="team-photo-frame">
-              <img class="team-photo team-photo--riccardo" src="/photo2.jpg" alt="" width="220" height="275" decoding="async" aria-hidden="true">
+              <img class="team-photo team-photo--riccardo" src="/rcunego.png" alt="" width="220" height="275" decoding="async" aria-hidden="true">
             </span>
           </span>
           <span class="team-pick-name">Riccardo Cunego</span>
@@ -1047,27 +1065,11 @@
         <div id="panel-riccardo" class="team-panel" role="tabpanel" aria-labelledby="tab-riccardo" hidden>
           <div class="team-name">Riccardo Cunego</div>
           <div class="team-role">Founder &amp; Partner</div>
-          <p class="team-bio">PE and M&amp;A background across Schroders, Promethiem and BNP Paribas, focused on European industrials and financial services. Riccardo covers <strong>Italy and France</strong> — combining on-the-ground market depth with cross-border M&amp;A execution.</p>
+          <p class="team-bio">Riccardo brings 6+ years of experience in Private Equity and M&amp;A, having worked in the Private Equity division of Schroders Capital and in M&amp;A at BNP Paribas, Rabobank and Promethiem. He has been involved across the full deal lifecycle — from origination and target screening to execution — and has built an extensive network across Europe's leading financial sponsors.</p>
           <a href="https://www.linkedin.com/in/riccardocunego/" class="team-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="kontakt">
-    <div class="contact-bg">Contact</div>
-    <div class="contact-inner">
-      <div class="label reveal">Contact</div>
-      <h2 class="contact-title reveal">Ready for the<br><em>next step?</em></h2>
-      <p class="contact-sub reveal">Discreet introductory conversations — no obligation, no noise. We take the time to understand your situation.</p>
-      <div class="reveal" style="margin-bottom: 1rem;">
-        <a href="mailto:jkirchmayr@finstant.ai" class="contact-email">
-          jkirchmayr@finstant.ai
-        </a>
-      </div>
-      <p class="contact-note reveal">Zurich, Switzerland &nbsp;·&nbsp; All enquiries strictly confidential</p>
     </div>
   </section>
 
@@ -1090,42 +1092,21 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // INTRO
+    // NAV — blurred glass over hero, solid white at services section
     (function() {
-      const intro = document.getElementById('intro');
-      const line1 = document.getElementById('iline1');
-      const line2 = document.getElementById('iline2');
-      const rule  = document.getElementById('irule');
-      const hint  = document.getElementById('ihint');
-      let gone = false;
-
-      document.body.classList.add('no-scroll');
-
-      function dismiss() {
-        if (gone) return;
-        gone = true;
-        hint.classList.remove('visible');
-        line1.classList.add('out');
-        line2.classList.add('out');
-        rule.style.width = '0';
-        setTimeout(() => {
-          intro.classList.add('dismissed');
-          document.body.classList.remove('no-scroll');
-          setTimeout(() => intro.style.display = 'none', 1000);
-        }, 350);
+      const nav = document.querySelector('nav');
+      const servicesSection = document.querySelector('#leistungen');
+      if (!nav || !servicesSection) return;
+      function updateNav() {
+        const navHeight = nav.getBoundingClientRect().height;
+        const sectionTop = servicesSection.getBoundingClientRect().top;
+        const atWhiteSection = sectionTop <= navHeight;
+        nav.classList.toggle('is-scrolled', atWhiteSection);
+        nav.classList.toggle('is-blurred', window.scrollY > 24 && !atWhiteSection);
       }
-
-      setTimeout(() => line1.classList.add('visible'), 600);
-      setTimeout(() => rule.classList.add('visible'), 2300);
-      setTimeout(() => line2.classList.add('visible'), 3000);
-      setTimeout(() => hint.classList.add('visible'), 4800);
-      setTimeout(dismiss, 9500);
-
-      window.addEventListener('scroll', dismiss, { once: true });
-      window.addEventListener('wheel', dismiss, { once: true, passive: true });
-      window.addEventListener('touchmove', dismiss, { once: true, passive: true });
-      intro.addEventListener('click', dismiss);
-      document.addEventListener('keydown', dismiss, { once: true });
+      updateNav();
+      window.addEventListener('scroll', updateNav, { passive: true });
+      window.addEventListener('resize', updateNav);
     })();
 
     // TEAM — portrait tabs (click to show bio)
