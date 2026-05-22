@@ -403,21 +403,30 @@
     .why {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
       background: var(--black);
       color: var(--white);
+    }
+
+    .why-intro {
+      width: 100%;
+      max-width: 40rem;
+    }
+
+    .why-intro .label {
+      margin-bottom: 1rem;
     }
 
     .why .label { color: rgba(255,255,255,0.3); }
 
     .why-title {
       font-family: var(--serif);
-      font-size: 42px;
+      font-size: 32px;
       font-weight: 300;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
       color: var(--white);
     }
 
@@ -430,15 +439,24 @@
       font-weight: 300;
     }
 
-    .why-items { display: flex; flex-direction: column; }
-
-    .why-item {
-      padding: 1.75rem 0;
-      border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    .why-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 100%;
+      padding-top: 2rem;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.07);
     }
 
-    .why-item:first-child { padding-top: 0; }
-    .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .why-item {
+      padding: 0 1.5rem 0 0;
+      border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .why-item:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
 
     .why-item-title {
       font-size: 13px;
@@ -865,7 +883,14 @@
       }
       .service:not(:first-child) { padding-left: 0; }
       .service:last-child { border-bottom: none; }
-      .why { grid-template-columns: 1fr; padding: 3.5rem 1.75rem; gap: 2.5rem; }
+      .why { padding: 3.5rem 1.75rem; gap: 2.5rem; }
+      .why-items { grid-template-columns: 1fr; gap: 0; }
+      .why-item {
+        padding: 1.75rem 0;
+        border-right: none;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+      }
+      .why-item:last-child { border-bottom: none; padding-bottom: 0; }
       .market { padding: 3.5rem 1.75rem; }
       .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
       .market-grid { grid-template-columns: 1fr; }
@@ -954,27 +979,27 @@
 
   <!-- WHY — dark section -->
   <div class="why">
-    <div>
+    <div class="why-intro">
       <div class="label reveal">Warum Finstant</div>
-      <h2 class="why-title reveal">Wir denken wie<br><em>Investoren —<br>weil wir es waren.</em></h2>
-      <p class="why-body reveal">Unser Team kommt aus dem Private Equity. Wir haben auf der Käuferseite gesessen und wissen genau, was institutionelle Investoren suchen und wie man ein Unternehmen so positioniert.</p>
+      <h2 class="why-title reveal">Wir denken wie <em>Investoren — weil wir es waren.</em></h2>
+      <p class="why-body reveal">Unser Team kommt aus dem Private Equity. Wir haben auf der Käuferseite gesessen und wissen genau, was institutionelle Investoren suchen und wie man ein Unternehmen positioniert.</p>
     </div>
     <div class="why-items">
       <div class="why-item reveal">
         <div class="why-item-title">Aktives PE-Netzwerk</div>
-        <p class="why-item-body">Direkter Zugang zu den aktivsten Buy-and-Build Plattformen in der Schweiz, Italien und Europa. Wir wissen, wer wirklich kauft.</p>
+        <p class="why-item-body">Direkter Zugang zu den aktivsten Buy-and-Build Plattformen in DACH, Italien und Europa. Wir wissen, wer wirklich kauft.</p>
       </div>
       <div class="why-item reveal reveal-delay-1">
         <div class="why-item-title">Mittelstand-Mentalität</div>
         <p class="why-item-body">Wir verstehen inhabergeführte Unternehmen: klare Ansagen, keine Berater-Sprache — Gespräche auf Augenhöhe mit Unternehmern und Familien.</p>
       </div>
       <div class="why-item reveal reveal-delay-2">
-        <div class="why-item-title">Proprietäres Sourcing · Direkte Beziehungen</div>
-        <p class="why-item-body">Kein anonymes Screening aus Datenbanken. Wir sourcen über persönliche Kontakte und langjährige Mandate — gezielt, diskret und über direkte Beziehungen zu Entscheidungsträgern.</p>
+        <div class="why-item-title">Direkte Beziehungen</div>
+        <p class="why-item-body">Kein anonymes Screening aus Datenbanken. Wir sourcen über persönliche Kontakte und langjährige Mandate — gezielt, diskret und über direkte Beziehungen zu Investoren und Eigentümern.</p>
       </div>
       <div class="why-item reveal reveal-delay-3">
         <div class="why-item-title">Off-market Zugänge</div>
-        <p class="why-item-body">Kein klassisches Bieterverfahren. Wir nutzen vertrauliche Kanäle zu Investoren und Gesellschaftern — diskret, ohne öffentlichen Druck.</p>
+        <p class="why-item-body">Wir identifizieren Kanäle und Zugänge abseits der klassischen Bieterverfahren — direkt und ohne Druck.</p>
       </div>
     </div>
   </div>
@@ -1048,7 +1073,7 @@
         <button type="button" class="team-pick is-selected" id="tab-johannes" role="tab" aria-selected="true" aria-controls="panel-johannes" data-member="johannes" tabindex="0">
           <span class="team-photo-wrap">
             <span class="team-photo-frame">
-              <img class="team-photo" src="/photo.jpg" alt="" width="220" height="275" decoding="async" aria-hidden="true">
+              <img class="team-photo" src="/jkirchmayr.png" alt="" width="220" height="275" decoding="async" aria-hidden="true">
             </span>
           </span>
           <span class="team-pick-name">Johannes Kirchmayr, CFA</span>

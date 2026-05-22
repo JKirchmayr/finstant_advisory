@@ -10,6 +10,9 @@
     sending: form.dataset.msgSending || "Sending…",
     success: form.dataset.msgSuccess || "Thank you. We will be in touch shortly.",
     error: form.dataset.msgError || "Something went wrong. Please try again or email us directly.",
+    local:
+      form.dataset.msgLocal ||
+      "The contact form API is not available in this preview. Please use the email link below.",
   };
 
   function detectLang() {
@@ -55,12 +58,31 @@
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) {
+        let detail = "";
+        try {
+          const payload = await res.json();
+          detail = payload.error || "";
+        } catch {
+          /* non-JSON response */
+        }
+        if (res.status === 503 && detail) {
+          throw new Error(detail);
+        }
+        if (res.status === 404) {
+          throw new Error("local");
+        }
+        throw new Error(detail || "Request failed");
+      }
 
       form.reset();
       setStatus(messages.success, "is-success");
-    } catch {
-      setStatus(messages.error, "is-error");
+    } catch (err) {
+      if (err.message === "local") {
+        setStatus(messages.local, "is-error");
+      } else {
+        setStatus(messages.error, "is-error");
+      }
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = defaultLabel;
