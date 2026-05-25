@@ -1,4 +1,4 @@
-const RECIPIENTS = (process.env.CONTACT_RECIPIENTS || "jkirchmayr@finstant.ai,riccardo@finstant.ai")
+const RECIPIENTS = (process.env.CONTACT_RECIPIENTS || "kontakt@finstantadvisory.com,jkirchmayr@finstantadvisory.com,riccardo@finstantadvisory.com")
   .split(",")
   .map((e) => e.trim())
   .filter(Boolean);

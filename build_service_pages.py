@@ -8,6 +8,8 @@ NAV = {
     "en": {
         "home": "/en/",
         "contact": "/en/contact/",
+        "impressum_url": "/en/impressum/",
+        "footer_label": "Legal notice",
         "home_label": "Home",
         "services": ("Services", "#leistungen"),
         "who": ("Who We Are", "#team"),
@@ -21,11 +23,13 @@ NAV = {
     "de": {
         "home": "/de/",
         "contact": "/de/kontakt/",
+        "impressum_url": "/de/impressum/",
+        "footer_label": "Impressum",
         "home_label": "Home",
         "services": ("Leistungen", "#leistungen"),
         "who": ("Wer wir sind", "#team"),
         "contact_label": "Kontakt",
-        "cta": "Kontaktieren Sie uns",
+        "cta": "Kontakt",
         "back": "Alle Leistungen",
         "cta_section": "Bereit für ein Gespräch?",
         "cta_body": "Diskrete Erstgespräche — unverbindlich.",
@@ -34,6 +38,8 @@ NAV = {
     "it": {
         "home": "/it/",
         "contact": "/it/contatto/",
+        "impressum_url": "/it/impressum/",
+        "footer_label": "Note legali",
         "home_label": "Home",
         "services": ("Servizi", "#leistungen"),
         "who": ("Chi siamo", "#team"),
@@ -442,7 +448,7 @@ def build_page(lang: str, service_key: str, style: str) -> str:
   <footer>
     <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
     <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-text">jkirchmayr@finstant.ai</div>
+    <div class="footer-links"><a href="{n['impressum_url']}">{n['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:kontakt@finstantadvisory.com">kontakt@finstantadvisory.com</a></div>
   </footer>
 
   <script>

@@ -20,6 +20,8 @@ LANGS = {
         },
         "lang_hrefs": {"en": "/en/contact/", "de": "/de/kontakt/", "it": "/it/contatto/"},
         "contact_bg": "Contact",
+        "impressum_url": "/en/impressum/",
+        "footer_label": "Legal notice",
     },
     "de": {
         "dir": "de/kontakt",
@@ -33,10 +35,12 @@ LANGS = {
             "services": ("Leistungen", "#leistungen"),
             "who": ("Wer wir sind", "#team"),
             "contact": "Kontakt",
-            "cta": "Kontaktieren Sie uns",
+            "cta": "Kontakt",
         },
         "lang_hrefs": {"en": "/en/contact/", "de": "/de/kontakt/", "it": "/it/contatto/"},
         "contact_bg": "Kontakt",
+        "impressum_url": "/de/impressum/",
+        "footer_label": "Impressum",
     },
     "it": {
         "dir": "it/contatto",
@@ -54,6 +58,8 @@ LANGS = {
         },
         "lang_hrefs": {"en": "/en/contact/", "de": "/de/kontakt/", "it": "/it/contatto/"},
         "contact_bg": "Contatto",
+        "impressum_url": "/it/impressum/",
+        "footer_label": "Note legali",
     },
 }
 
@@ -181,7 +187,7 @@ def build_contact_page(lang: str, cfg: dict, html: str) -> str:
   <footer>
     <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
     <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-text">jkirchmayr@finstant.ai</div>
+    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:kontakt@finstantadvisory.com">kontakt@finstantadvisory.com</a></div>
   </footer>
 
   <script>
