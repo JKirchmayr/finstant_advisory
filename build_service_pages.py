@@ -12,7 +12,7 @@ NAV = {
         "footer_label": "Legal notice",
         "home_label": "Home",
         "services": ("Services", "#leistungen"),
-        "who": ("Who We Are", "#team"),
+        "who": ("About us", "/en/about/"),
         "contact_label": "Contact",
         "cta": "Contact us",
         "back": "All services",
@@ -27,7 +27,7 @@ NAV = {
         "footer_label": "Impressum",
         "home_label": "Home",
         "services": ("Leistungen", "#leistungen"),
-        "who": ("Wer wir sind", "#team"),
+        "who": ("Über uns", "/de/ueber-uns/"),
         "contact_label": "Kontakt",
         "cta": "Kontakt",
         "back": "Alle Leistungen",
@@ -42,7 +42,7 @@ NAV = {
         "footer_label": "Note legali",
         "home_label": "Home",
         "services": ("Servizi", "#leistungen"),
-        "who": ("Chi siamo", "#team"),
+        "who": ("Chi siamo", "/it/chi-siamo/"),
         "contact_label": "Contatto",
         "cta": "Contattaci",
         "back": "Tutti i servizi",
@@ -363,8 +363,7 @@ def build_nav_html(lang: str, service_key: str) -> str:
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="{home}">{n['home_label']}</a></li>
-      <li><a href="{home}{n['services'][1]}">{n['services'][0]}</a></li>
-      <li><a href="{home}{n['who'][1]}">{n['who'][0]}</a></li>
+      <li><a href="{n['who'][1] if str(n['who'][1]).startswith('/') else home + n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{n['contact']}">{n['contact_label']}</a></li>
     </ul>
     <div class="nav-right">
@@ -375,7 +374,6 @@ def build_nav_html(lang: str, service_key: str) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
-      <a href="{n['contact']}" class="nav-cta">{n['cta']}</a>
     </div>
   </nav>"""
 

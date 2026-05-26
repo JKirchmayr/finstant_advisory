@@ -19,8 +19,8 @@ LANGS = {
         "footer_label": "Impressum",
         "nav": {
             "home": "Home",
-            "services": ("Leistungen", "#leistungen"),
-            "who": ("Wer wir sind", "#team"),
+            "services": ("Leistungen", "/de/#leistungen"),
+            "who": ("Über uns", "/de/ueber-uns/"),
             "contact": "Kontakt",
             "cta": "Kontakt",
         },
@@ -40,10 +40,10 @@ LANGS = {
         "footer_label": "Legal notice",
         "nav": {
             "home": "Home",
-            "services": ("Services", "#leistungen"),
-            "who": ("Who We Are", "#team"),
+            "services": ("Services", "/en/#leistungen"),
+            "who": ("About us", "/en/about/"),
             "contact": "Contact",
-            "cta": "Contact us",
+            "cta": "Contact",
         },
     },
     "it": {
@@ -61,10 +61,10 @@ LANGS = {
         "footer_label": "Note legali",
         "nav": {
             "home": "Home",
-            "services": ("Servizi", "#leistungen"),
-            "who": ("Chi siamo", "#team"),
+            "services": ("Servizi", "/it/#leistungen"),
+            "who": ("Chi siamo", "/it/chi-siamo/"),
             "contact": "Contatto",
-            "cta": "Contattaci",
+            "cta": "Contatto",
         },
     },
 }
@@ -171,8 +171,7 @@ def build_nav(lang: str, cfg: dict) -> str:
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="{home}">{n['home']}</a></li>
-      <li><a href="{home}{n['services'][1]}">{n['services'][0]}</a></li>
-      <li><a href="{home}{n['who'][1]}">{n['who'][0]}</a></li>
+      <li><a href="{n['who'][1] if str(n['who'][1]).startswith('/') else home + n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{cfg['contact_url']}">{n['contact']}</a></li>
     </ul>
     <div class="nav-right">
@@ -183,7 +182,6 @@ def build_nav(lang: str, cfg: dict) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
-      <a href="{cfg['contact_url']}" class="nav-cta">{n['cta']}</a>
     </div>
   </nav>"""
 

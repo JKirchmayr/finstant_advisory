@@ -15,6 +15,7 @@
   <link rel="alternate" hreflang="x-default" href="https://www.finstantadvisory.com/de/" />
   <link rel="icon" href="/favi.png" type="image/png" />
   <link rel="apple-touch-icon" href="/favi.png" />
+  <link rel="preload" href="/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" as="image" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -22,9 +23,12 @@
   <meta property="og:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
   <meta property="og:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
+  <meta property="og:image:alt" content="Zurich skyline at sunset — Finstant Advisory" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta name="twitter:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
   <meta name="twitter:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
 
@@ -249,7 +253,7 @@
       border-bottom: 0.5px solid var(--border);
       position: relative;
       overflow: hidden;
-      background: url('/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg') center 42% / cover no-repeat;
+      background: url('/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg') 62% 36% / cover no-repeat;
       min-height: 100vh;
       min-height: 100dvh;
       box-sizing: border-box;
@@ -264,12 +268,21 @@
       inset: 0;
       background: linear-gradient(
         100deg,
-        rgba(13, 13, 11, 0.96) 0%,
-        rgba(13, 13, 11, 0.88) 25%,
-        rgba(13, 13, 11, 0.52) 52%,
-        rgba(13, 13, 11, 0.08) 100%
+        rgba(13, 13, 11, 0.93) 0%,
+        rgba(13, 13, 11, 0.78) 30%,
+        rgba(13, 13, 11, 0.38) 58%,
+        rgba(13, 13, 11, 0.06) 100%
       );
       z-index: 0;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13, 13, 11, 0.28) 0%, transparent 45%);
+      z-index: 0;
+      pointer-events: none;
     }
 
     .hero > *:not(nav) { position: relative; z-index: 1; }
@@ -399,15 +412,15 @@
       margin-top: 1.75rem;
     }
 
-    /* WHY — dark */
+    /* WHY */
     .why {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
       display: flex;
       flex-direction: column;
       gap: 3rem;
-      background: var(--black);
-      color: var(--white);
+      background: var(--off-white);
+      color: var(--black);
     }
 
     .why-intro {
@@ -419,7 +432,7 @@
       margin-bottom: 1rem;
     }
 
-    .why .label { color: rgba(255,255,255,0.3); }
+    .why .label { color: var(--gray-mid); }
 
     .why-title {
       font-family: var(--serif);
@@ -427,14 +440,14 @@
       font-weight: 300;
       line-height: 1.25;
       margin-bottom: 1.25rem;
-      color: var(--white);
+      color: var(--black);
     }
 
     .why-title em { font-style: italic; }
 
     .why-body {
       font-size: 14px;
-      color: rgba(255,255,255,0.45);
+      color: var(--gray-text);
       line-height: 1.85;
       font-weight: 300;
     }
@@ -445,12 +458,12 @@
       gap: 2rem;
       width: 100%;
       padding-top: 2rem;
-      border-top: 0.5px solid rgba(255, 255, 255, 0.07);
+      border-top: 0.5px solid var(--border);
     }
 
     .why-item {
       padding: 0 1.5rem 0 0;
-      border-right: 0.5px solid rgba(255, 255, 255, 0.07);
+      border-right: 0.5px solid var(--border);
     }
 
     .why-item:last-child {
@@ -462,14 +475,89 @@
       font-size: 13px;
       font-weight: 500;
       margin-bottom: 0.5rem;
-      color: var(--white);
+      color: var(--black);
     }
 
     .why-item-body {
       font-size: 13px;
-      color: rgba(255,255,255,0.42);
+      color: var(--gray-text);
       line-height: 1.75;
       font-weight: 300;
+    }
+
+    /* SECTORS */
+    .sectors {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+
+    .sectors-intro {
+      max-width: 44rem;
+      margin-bottom: 0;
+    }
+
+    .sectors-intro .label {
+      margin-bottom: 1rem;
+    }
+
+    .sectors-intro .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .sectors-body {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .sectors-body + .sectors-body {
+      margin-top: 1.25rem;
+    }
+
+    .sectors-body strong {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .sectors-grid-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin: 2rem 0 1rem;
+      font-weight: 500;
+    }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .sector-item {
+      padding: 1.35rem 1.5rem;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .sector-item--focus {
+      background: var(--off-white);
+      font-weight: 600;
+    }
+
+    .sectors-grid--focus {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 36rem;
+    }
+
+    .sectors-grid--subs {
+      grid-template-columns: repeat(3, 1fr);
     }
 
     /* MARKET */
@@ -525,172 +613,6 @@
       font-weight: 300;
     }
 
-    /* TEAM */
-    .team {
-      padding: 5rem 3.5rem;
-      border-bottom: 0.5px solid var(--border);
-    }
-
-    .team-intro {
-      font-size: 14px;
-      color: var(--gray-text);
-      line-height: 1.85;
-      font-weight: 300;
-      max-width: 42rem;
-      margin: -1.5rem 0 2.5rem;
-    }
-
-    .team-shell {
-      padding-top: 3rem;
-      border-top: 0.5px solid var(--border);
-    }
-
-    .team-layout {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 2.5rem 3rem;
-      align-items: start;
-    }
-
-    .team-portraits {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem 2.75rem;
-      align-items: flex-start;
-    }
-
-    .team-pick {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-      border: none;
-      background: none;
-      font: inherit;
-      color: inherit;
-      text-align: left;
-      cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .team-pick:focus-visible .team-photo-wrap {
-      outline: 2px solid var(--black);
-      outline-offset: 4px;
-    }
-
-    .team-pick-name {
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      max-width: min(240px, 42vw);
-      line-height: 1.35;
-      color: var(--black);
-    }
-
-    .team-pick:not(.is-selected) .team-photo-wrap {
-      opacity: 0.78;
-    }
-
-    .team-pick:not(.is-selected) .team-pick-name {
-      color: var(--gray-text);
-    }
-
-    .team-pick.is-selected .team-photo-wrap {
-      border-color: rgba(0, 0, 0, 0.22);
-      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.09);
-    }
-
-    .team-panels {
-      margin-top: 0;
-      padding: 0 0 0 2.5rem;
-      border-top: none;
-      border-left: 0.5px solid var(--border);
-      min-height: 12rem;
-    }
-
-    .team-panel:focus-visible {
-      outline: none;
-    }
-
-    .team-photo-wrap {
-      flex-shrink: 0;
-      align-self: start;
-      background: var(--off-white);
-      border: 1px solid var(--border);
-      padding: 8px;
-      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
-      transition: opacity 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-      border-radius: 2px;
-    }
-
-    .team-photo-frame {
-      position: relative;
-      display: block;
-      width: min(220px, 40vw);
-      max-width: 100%;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      border-radius: 2px;
-    }
-
-    .team-photo {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      filter: grayscale(1) contrast(1.06);
-    }
-
-    .team-photo--riccardo {
-      object-position: center 14%;
-    }
-
-    .team-name {
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-
-    .team-role {
-      font-size: 10px;
-      color: var(--gray-text);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .team-bio {
-      font-size: 13px;
-      color: var(--gray-text);
-      line-height: 1.8;
-      max-width: 640px;
-      font-weight: 300;
-    }
-
-    .team-bio strong {
-      color: var(--black);
-      font-weight: 500;
-      letter-spacing: 0.01em;
-    }
-
-    .team-link {
-      display: inline-block;
-      margin-top: 1.15rem;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--black);
-      text-decoration: none;
-      border-bottom: 0.5px solid var(--black);
-      padding-bottom: 3px;
-      letter-spacing: 0.02em;
-      transition: opacity 0.2s;
-    }
-
-    .team-link:hover { opacity: 0.5; }
 
     /* CONTACT */
     .contact {
@@ -835,6 +757,28 @@
 
     .contact-direct .contact-email { margin-bottom: 0; }
 
+    /* PAGE CTA */
+    .page-cta {
+      padding: 5.5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+      text-align: center;
+    }
+
+    .page-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 300;
+      line-height: 1.25;
+      max-width: 22em;
+      margin: 0 auto 2rem;
+      color: var(--black);
+    }
+
+    .page-cta-title em {
+      font-style: italic;
+    }
+
     /* FOOTER */
     footer {
       padding: 2rem 3.5rem;
@@ -881,7 +825,7 @@
         padding: calc(4rem + var(--nav-height)) 1.75rem 2.5rem;
         min-height: 100vh;
         min-height: 100dvh;
-        background-position: center 40%;
+        background-position: 58% 38%;
       }
       .section { padding: 3.5rem 1.75rem; }
       .services-grid { grid-template-columns: 1fr; }
@@ -898,39 +842,16 @@
       .why-item {
         padding: 1.75rem 0;
         border-right: none;
-        border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+        border-bottom: 0.5px solid var(--border);
       }
       .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+      .sectors { padding: 3.5rem 1.75rem; }
+      .sectors-grid { grid-template-columns: 1fr; }
       .market { padding: 3.5rem 1.75rem; }
       .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
       .market-grid { grid-template-columns: 1fr; }
-      .team { padding: 3.5rem 1.75rem; }
-      .team-layout {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .team-panels {
-        padding: 2.25rem 0 0;
-        border-left: none;
-        border-top: 0.5px solid var(--border);
-        margin-top: 0.25rem;
-      }
-      .team-portraits {
-        justify-content: center;
-        gap: 1.75rem;
-      }
-      .team-pick { align-items: center; }
-      .team-pick-name { text-align: center; max-width: 280px; }
-      .team-photo-wrap {
-        width: 100%;
-        max-width: min(260px, 100%);
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .team-photo-frame {
-        width: 100%;
-      }
       .contact { padding: 4.5rem 1.75rem; }
+      .page-cta { padding: 4rem 1.75rem; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
     }
 
@@ -945,8 +866,7 @@
       <a href="/en/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
       <li><a href="/en/">Home</a></li>
-      <li><a href="#leistungen">Services</a></li>
-      <li><a href="#team">Who We Are</a></li>
+      <li><a href="/en/about/">About us</a></li>
       <li><a href="/en/contact/">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -957,7 +877,6 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
-      <a href="/en/contact/" class="nav-cta">Contact us</a>
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
@@ -987,7 +906,7 @@
     </div>
   </section>
 
-  <!-- WHY — dark section -->
+  <!-- WHY -->
   <div class="why">
     <div class="why-intro">
       <div class="label reveal">Why Finstant</div>
@@ -1013,6 +932,29 @@
       </div>
     </div>
   </div>
+
+  <!-- SECTORS -->
+  <section class="sectors" id="sectors">
+    <div class="sectors-intro">
+      <div class="label reveal">Sectors</div>
+      <h2 class="section-title reveal">Our sectors</h2>
+      <p class="sectors-body reveal">Through continuous dialogue with founders, executives, investors, and industry associations, we maintain a strong network across the DACH region and beyond. Our structured work across core sectors keeps us close to the latest trends in our industries.</p>
+      <p class="sectors-body reveal">We specialize in asset-light business models and fragmented markets — particularly <strong>Business Services</strong> and <strong>Software &amp; Technology</strong>. Within these areas, we work across subsectors including:</p>
+    </div>
+    <p class="sectors-grid-label reveal">Focus sectors</p>
+    <div class="sectors-grid sectors-grid--focus reveal">
+      <div class="sector-item sector-item--focus">Business Services</div>
+      <div class="sector-item sector-item--focus">Software &amp; Technology</div>
+    </div>
+    <p class="sectors-grid-label reveal">Subsectors</p>
+    <div class="sectors-grid sectors-grid--subs reveal">
+      <div class="sector-item">IT Services</div>
+      <div class="sector-item">Cybersecurity</div>
+      <div class="sector-item">Professional Services</div>
+      <div class="sector-item">Engineering Services</div>
+      <div class="sector-item">B2B SaaS</div>
+    </div>
+  </section>
 
   <!-- FÜR UNTERNEHMER -->
   <section class="market" id="unternehmer">
@@ -1072,47 +1014,10 @@
     </div>
   </section>
 
-  <!-- TEAM -->
-  <section class="team" id="team">
-    <div class="label reveal">Team</div>
-    <h2 class="section-title reveal">Who we are</h2>
-    <p class="team-intro reveal">We combine over 12 years of experience in Private Equity and M&amp;A, a deep network across Europe's leading financial sponsors, and hands-on operational knowledge of the deal origination process.</p>
-    <div class="team-shell reveal">
-      <div class="team-layout">
-      <div class="team-portraits" role="tablist" aria-label="Team portraits">
-        <button type="button" class="team-pick is-selected" id="tab-johannes" role="tab" aria-selected="true" aria-controls="panel-johannes" data-member="johannes" tabindex="0">
-          <span class="team-photo-wrap">
-            <span class="team-photo-frame">
-              <img class="team-photo" src="/jkirchmayr.png" alt="" width="220" height="275" decoding="async" aria-hidden="true">
-            </span>
-          </span>
-          <span class="team-pick-name">Johannes Kirchmayr, CFA</span>
-        </button>
-        <button type="button" class="team-pick" id="tab-riccardo" role="tab" aria-selected="false" aria-controls="panel-riccardo" data-member="riccardo" tabindex="-1">
-          <span class="team-photo-wrap">
-            <span class="team-photo-frame">
-              <img class="team-photo team-photo--riccardo" src="/rcunego.png" alt="" width="220" height="275" decoding="async" aria-hidden="true">
-            </span>
-          </span>
-          <span class="team-pick-name">Riccardo Cunego</span>
-        </button>
-      </div>
-      <div class="team-panels">
-        <div id="panel-johannes" class="team-panel is-active" role="tabpanel" aria-labelledby="tab-johannes">
-          <div class="team-name">Johannes Kirchmayr, CFA</div>
-          <div class="team-role">Founder &amp; Partner</div>
-          <p class="team-bio">Johannes Kirchmayr began his career in turnaround private equity before joining one of Switzerland’s leading institutional asset managers. There he led mid-market transactions in Switzerland and Europe for several years and learned the craft end to end — from first approach to closing. His entrepreneurial drive and desire for a direct, trusted dialogue with founders and clients led him to found Finstant Advisory. At Finstant Advisory, his focus is the <strong>DACH market</strong>.</p>
-          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-        <div id="panel-riccardo" class="team-panel" role="tabpanel" aria-labelledby="tab-riccardo" hidden>
-          <div class="team-name">Riccardo Cunego</div>
-          <div class="team-role">Founder &amp; Partner</div>
-          <p class="team-bio">Riccardo brings 6+ years of experience in Private Equity and M&amp;A, having worked in the Private Equity division of Schroders Capital and in M&amp;A at BNP Paribas, Rabobank and Promethiem. He has been involved across the full deal lifecycle — from origination and target screening to execution — and has built an extensive network across Europe's leading financial sponsors.</p>
-          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-      </div>
-    </div>
+  <!-- CTA -->
+  <section class="page-cta" id="contact-cta">
+    <h2 class="page-cta-title reveal">Planning a company sale?</h2>
+    <a href="/en/contact/" class="btn-primary reveal">Book an introductory call</a>
   </section>
 
   <!-- FOOTER -->
@@ -1151,51 +1056,6 @@
       window.addEventListener('resize', updateNav);
     })();
 
-    // TEAM — portrait tabs (click to show bio)
-    (function() {
-      const picks = document.querySelectorAll('.team-pick');
-      const panels = document.querySelectorAll('.team-panel');
-      if (!picks.length || !panels.length) return;
-
-      function activate(memberId) {
-        picks.forEach((btn) => {
-          const on = btn.dataset.member === memberId;
-          btn.classList.toggle('is-selected', on);
-          btn.setAttribute('aria-selected', on ? 'true' : 'false');
-          btn.tabIndex = on ? 0 : -1;
-        });
-        panels.forEach((panel) => {
-          const show = panel.id === 'panel-' + memberId;
-          panel.hidden = !show;
-          panel.classList.toggle('is-active', show);
-        });
-      }
-
-      picks.forEach((btn) => {
-        btn.addEventListener('click', () => activate(btn.dataset.member));
-      });
-
-      const tablist = document.querySelector('.team-portraits');
-      if (tablist) {
-        tablist.addEventListener('keydown', (e) => {
-          const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
-          if (!keys.includes(e.key)) return;
-          const order = Array.from(picks);
-          const i = order.findIndex((b) => b.classList.contains('is-selected'));
-          if (i < 0) return;
-          let next = i;
-          if (e.key === 'ArrowRight') next = (i + 1) % order.length;
-          else if (e.key === 'ArrowLeft') next = (i - 1 + order.length) % order.length;
-          else if (e.key === 'Home') next = 0;
-          else if (e.key === 'End') next = order.length - 1;
-          if (next !== i) {
-            e.preventDefault();
-            activate(order[next].dataset.member);
-            order[next].focus();
-          }
-        });
-      }
-    })();
 
     // Preserve #anchor when switching language
     document.querySelectorAll('.nav-lang-link').forEach(function (a) {
