@@ -268,10 +268,10 @@
       inset: 0;
       background: linear-gradient(
         100deg,
-        rgba(13, 13, 11, 0.96) 0%,
-        rgba(13, 13, 11, 0.90) 28%,
-        rgba(13, 13, 11, 0.72) 52%,
-        rgba(13, 13, 11, 0.48) 100%
+        rgba(8, 8, 7, 0.97) 0%,
+        rgba(8, 8, 7, 0.93) 28%,
+        rgba(8, 8, 7, 0.72) 58%,
+        rgba(8, 8, 7, 0.42) 100%
       );
       z-index: 0;
     }
@@ -280,7 +280,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(13, 13, 11, 0.45) 0%, transparent 50%);
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.4) 0%, transparent 48%);
       z-index: 0;
       pointer-events: none;
     }
@@ -289,7 +289,7 @@
 
     .hero .label { color: rgba(249, 248, 245, 0.65); }
     .hero .hero-title { color: var(--white); }
-    .hero .hero-sub { color: rgba(249, 248, 245, 0.88); }
+    .hero .hero-sub { color: rgba(249, 248, 245, 0.92); }
     .hero .btn-primary {
       background: var(--white);
       color: var(--black);
@@ -298,7 +298,7 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
     }
     .hero .btn-primary:hover { opacity: 0.92; }
     .label {
@@ -321,12 +321,20 @@
     .hero-title em { font-style: italic; }
 
     .hero-sub {
-      font-size: 15px;
+      font-size: 18px;
       color: var(--gray-text);
-      max-width: 460px;
-      line-height: 1.85;
+      max-width: 620px;
+      line-height: 1.5;
       margin-bottom: 3rem;
       font-weight: 300;
+    }
+
+    .hero-sub span {
+      display: block;
+    }
+
+    .hero-sub span + span {
+      margin-top: 0.85em;
     }
 
     .hero-actions { display: flex; gap: 2rem; align-items: center; }
@@ -956,7 +964,7 @@
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
-    <p class="hero-sub reveal reveal-delay-2">Looking to buy or sell a company? Book a free advisory call with us today!</p>
+    <p class="hero-sub reveal reveal-delay-2"><span>Looking to buy or sell a company?</span><span>Book a free advisory call with us today!</span></p>
     <div class="hero-actions reveal reveal-delay-3">
       <a href="/en/contact/" class="btn-primary">Book a meeting</a>
     </div>
