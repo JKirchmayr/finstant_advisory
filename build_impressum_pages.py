@@ -204,7 +204,7 @@ def build_footer(cfg: dict) -> str:
     return f"""  <footer>
     <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
     <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:kontakt@finstantadvisory.com">kontakt@finstantadvisory.com</a></div>
+    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
   </footer>"""
 
 
@@ -261,7 +261,7 @@ def patch_footer(html: str, cfg: dict) -> str:
     old = '    <div class="footer-text">jkirchmayr@finstant.ai</div>'
     new = (
         f'    <div class="footer-links"><a href="{cfg["impressum_url"]}">{cfg["footer_label"]}</a>'
-        f'<span class="footer-sep">·</span><a href="mailto:kontakt@finstantadvisory.com">kontakt@finstantadvisory.com</a></div>'
+        f'<span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>'
     )
     if old not in html:
         return html

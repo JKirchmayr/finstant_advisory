@@ -72,6 +72,7 @@
         if (res.status === 404) {
           throw new Error("local");
         }
+        // Prefer Resend/API detail when present (helps diagnose domain/env issues)
         throw new Error(detail || "Request failed");
       }
 
@@ -80,6 +81,8 @@
     } catch (err) {
       if (err.message === "local") {
         setStatus(messages.local, "is-error");
+      } else if (err.message && err.message !== "Request failed") {
+        setStatus(err.message, "is-error");
       } else {
         setStatus(messages.error, "is-error");
       }

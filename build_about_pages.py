@@ -83,7 +83,7 @@ LANGS = {
                 "photo": "/rici-thumb.jpg",
                 "photo_large": "/rici-portrait.jpg",
                 "photo_class": "team-photo--riccardo",
-                "email": "riccardo@finstantadvisory.com",
+                "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo bringt über 6 Jahre Erfahrung in Private Equity und M&A mit — in der Private-Equity-Sparte "
@@ -172,7 +172,7 @@ LANGS = {
                 "photo": "/rici-thumb.jpg",
                 "photo_large": "/rici-portrait.jpg",
                 "photo_class": "team-photo--riccardo",
-                "email": "riccardo@finstantadvisory.com",
+                "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo brings over 6 years of private equity and M&A experience — at Schroders Capital's "
@@ -260,7 +260,7 @@ LANGS = {
                 "photo": "/rici-thumb.jpg",
                 "photo_large": "/rici-portrait.jpg",
                 "photo_class": "team-photo--riccardo",
-                "email": "riccardo@finstantadvisory.com",
+                "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo porta oltre 6 anni di esperienza in private equity e M&A — nella divisione private equity "
@@ -933,7 +933,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
   <footer>
     <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
     <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:kontakt@finstantadvisory.com">kontakt@finstantadvisory.com</a></div>
+    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
   </footer>
 
   <script>

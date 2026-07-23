@@ -1,9 +1,13 @@
-const RECIPIENTS = (process.env.CONTACT_RECIPIENTS || "kontakt@finstantadvisory.com,jkirchmayr@finstantadvisory.com,riccardo@finstantadvisory.com")
+const RECIPIENTS = (
+  process.env.CONTACT_RECIPIENTS ||
+  "jkirchmayr@finstantadvisory.com,rcunego@finstantadvisory.com"
+)
   .split(",")
   .map((e) => e.trim())
   .filter(Boolean);
 
-const FROM = process.env.CONTACT_FROM || "Finstant Advisory <onboarding@resend.dev>";
+const FROM =
+  process.env.CONTACT_FROM || "Finstant Advisory <contact@finstantadvisory.com>";
 
 function escapeHtml(value) {
   return String(value)
@@ -48,7 +52,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Invalid email address" });
     }
 
-    if (name.length > 200 || email.length > 254 || (company && company.length > 200) || message.length > 5000) {
+    if (
+      name.length > 200 ||
+      email.length > 254 ||
+      (company && company.length > 200) ||
+      message.length > 5000
+    ) {
       return res.status(400).json({ error: "Input too long" });
     }
 
@@ -87,7 +96,14 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const detail = await response.text();
       console.error("Resend error:", response.status, detail);
-      return res.status(502).json({ error: "Failed to send email" });
+      let message = "Failed to send email";
+      try {
+        const parsed = JSON.parse(detail);
+        if (parsed?.message) message = parsed.message;
+      } catch {
+        /* keep default */
+      }
+      return res.status(502).json({ error: message });
     }
 
     return res.status(200).json({ ok: true });
