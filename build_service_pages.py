@@ -429,7 +429,6 @@ def build_page(lang: str, service_key: str, style: str) -> str:
 
 <main class="service-detail">
   <a href="{n['home']}{n['services'][1]}" class="service-detail-back reveal">← {n['back']}</a>
-  <div class="label reveal">{c['label']}</div>
   <h1 class="service-detail-heading reveal">{c['heading']}</h1>
   <p class="service-detail-subtitle reveal">{c['subtitle']}</p>
   <p class="service-detail-intro reveal">{c['intro']}</p>

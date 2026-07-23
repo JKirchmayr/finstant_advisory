@@ -94,6 +94,90 @@ EXTRA_CSS = """
     body.page-contact .nav-links a[aria-current="page"] {
       color: var(--black);
     }
+
+    .contact-person {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      text-align: left;
+      padding: 0;
+      overflow: hidden;
+      border: 0.5px solid var(--border);
+      background: var(--off-white);
+    }
+
+    .contact-person-media {
+      width: 152px;
+      flex-shrink: 0;
+      position: relative;
+      min-height: 100%;
+    }
+
+    .contact-person-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      filter: grayscale(1) contrast(1.06);
+      display: block;
+    }
+
+    .contact-person-body {
+      flex: 1;
+      min-width: 0;
+      padding: 1.35rem 1.5rem;
+    }
+
+    .contact-person-name {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-person-role {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 1rem;
+    }
+
+    .contact-person-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .contact-person-list a {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 0.5px solid transparent;
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+
+    .contact-person-list a:hover {
+      border-bottom-color: var(--black);
+      opacity: 0.7;
+    }
+
+    .contact-person-label {
+      display: inline-block;
+      min-width: 4.5rem;
+      color: var(--gray-text);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-right: 0.5rem;
+    }
 """
 
 

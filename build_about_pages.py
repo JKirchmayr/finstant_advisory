@@ -898,13 +898,11 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 {build_nav(lang, cfg)}
 
   <section class="about-section about-hero" id="about">
-    <div class="label reveal">{cfg['hero_label']}</div>
     <h1 class="section-title reveal">{cfg['hero_title']}</h1>
     <p class="about-lead reveal">{cfg['hero_intro']}</p>
   </section>
 
   <section class="about-section" id="values">
-    <div class="label reveal">{cfg['values_label']}</div>
     <h2 class="section-title reveal">{cfg['values_title']}</h2>
     <div class="values-grid">
 {build_values(cfg)}
@@ -912,14 +910,12 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
   </section>
 
   <section class="about-section" id="approach">
-    <div class="label reveal">{cfg['approach_label']}</div>
 {approach_heading}    <div class="approach-body">
 {build_approach(cfg)}
     </div>
   </section>
 
   <section class="about-section" id="team">
-    <div class="label reveal">{cfg['team_label']}</div>
     <h2 class="section-title reveal">{cfg['team_title']}</h2>
     <p class="about-team-intro reveal">{cfg['team_intro']}</p>
     <p class="about-team-hint reveal">{cfg['team_click_hint']}</p>

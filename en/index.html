@@ -268,10 +268,10 @@
       inset: 0;
       background: linear-gradient(
         100deg,
-        rgba(13, 13, 11, 0.93) 0%,
-        rgba(13, 13, 11, 0.78) 30%,
-        rgba(13, 13, 11, 0.38) 58%,
-        rgba(13, 13, 11, 0.06) 100%
+        rgba(13, 13, 11, 0.96) 0%,
+        rgba(13, 13, 11, 0.90) 28%,
+        rgba(13, 13, 11, 0.72) 52%,
+        rgba(13, 13, 11, 0.48) 100%
       );
       z-index: 0;
     }
@@ -280,7 +280,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(13, 13, 11, 0.28) 0%, transparent 45%);
+      background: linear-gradient(to top, rgba(13, 13, 11, 0.45) 0%, transparent 50%);
       z-index: 0;
       pointer-events: none;
     }
@@ -289,12 +289,18 @@
 
     .hero .label { color: rgba(249, 248, 245, 0.65); }
     .hero .hero-title { color: var(--white); }
-    .hero .hero-sub { color: rgba(249, 248, 245, 0.78); }
+    .hero .hero-sub { color: rgba(249, 248, 245, 0.88); }
     .hero .btn-primary {
       background: var(--white);
       color: var(--black);
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
     }
-    .hero .btn-primary:hover { opacity: 0.88; }
+    .hero .btn-primary:hover { opacity: 0.92; }
     .label {
       font-size: 10px;
       letter-spacing: 0.22em;
@@ -373,18 +379,20 @@
     /* SERVICES */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      border-top: 0.5px solid var(--border);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
     }
 
     .service {
-      padding: 2.5rem 3rem 2.5rem 0;
-      border-right: 0.5px solid var(--border);
+      padding: 2.25rem 1.75rem;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
     }
-
-    .service:first-child { padding-left: 0; }
-    .service:last-child { border-right: none; }
-    .service:not(:first-child) { padding-left: 3rem; }
 
     .service-num {
       font-family: var(--serif);
@@ -405,11 +413,82 @@
       color: var(--gray-text);
       line-height: 1.8;
       font-weight: 300;
+      flex: 1;
     }
 
     .service .btn-ghost {
       display: inline-block;
       margin-top: 1.75rem;
+      align-self: flex-start;
+    }
+
+    /* SUCCESSION */
+    .succession {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+      text-align: center;
+    }
+
+    .succession-intro {
+      max-width: 42rem;
+      margin: 0 auto 3rem;
+    }
+
+    .succession-intro .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .succession-body {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .succession-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem 1.5rem;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .succession-item {
+      padding: 0.25rem 0.35rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .succession-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      margin: 0 auto 1rem;
+      color: var(--black);
+    }
+
+    .succession-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .succession-item-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.55rem;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .succession-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+      text-align: center;
     }
 
     /* WHY */
@@ -828,15 +907,12 @@
         background-position: 58% 38%;
       }
       .section { padding: 3.5rem 1.75rem; }
-      .services-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
       .service {
-        border-right: none;
-        border-bottom: 0.5px solid var(--border);
-        padding: 2rem 0;
-        text-align: left;
+        padding: 2rem 1.75rem;
       }
-      .service:not(:first-child) { padding-left: 0; }
-      .service:last-child { border-bottom: none; }
+      .succession { padding: 3.5rem 1.75rem; }
+      .succession-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
       .why { padding: 3.5rem 1.75rem; gap: 2.5rem; }
       .why-items { grid-template-columns: 1fr; gap: 0; }
       .why-item {
@@ -880,79 +956,88 @@
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
-    <p class="hero-sub reveal reveal-delay-2">Buy-side origination and sell-side advisory for the European mid-market. Led by former private equity investors.</p>
+    <p class="hero-sub reveal reveal-delay-2">Looking to buy or sell a company? Book a free advisory call with us today!</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="/en/contact/" class="btn-primary">Book an introductory call</a>
+      <a href="/en/contact/" class="btn-primary">Book a meeting</a>
     </div>
   </section>
 
   <!-- LEISTUNGEN -->
   <section class="section" id="leistungen">
-    <div class="label reveal">Services</div>
-    <h2 class="section-title reveal">What we do for you</h2>
+    <h2 class="section-title reveal">Our services</h2>
     <div class="services-grid">
       <div class="service reveal">
-        <div class="service-num">01</div>
-        <div class="service-title">Buy-side origination</div>
-        <p class="service-body">Systematic identification of off-market targets for PE roll-ups in the services sector across DACH and Italy. Proprietary screening and direct dialogue with owners.</p>
-        <a href="/en/buy-side-origination/" class="btn-ghost">Learn more</a>
+        <div class="service-title">Buy a company</div>
+        <p class="service-body">We support you in acquiring a business.</p>
+        <a href="/en/contact/" class="btn-ghost">Learn more</a>
       </div>
       <div class="service reveal reveal-delay-1">
-        <div class="service-num">02</div>
-        <div class="service-title">Sell-side advisory</div>
-        <p class="service-body">We provide comprehensive support to business owners looking to sell their companies. Our services include valuation, marketing, buyer identification, and negotiation to ensure the best possible outcome for our clients.</p>
-        <a href="/en/sell-side-advisory/" class="btn-ghost">Learn more</a>
+        <div class="service-title">Sell a company</div>
+        <p class="service-body">We guide you discreetly and experienced through the sale of your company.</p>
+        <a href="/en/contact/" class="btn-ghost">Learn more</a>
+      </div>
+      <div class="service reveal">
+        <div class="service-title">Value a company</div>
+        <p class="service-body">We provide a robust company valuation — as a basis for a sale, succession, or strategic decisions.</p>
+        <a href="/en/contact/" class="btn-ghost">Learn more</a>
+      </div>
+      <div class="service reveal reveal-delay-1">
+        <div class="service-title">Increase company value</div>
+        <p class="service-body">Exit readiness: identify and unlock value drivers.</p>
+        <a href="/en/contact/" class="btn-ghost">Learn more</a>
       </div>
     </div>
   </section>
 
-  <!-- WHY -->
-  <div class="why">
-    <div class="why-intro">
-      <div class="label reveal">Why Finstant</div>
-      <h2 class="why-title reveal">We think like <em>investors — because we were.</em></h2>
-      <p class="why-body reveal">Our team comes from private equity. We have sat on the buyer side and know exactly what institutional investors look for and how to position a business accordingly.</p>
+  <!-- SUCCESSION -->
+  <section class="succession" id="succession">
+    <div class="succession-intro">
+      <h2 class="section-title reveal">Master business succession successfully!</h2>
+      <p class="succession-body reveal">Selling a company becomes easier thanks to our focus on businesses with enterprise values of approximately CHF&nbsp;2 to CHF&nbsp;100&nbsp;million. You benefit from our excellent access to strategic and financial investors as well as other specialists in business succession.</p>
     </div>
-    <div class="why-items">
-      <div class="why-item reveal">
-        <div class="why-item-title">Active PE network</div>
-        <p class="why-item-body">Direct access to the most active buy-and-build platforms across DACH, Italy, and Europe. We know who actually buys.</p>
+    <div class="succession-grid">
+      <div class="succession-item reveal">
+        <div class="succession-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
+            <circle cx="16" cy="16" r="11"/>
+            <path d="M16 9v7l4.5 2.5"/>
+          </svg>
+        </div>
+        <div class="succession-item-title">Highest transaction probability and speed</div>
+        <p class="succession-item-body">Our approach is efficient and effective.</p>
       </div>
-      <div class="why-item reveal reveal-delay-1">
-        <div class="why-item-title">Mid-market mindset</div>
-        <p class="why-item-body">We understand owner-managed businesses: clear answers, no consultant jargon — conversations at eye level with founders and families.</p>
+      <div class="succession-item reveal reveal-delay-1">
+        <div class="succession-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
+            <rect x="6" y="5" width="14" height="18" rx="1"/>
+            <path d="M12 5v-1.5h6V5M10 12h6M10 16h8M10 20h5"/>
+            <path d="M20 11h4v16H10v-3"/>
+          </svg>
+        </div>
+        <div class="succession-item-title">Structured sale</div>
+        <p class="succession-item-body">Through a structured process, we strengthen your negotiating position and the purchase price.</p>
       </div>
-      <div class="why-item reveal reveal-delay-2">
-        <div class="why-item-title">Direct relationships</div>
-        <p class="why-item-body">No anonymous database screening. We source through personal contacts and long-standing mandates — targeted, discreet, and through direct relationships with investors and owners.</p>
+      <div class="succession-item reveal reveal-delay-2">
+        <div class="succession-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
+            <rect x="8" y="13" width="16" height="12" rx="1.5"/>
+            <path d="M12 13V10a4 4 0 0 1 8 0v3"/>
+            <circle cx="16" cy="19" r="1.5"/>
+          </svg>
+        </div>
+        <div class="succession-item-title">Discretion</div>
+        <p class="succession-item-body">Discreet outreach to interested buyers.</p>
       </div>
-      <div class="why-item reveal reveal-delay-3">
-        <div class="why-item-title">Off-market access</div>
-        <p class="why-item-body">We identify channels and access beyond classic auction processes — direct and without pressure.</p>
+      <div class="succession-item reveal reveal-delay-3">
+        <div class="succession-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
+            <path d="M6 22l6-6 4 3 10-11"/>
+            <path d="M20 8h6v6"/>
+          </svg>
+        </div>
+        <div class="succession-item-title">Performance-oriented</div>
+        <p class="succession-item-body">We participate in the outcome through success-based fees.</p>
       </div>
-    </div>
-  </div>
-
-  <!-- SECTORS -->
-  <section class="sectors" id="sectors">
-    <div class="sectors-intro">
-      <div class="label reveal">Sectors</div>
-      <h2 class="section-title reveal">Our sectors</h2>
-      <p class="sectors-body reveal">Through continuous dialogue with founders, executives, investors, and industry associations, we maintain a strong network across the DACH region and beyond. Our structured work across core sectors keeps us close to the latest trends in our industries.</p>
-      <p class="sectors-body reveal">We specialize in asset-light business models and fragmented markets — particularly <strong>Business Services</strong> and <strong>Software &amp; Technology</strong>. Within these areas, we work across subsectors including:</p>
-    </div>
-    <p class="sectors-grid-label reveal">Focus sectors</p>
-    <div class="sectors-grid sectors-grid--focus reveal">
-      <div class="sector-item sector-item--focus">Business Services</div>
-      <div class="sector-item sector-item--focus">Software &amp; Technology</div>
-    </div>
-    <p class="sectors-grid-label reveal">Subsectors</p>
-    <div class="sectors-grid sectors-grid--subs reveal">
-      <div class="sector-item">IT Services</div>
-      <div class="sector-item">Cybersecurity</div>
-      <div class="sector-item">Professional Services</div>
-      <div class="sector-item">Engineering Services</div>
-      <div class="sector-item">B2B SaaS</div>
     </div>
   </section>
 
@@ -960,7 +1045,6 @@
   <section class="market" id="unternehmer">
     <div class="market-intro">
       <div>
-        <div class="label reveal">For founders</div>
         <h2 class="section-title reveal" style="margin-bottom:0;">Your life’s work deserves<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">the right outcome.</em></h2>
       </div>
       <p class="market-sub reveal">Selling your company is the most important transaction of your life. We support you discreetly and at eye level — from the first conversation to closing.</p>
@@ -989,7 +1073,6 @@
   <section class="market" id="markt" style="background: var(--white);">
     <div class="market-intro">
       <div>
-        <div class="label reveal">For investors</div>
         <h2 class="section-title reveal" style="margin-bottom:0;">The market is consolidating —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">we have the access.</em></h2>
       </div>
       <p class="market-sub reveal">Thousands of owner-managed businesses across Europe face succession questions. We identify the best targets before they come to market — with local market knowledge and direct relationships.</p>
