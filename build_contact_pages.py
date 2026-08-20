@@ -178,6 +178,22 @@ EXTRA_CSS = """
       text-transform: uppercase;
       margin-right: 0.5rem;
     }
+
+    .contact-calendly {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 2.5rem;
+      max-width: 520px;
+    }
+
+    .contact-calendly .btn-primary {
+      width: 100%;
+      text-align: center;
+      padding: 16px 32px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 """
 
 
