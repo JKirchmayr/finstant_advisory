@@ -1,7 +1,15 @@
 from pathlib import Path
 import re
 
+from site_chrome import ASSETS, SCRIPT, footer_html, refs_nav_item
+
 ROOT = Path(__file__).parent
+
+AUDIENCE = {
+    "de": {"inv_url": "/de/fuer-investoren/", "ent_url": "/de/fuer-unternehmer/", "inv_label": "Für Investoren", "ent_label": "Für Unternehmer"},
+    "en": {"inv_url": "/en/for-investors/", "ent_url": "/en/for-entrepreneurs/", "inv_label": "For investors", "ent_label": "For entrepreneurs"},
+    "it": {"inv_url": "/it/per-investitori/", "ent_url": "/it/per-imprenditori/", "inv_label": "Per investitori", "ent_label": "Per imprenditori"},
+}
 
 LANGS = {
     "de": {
@@ -159,6 +167,10 @@ def extract_style(html: str) -> str:
 
 def build_nav(lang: str, cfg: dict) -> str:
     n = cfg["nav"]
+    inv_url = AUDIENCE[lang]["inv_url"]
+    ent_url = AUDIENCE[lang]["ent_url"]
+    inv_label = AUDIENCE[lang]["inv_label"]
+    ent_label = AUDIENCE[lang]["ent_label"]
     home = cfg["home"]
 
     def lang_link(code: str) -> str:
@@ -170,7 +182,9 @@ def build_nav(lang: str, cfg: dict) -> str:
     return f"""  <nav>
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="{home}">{n['home']}</a></li>
+      <li><a href="{inv_url}">{inv_label}</a></li>
+      <li><a href="{ent_url}">{ent_label}</a></li>
+{refs_nav_item(lang)}
       <li><a href="{n['who'][1] if str(n['who'][1]).startswith('/') else home + n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{cfg['contact_url']}">{n['contact']}</a></li>
     </ul>
@@ -200,12 +214,8 @@ def build_legal_section(cfg: dict) -> str:
   </main>"""
 
 
-def build_footer(cfg: dict) -> str:
-    return f"""  <footer>
-    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
-    <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
-  </footer>"""
+def build_footer(lang: str, cfg: dict) -> str:
+    return footer_html(lang)
 
 
 def build_page(lang: str, cfg: dict, style: str) -> str:
@@ -231,6 +241,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 {style}
 {EXTRA_CSS}
   </style>
+{ASSETS}
 </head>
 <body class="page-legal">
 
@@ -238,7 +249,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 
 {build_legal_section(cfg)}
 
-{build_footer(cfg)}
+{build_footer(lang, cfg)}
 
   <script>
     const observer = new IntersectionObserver((entries) => {{
@@ -251,7 +262,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
     }}, {{ threshold: 0.1 }});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
+{SCRIPT}
 </body>
 </html>
 """

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finstant Advisory — M&A Advisory with Local Market Expertise</title>
-  <meta name="description" content="Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness. Based in Zurich." />
+  <meta name="description" content="Discreet M&A advisory for owner-managed businesses — with deep localket expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness. Based in Zurich." />
   <meta name="keywords" content="M&A advisory, business sale, mid-market, Italy, Switzerland, Europe, IT services, buy-and-build, private equity, Zurich, succession, off-market, deal origination" />
   <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
   <meta name="robots" content="index, follow" />
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.finstantadvisory.com/en/" />
   <meta property="og:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
-  <meta property="og:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
+  <meta property="og:description" content="Discreet M&A advisory with deep localket expertise across Switzerland, Italy, and Europe." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta property="og:image:alt" content="Zurich skyline at sunset — Finstant Advisory" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta name="twitter:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
-  <meta name="twitter:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
+  <meta name="twitter:description" content="Discreet M&A advisory with deep localket expertise across Switzerland, Italy, and Europe." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Finstant Advisory",
-    "description": "Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness.",
+    "description": "Discreet M&A advisory for owner-managed businesses — with deep localket expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness.",
     "url": "https://www.finstantadvisory.com/en/",
     "email": "contact@finstantadvisory.com",
     "address": {
@@ -57,7 +57,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -148,7 +148,7 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 1.6rem;
       list-style: none;
     }
 
@@ -306,7 +306,7 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gray-text);
-      margin-bottom: 2rem;
+     margin-bottom: 2rem;
     }
 
     .hero-title {
@@ -314,7 +314,7 @@
       font-size: clamp(40px, 5.5vw, 64px);
       font-weight: 300;
       line-height: 1.1;
-      margin-bottom: 2rem;
+     margin-bottom: 2rem;
       max-width: 680px;
     }
 
@@ -325,7 +325,7 @@
       color: var(--gray-text);
       max-width: 620px;
       line-height: 1.5;
-      margin-bottom: 3rem;
+     margin-bottom: 3rem;
       font-weight: 300;
     }
 
@@ -334,7 +334,7 @@
     }
 
     .hero-sub span + span {
-      margin-top: 0.85em;
+     margin-top: 0.85em;
     }
 
     .hero-actions { display: flex; gap: 2rem; align-items: center; }
@@ -381,10 +381,246 @@
       font-size: 38px;
       font-weight: 300;
       line-height: 1.2;
-      margin-bottom: 3rem;
+     margin-bottom: 3rem;
     }
 
+    .services-tabs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+     margin: -1.5rem 0 2.25rem;
+    }
+
+    .services-tab {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gray-text);
+      border: 0.5px solid var(--border);
+      background: transparent;
+      padding: 10px 18px;
+      border-radius: 1px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .services-tab:hover {
+      color: var(--black);
+      border-color: var(--black);
+    }
+
+    .services-tab.is-active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .service.is-dimmed {
+      opacity: 0.38;
+    }
+
+    .apart {
+      padding: 8.5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+
+    .apart-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+     margin-bottom: 0.85rem;
+    }
+
+    .apart-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+     margin-bottom: 3rem;
+    }
+
+    .apart-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    .apart-num {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+     margin-bottom: 1.1rem;
+    }
+
+    .apart-item-title {
+      font-size: 16px;
+      font-weight: 500;
+     margin-bottom: 0.7rem;
+      line-height: 1.3;
+    }
+
+    .apart-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .audience-panel[hidden] {
+      display: none !important;
+    }
+
+    .offer {
+      padding: 8.5rem 3.5rem;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .offer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 4rem;
+      align-items: start;
+      max-width: none;
+      width: 100%;
+      margin: 0;
+    }
+
+    .offer-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+     margin-bottom: 1rem;
+    }
+
+    .offer-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+     margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+
+    .offer-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 28rem;
+    }
+
+    .offer-list {
+      list-style: none;
+     margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .offer-acc {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .offer-acc.is-open {
+      border-bottom: none;
+    }
+
+    .offer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.85rem 0;
+      border: none;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .offer-acc:first-child .offer-item {
+      border-top: none;
+    }
+
+    .offer-item-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .offer-item-mark {
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    button.offer-item {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+    }
+    .offer-item-mark::before,
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0;
+      inset: auto;
+    }
+    .offer-item-mark::before {
+      width: 8px;
+      height: 1px;
+      left: 4px;
+      top: 7.5px;
+    }
+    .offer-item-mark::after {
+      width: 1px;
+      height: 8px;
+      left: 7.5px;
+      top: 4px;
+    }
+    .offer-acc.is-open .offer-item-mark::after { opacity: 0; }
+    .offer-panel[hidden] { display: none; }
+    .offer-panel p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 32rem;
+      padding: 0 2rem 0 0;
+    }
+    .offer-more {
+      display: inline-block;
+      margin: 0.85rem 0 1.25rem;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+    }
+    .offer-more:hover { border-bottom-color: var(--white); }
+
     /* SERVICES */
+    a.service { text-decoration: none; color: inherit; }
+    a.service:hover { background: var(--off-white); }
+    .services-grid--split { grid-template-columns: 1fr 1fr; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -406,14 +642,14 @@
       font-family: var(--serif);
       font-size: 12px;
       color: var(--gray-mid);
-      margin-bottom: 1.25rem;
+     margin-bottom: 1.25rem;
       letter-spacing: 0.08em;
     }
 
     .service-title {
       font-size: 14px;
       font-weight: 500;
-      margin-bottom: 1rem;
+     margin-bottom: 1rem;
     }
 
     .service-body {
@@ -426,7 +662,7 @@
 
     .service .btn-ghost {
       display: inline-block;
-      margin-top: 1.75rem;
+     margin-top: 1.75rem;
       align-self: flex-start;
     }
 
@@ -440,11 +676,11 @@
 
     .succession-intro {
       max-width: 42rem;
-      margin: 0 auto 3rem;
+     margin: 0 auto 3rem;
     }
 
     .succession-intro .section-title {
-      margin-bottom: 1.25rem;
+     margin-bottom: 1.25rem;
     }
 
     .succession-body {
@@ -460,7 +696,7 @@
       gap: 1.75rem 1.5rem;
       text-align: center;
       max-width: 1100px;
-      margin: 0 auto;
+     margin: 0 auto;
     }
 
     .succession-item {
@@ -473,7 +709,7 @@
     .succession-icon {
       width: 2.25rem;
       height: 2.25rem;
-      margin: 0 auto 1rem;
+     margin: 0 auto 1rem;
       color: var(--black);
     }
 
@@ -486,7 +722,7 @@
     .succession-item-title {
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 0.55rem;
+     margin-bottom: 0.55rem;
       line-height: 1.35;
       text-align: center;
     }
@@ -516,7 +752,7 @@
     }
 
     .why-intro .label {
-      margin-bottom: 1rem;
+     margin-bottom: 1rem;
     }
 
     .why .label { color: var(--gray-mid); }
@@ -526,7 +762,7 @@
       font-size: 32px;
       font-weight: 300;
       line-height: 1.25;
-      margin-bottom: 1.25rem;
+     margin-bottom: 1.25rem;
       color: var(--black);
     }
 
@@ -561,7 +797,7 @@
     .why-item-title {
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 0.5rem;
+     margin-bottom: 0.5rem;
       color: var(--black);
     }
 
@@ -581,15 +817,15 @@
 
     .sectors-intro {
       max-width: 44rem;
-      margin-bottom: 0;
+     margin-bottom: 0;
     }
 
     .sectors-intro .label {
-      margin-bottom: 1rem;
+     margin-bottom: 1rem;
     }
 
     .sectors-intro .section-title {
-      margin-bottom: 1.25rem;
+     margin-bottom: 1.25rem;
     }
 
     .sectors-body {
@@ -600,7 +836,7 @@
     }
 
     .sectors-body + .sectors-body {
-      margin-top: 1.25rem;
+     margin-top: 1.25rem;
     }
 
     .sectors-body strong {
@@ -613,7 +849,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gray-mid);
-      margin: 2rem 0 1rem;
+     margin: 2rem 0 1rem;
       font-weight: 500;
     }
 
@@ -648,11 +884,6 @@
     }
 
     /* MARKET */
-    #unternehmer,
-    #markt {
-      display: none;
-    }
-
     .market {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
@@ -663,7 +894,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
-      margin-bottom: 3rem;
+     margin-bottom: 3rem;
       align-items: end;
     }
 
@@ -690,7 +921,7 @@
     .market-card-title {
       font-size: 13px;
       font-weight: 500;
-      margin-bottom: 0.75rem;
+     margin-bottom: 0.75rem;
     }
 
     .market-card-body {
@@ -732,7 +963,7 @@
       font-size: clamp(36px, 5vw, 56px);
       font-weight: 300;
       line-height: 1.15;
-      margin-bottom: 1.25rem;
+     margin-bottom: 1.25rem;
     }
 
     .contact-title em { font-style: italic; }
@@ -742,7 +973,7 @@
       color: var(--gray-text);
       line-height: 1.85;
       max-width: 400px;
-      margin: 0 auto 2.5rem;
+     margin: 0 auto 2.5rem;
       font-weight: 300;
     }
 
@@ -754,7 +985,7 @@
       text-decoration: none;
       border-bottom: 0.5px solid var(--black);
       padding-bottom: 3px;
-      margin-bottom: 3rem;
+     margin-bottom: 3rem;
       letter-spacing: 0.02em;
       transition: opacity 0.2s;
     }
@@ -770,7 +1001,7 @@
 
     .contact-form {
       max-width: 440px;
-      margin: 0 auto 2rem;
+     margin: 0 auto 2rem;
       text-align: left;
     }
 
@@ -789,7 +1020,7 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--gray-text);
-      margin-bottom: 0.5rem;
+     margin-bottom: 0.5rem;
     }
 
     .contact-field input,
@@ -819,12 +1050,12 @@
 
     .contact-submit {
       width: 100%;
-      margin-top: 0.5rem;
+     margin-top: 0.5rem;
       cursor: pointer;
     }
 
     .contact-form-status {
-      margin-top: 1rem;
+     margin-top: 1rem;
       font-size: 13px;
       line-height: 1.6;
       text-align: center;
@@ -838,7 +1069,7 @@
     .contact-direct-label {
       font-size: 12px;
       color: var(--gray-text);
-      margin-bottom: 0.75rem;
+     margin-bottom: 0.75rem;
       font-weight: 300;
     }
 
@@ -848,22 +1079,170 @@
     .page-cta {
       padding: 5.5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
-      background: var(--off-white);
+      background: var(--white);
       text-align: center;
     }
 
     .page-cta-title {
       font-family: var(--serif);
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(24px, 3.2vw, 34px);
       font-weight: 300;
       line-height: 1.25;
-      max-width: 22em;
-      margin: 0 auto 2rem;
+      max-width: 28em;
+     margin: 0 auto 2rem;
       color: var(--black);
     }
 
     .page-cta-title em {
       font-style: italic;
+    }
+
+    .focus {
+      padding: 5.5rem 3.5rem 6rem;
+      background: var(--white);
+    }
+
+    .focus-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+     margin-bottom: 1rem;
+    }
+
+    .focus-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-top {
+      display: grid;
+      grid-template-columns: minmax(16rem, 0.95fr) minmax(0, 1.35fr);
+      gap: 2.5rem 2rem;
+      align-items: stretch;
+      margin-bottom: 4.5rem;
+    }
+
+    .focus-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .focus-intro-body {
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: var(--gray-text);
+      max-width: 28rem;
+    }
+
+    .focus-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .focus-box {
+      cursor: default;
+      background: var(--black);
+      color: var(--white);
+      padding: 2.25rem 2rem 2rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      border-radius: 1px;
+    }
+
+    .focus-box-title {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-box-body {
+      font-size: 14px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .focus-box-link {
+      display: inline-block;
+      margin-top: 1.75rem;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .focus-box-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .focus-industries-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+
+    .focus-industries {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .focus-industry {
+      position: relative;
+      display: block;
+      aspect-ratio: 3 / 4;
+      min-height: 0;
+      overflow: hidden;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      cursor: default;
+    }
+
+    .focus-industry img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: grayscale(0.15) contrast(1.05);
+    }
+
+    .focus-industry::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.72) 0%, rgba(8, 8, 7, 0.12) 55%);
+    }
+
+    .focus-industry span {
+      position: absolute;
+      left: 1.1rem;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.3;
     }
 
     /* FOOTER */
@@ -892,12 +1271,188 @@
       text-decoration: none;
     }
     .footer-links a:hover { color: var(--black); }
-    .footer-sep { margin: 0 0.35rem; }
+    .footer-sep {gin: 0 0.35rem; }
 
     .footer-text {
       font-size: 11px;
       color: var(--gray-text);
       letter-spacing: 0.04em;
+    }
+
+    .team-preview {
+      padding: 1.25rem 2.5rem 3.5rem;
+      background: var(--white);
+    }
+
+    .team-preview-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.95fr;
+      gap: 1.1rem 1.5rem;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: var(--off-white);
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 2rem 1.75rem;
+    }
+
+    .team-preview-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      min-height: 0;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      z-index: 1;
+      cursor: default;
+    }
+
+    .team-preview-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    .team-preview-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.78) 0%, rgba(8, 8, 7, 0.08) 52%);
+    }
+
+    .team-preview-meta {
+      position: absolute;
+      left: 1.15rem;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 1;
+    }
+
+    .team-preview-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-preview-role {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .team-preview-copy {
+      padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+      z-index: 1;
+    }
+
+    .team-preview-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.6vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+
+    .team-preview-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--gray-text);
+      margin-bottom: 1.6rem;
+    }
+
+    .team-preview-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .team-preview-link span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 0.5px solid rgba(13, 13, 11, 0.25);
+      border-radius: 50%;
+      font-size: 13px;
+    }
+
+    .deal-cta {
+      padding: 5.5rem 3.5rem 6.5rem;
+      background: var(--white);
+    }
+
+    .deal-cta-inner {
+      max-width: 760px;
+    }
+
+    .deal-cta-label {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 1.35rem;
+    }
+
+    .deal-cta-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--black);
+      flex-shrink: 0;
+    }
+
+    .deal-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.6vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+      margin-bottom: 2rem;
+      color: var(--black);
+    }
+
+    .deal-cta .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      border-radius: 1px;
+      padding: 13px 16px 13px 24px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .deal-cta-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 13px;
+      line-height: 1;
+      border-radius: 1px;
     }
 
     /* RESPONSIVE */
@@ -915,12 +1470,16 @@
         background-position: 58% 38%;
       }
       .section { padding: 3.5rem 1.75rem; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid, .services-grid--split { grid-template-columns: 1fr; }
       .service {
         padding: 2rem 1.75rem;
       }
       .succession { padding: 3.5rem 1.75rem; }
       .succession-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
+      .apart { padding: 5.5rem 1.75rem; }
+      .apart-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+      .offer { padding: 5.5rem 1.75rem; }
+      .offer-inner { grid-template-columns: 1fr; gap: 2rem; }
       .why { padding: 3.5rem 1.75rem; gap: 2.5rem; }
       .why-items { grid-template-columns: 1fr; gap: 0; }
       .why-item {
@@ -936,10 +1495,19 @@
       .market-grid { grid-template-columns: 1fr; }
       .contact { padding: 4.5rem 1.75rem; }
       .page-cta { padding: 4rem 1.75rem; }
+      .focus { padding: 3.5rem 1.75rem 4rem; }
+      .team-preview { padding: 1rem 1.1rem 2.5rem; }
+      .team-preview-inner { grid-template-columns: 1fr 1fr; padding: 1.15rem; border-radius: 1px; }
+      .team-preview-copy { grid-column: 1 / -1; padding: 0.65rem 0.15rem 0.25rem; }
+      .team-preview-card { min-height: 0; }
+      .deal-cta { padding: 4.5rem 1.75rem 5rem; }
+      .focus-top { grid-template-columns: 1fr; gap: 1.75rem; }
+      .focus-boxes, .focus-industries { grid-template-columns: 1fr 1fr; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
     }
 
   </style>
+  <link rel="stylesheet" href="/site-footer.css" />
 </head>
 <body>
 
@@ -949,8 +1517,9 @@
     <nav>
       <a href="/en/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="/en/">Home</a></li>
-      <li><a href="/en/about/">About us</a></li>
+      <li><a href="/en/for-investors/">For investors</a></li>
+      <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
+<li><a href="/en/about/">About us</a></li>
       <li><a href="/en/contact/">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -964,158 +1533,201 @@
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
-    <p class="hero-sub reveal reveal-delay-2"><span>Looking to buy or sell a company?</span><span>Book a free advisory call with us today!</span></p>
+    <p class="hero-sub reveal reveal-delay-2">We support you with company acquisitions / sales.</p>
     <div class="hero-actions reveal reveal-delay-3">
       <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary" target="_blank" rel="noopener noreferrer">Book a meeting</a>
     </div>
   </section>
 
-  <!-- LEISTUNGEN -->
-  <section class="section" id="leistungen">
-    <h2 class="section-title reveal">Our services</h2>
-    <div class="services-grid">
-      <div class="service reveal">
-        <div class="service-title">Buy a company</div>
-        <p class="service-body">We support you in acquiring a business.</p>
-        <a href="/en/contact/" class="btn-ghost">Learn more</a>
+  <!-- WHAT SETS US APART -->
+  <section class="apart" id="why-us">
+    <div class="apart-label reveal">Why us?</div>
+    <h2 class="apart-title reveal">What sets us apart</h2>
+    <div class="apart-grid">
+      <div class="apart-item reveal">
+        <div class="apart-num">01</div>
+        <div class="apart-item-title">Rooted in the mid-market</div>
+        <p class="apart-item-body">Long-standing collaboration with entrepreneurs and investors in the European mid-market.</p>
       </div>
-      <div class="service reveal reveal-delay-1">
-        <div class="service-title">Sell a company</div>
-        <p class="service-body">We guide you discreetly and experienced through the sale of your company.</p>
-        <a href="/en/contact/" class="btn-ghost">Learn more</a>
+      <div class="apart-item reveal reveal-delay-1">
+        <div class="apart-num">02</div>
+        <div class="apart-item-title">Buyer perspective</div>
+        <p class="apart-item-body">We think like buyers — because we were buyers. That sharpens positioning, timing, and deal logic.</p>
       </div>
-      <div class="service reveal">
-        <div class="service-title">Value a company</div>
-        <p class="service-body">We provide a robust company valuation — as a basis for a sale, succession, or strategic decisions.</p>
-        <a href="/en/contact/" class="btn-ghost">Learn more</a>
+      <div class="apart-item reveal reveal-delay-2">
+        <div class="apart-num">03</div>
+        <div class="apart-item-title">Personal accountability</div>
+        <p class="apart-item-body">One mandate, one point of contact. From the first conversation to completion.</p>
       </div>
-      <div class="service reveal reveal-delay-1">
-        <div class="service-title">Increase company value</div>
-        <p class="service-body">Exit readiness: identify and unlock value drivers.</p>
-        <a href="/en/contact/" class="btn-ghost">Learn more</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUCCESSION -->
-  <section class="succession" id="succession">
-    <div class="succession-intro">
-      <h2 class="section-title reveal">Master business succession successfully!</h2>
-      <p class="succession-body reveal">Selling a company becomes easier thanks to our focus on businesses with enterprise values of approximately CHF&nbsp;2 to CHF&nbsp;100&nbsp;million. You benefit from our excellent access to strategic and financial investors as well as other specialists in business succession.</p>
-    </div>
-    <div class="succession-grid">
-      <div class="succession-item reveal">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <circle cx="16" cy="16" r="11"/>
-            <path d="M16 9v7l4.5 2.5"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Highest transaction probability and speed</div>
-        <p class="succession-item-body">Our approach is efficient and effective.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-1">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <rect x="6" y="5" width="14" height="18" rx="1"/>
-            <path d="M12 5v-1.5h6V5M10 12h6M10 16h8M10 20h5"/>
-            <path d="M20 11h4v16H10v-3"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Structured sale</div>
-        <p class="succession-item-body">Through a structured process, we strengthen your negotiating position and the purchase price.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-2">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <rect x="8" y="13" width="16" height="12" rx="1.5"/>
-            <path d="M12 13V10a4 4 0 0 1 8 0v3"/>
-            <circle cx="16" cy="19" r="1.5"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Discretion</div>
-        <p class="succession-item-body">Discreet outreach to interested buyers.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-3">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <path d="M6 22l6-6 4 3 10-11"/>
-            <path d="M20 8h6v6"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Performance-oriented</div>
-        <p class="succession-item-body">We participate in the outcome through success-based fees.</p>
+      <div class="apart-item reveal reveal-delay-3">
+        <div class="apart-num">04</div>
+        <div class="apart-item-title">Technology-enabled approach</div>
+        <p class="apart-item-body">Personal judgement, sharpened by data- and technology-enabled analysis.</p>
       </div>
     </div>
   </section>
 
-  <!-- FÜR UNTERNEHMER -->
-  <section class="market" id="unternehmer">
-    <div class="market-intro">
+  <!-- SERVICES -->
+  <section class="offer" id="our-services">
+    <div class="offer-inner">
       <div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">Your life’s work deserves<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">the right outcome.</em></h2>
+        <div class="offer-label reveal">Services</div>
+        <h2 class="offer-title reveal">Our services</h2>
+        <p class="offer-body reveal">We support investors and entrepreneurs in decisive transactions — from deal origination to exit readiness.</p>
       </div>
-      <p class="market-sub reveal">Selling your company is the most important transaction of your life. We support you discreetly and at eye level — from the first conversation to closing.</p>
+      <ul class="offer-list">
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">Off-market deal origination</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>We build a proprietary pipeline for investors in fragmented markets and approach owners before a company enters an auction process.</p>
+            <a class="offer-more" href="/en/for-investors/">Learn more</a>
+          </div>
+        </li>
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">M&amp;A advisory for a company sale</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>Discreet support on a sale: positioning, buyer outreach, and negotiation — aimed at a value-maximising close.</p>
+            <a class="offer-more" href="/en/for-entrepreneurs/">Learn more</a>
+          </div>
+        </li>
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">Fractional CFO &amp; exit readiness</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>We prepare numbers, processes, and the equity story so the company is transaction-ready — before a process begins.</p>
+            <a class="offer-more" href="/en/for-entrepreneurs/">Learn more</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="market-grid">
-      <div class="market-card reveal">
-        <div class="market-card-title">The right timing</div>
-        <p class="market-card-body">We help you plan. Together we define the right moment and work toward a smooth transition and the best achievable price.</p>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="focus" id="focus">
+    <div class="focus-label reveal">Focus</div>
+    <div class="focus-top">
+    <div class="focus-intro">
+    <h2 class="focus-title reveal">Connecting people.<br>Creating value.</h2>
+    <p class="focus-intro-body reveal">We create the right conditions for value-creating deals in selected focus industries by bringing the right parties to the table.</p>
+    </div>
+    <div class="focus-boxes">
+      <div class="focus-box reveal">
+        <div>
+          <div class="focus-box-title">Private equity firms and<br>buy-and-build platforms</div>
+          <p class="focus-box-body">We help them build an M&amp;A pipeline and execute a higher number of deals.</p>
+        </div>
+        <a class="focus-box-link" href="/en/for-investors/">Learn more →</a>
       </div>
-      <div class="market-card reveal reveal-delay-1">
-        <div class="market-card-title">A fair price, no compromise</div>
-        <p class="market-card-body">We know both sides of the table and negotiate for you at eye level with institutional buyers.</p>
+      <div class="focus-box reveal reveal-delay-1">
+        <div>
+          <div class="focus-box-title">Business owners</div>
+          <p class="focus-box-body">We help them prepare the business for an exit and execute the M&amp;A process in a value-maximising way.</p>
+        </div>
+        <a class="focus-box-link" href="/en/for-entrepreneurs/">Learn more →</a>
       </div>
-      <div class="market-card reveal reveal-delay-1">
-        <div class="market-card-title">Absolute discretion</div>
-        <p class="market-card-body">No auction process, no rumours, no unrest among staff or customers. Confidentiality is not a slogan — it is how we work.</p>
+    </div>
+    </div>
+    <h3 class="focus-industries-title reveal">Our focus: fragmented business services industries</h3>
+    <div class="focus-industries">
+      <div class="focus-industry reveal">
+        <img src="/industry-it.png" alt="IT Services" width="900" height="1200" decoding="async">
+        <span>IT Services</span>
       </div>
-      <div class="market-card reveal reveal-delay-2">
-        <div class="market-card-title">The right buyer</div>
-        <p class="market-card-body">Not every buyer fits every business. We find the partner that fits the company, the team, and your legacy — not only the price.</p>
+      <div class="focus-industry reveal reveal-delay-1">
+        <img src="/industry-software.png" alt="Software and Digital" width="1600" height="900" decoding="async">
+        <span>Software &amp; Digital</span>
+      </div>
+      <div class="focus-industry reveal reveal-delay-2">
+        <img src="/industry-professional.png" alt="Professional Services" width="1600" height="900" decoding="async">
+        <span>Professional Services</span>
+      </div>
+      <div class="focus-industry reveal reveal-delay-3">
+        <img src="/industry-engineering.png" alt="Engineering Services" width="900" height="1200" decoding="async">
+        <span>Engineering Services</span>
       </div>
     </div>
   </section>
 
-  <!-- FÜR INVESTOREN -->
-  <section class="market" id="markt" style="background: var(--white);">
-    <div class="market-intro">
-      <div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">The market is consolidating —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">we have the access.</em></h2>
+  <!-- TEAM -->
+  <section class="team-preview" id="team">
+    <div class="team-preview-inner">
+      <div class="team-preview-card reveal">
+        <img src="/jkirchmayr.png" alt="Johannes Kirchmayr, CFA" width="640" height="800" decoding="async">
+        <div class="team-preview-meta">
+          <div class="team-preview-name">Johannes Kirchmayr, CFA</div>
+          <div class="team-preview-role">Founder &amp; Partner</div>
+        </div>
       </div>
-      <p class="market-sub reveal">Thousands of owner-managed businesses across Europe face succession questions. We identify the best targets before they come to market — with local market knowledge and direct relationships.</p>
-    </div>
-    <div class="market-grid" style="background: rgba(0,0,0,0.06);">
-      <div class="market-card reveal" style="background: var(--white);">
-        <div class="market-card-title">Generational change as a driver</div>
-        <p class="market-card-body">57% of mid-market owners are over 55. Readiness to sell is rising — time pressure is growing.</p>
+      <div class="team-preview-card reveal reveal-delay-1">
+        <img src="/rici-portrait-studio.png" alt="Riccardo Cunego" width="640" height="800" decoding="async">
+        <div class="team-preview-meta">
+          <div class="team-preview-name">Riccardo Cunego</div>
+          <div class="team-preview-role">Founder &amp; Partner</div>
+        </div>
       </div>
-      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
-        <div class="market-card-title">Business services focus</div>
-        <p class="market-card-body">We focus on owner-managed business services companies. Asset-light models and fragmented markets are our domain.</p>
-      </div>
-      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
-        <div class="market-card-title">Rising PE activity</div>
-        <p class="market-card-body">You want systematic access to a vertical — we bring sector expertise and proprietary market access to source there consistently.</p>
-      </div>
-      <div class="market-card reveal reveal-delay-2" style="background: var(--white);">
-        <div class="market-card-title">Direct market access</div>
-        <p class="market-card-body">We speak directly with owners in selected markets — without auction pressure or anonymous screening. That yields tangible access to off-market opportunities.</p>
+      <div class="team-preview-copy">
+        <h2 class="team-preview-title reveal">The team</h2>
+        <p class="team-preview-body reveal">M&amp;A advisory with private equity experience. Personal, discreet, and at eye level — for investors and entrepreneurs.</p>
+        <a class="team-preview-link reveal" href="/en/about/">Learn more about us <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="page-cta" id="contact-cta">
-    <h2 class="page-cta-title reveal">Planning a company sale?</h2>
-    <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book an introductory call</a>
+  <section class="page-cta" id="close">
+    <h2 class="page-cta-title reveal">Let’s talk about your next M&amp;A transaction.</h2>
+    <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book a meeting</a>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
-    <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-links"><a href="/en/impressum/">Legal notice</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
+      <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div>
+        <a class="site-footer-logo" href="/en/"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+        <p class="site-footer-blurb">Finstant Advisory is an independent M&amp;A boutique for private equity and owner-managed companies in DACH, Italy, and Europe.</p>
+        <div class="site-footer-address">Langgrütstrasse 61<br>8047 Zürich<br>Schweiz</div>
+        <div class="site-footer-contact">
+          <a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a>
+          <a href="tel:+41764970496">+41 76 497 04 96</a>
+        </div>
+        <a class="site-footer-social" href="https://www.linkedin.com/company/finstantadvisory" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5h4.37v2.11h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.77h-4.56v-7.78c0-1.86-.03-4.25-2.59-4.25-2.59 0-2.99 2.02-2.99 4.11V24H8.34V8.5z"/></svg>
+        </a>
+      </div>
+      <div>
+        <div class="site-footer-heading">Navigation</div>
+        <ul class="site-footer-list">
+          <li><a href="/en/">Home</a></li>
+          <li><a href="/en/for-investors/">For investors</a></li>
+          <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
+          <li><a href="/en/about/">About us</a></li>
+          <li><a href="/en/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer-heading">Services</div>
+        <ul class="site-footer-list">
+          <li><a href="/en/buy-side-origination/">Off-market deal origination</a></li>
+          <li><a href="/en/sell-side-advisory/">M&amp;A advisory on a sale</a></li>
+          <li><a href="/en/for-entrepreneurs/">Business succession</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bar">
+      <div>Copyright ©2026 FINSTANT ADVISORY</div>
+      <div class="site-footer-legal">
+        <a href="/en/privacy/">Privacy policy</a><span class="site-footer-dot">·</span>
+        <a href="/en/impressum/">Legal notice</a><span class="site-footer-dot">·</span>
+        <button type="button" class="js-cookie-settings" data-cookie-settings>Cookie settings</button>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -1133,7 +1745,7 @@
     // NAV — blurred glass over hero, solid white at services section
     (function() {
       const nav = document.querySelector('nav');
-      const servicesSection = document.querySelector('#leistungen');
+      const servicesSection = document.querySelector('#why-us');
       if (!nav || !servicesSection) return;
       function updateNav() {
         const navHeight = nav.getBoundingClientRect().height;
@@ -1158,7 +1770,10 @@
         location.href = base.replace(/\/?$/, '/') + h;
       });
     });
+
   </script>
 
+  <script src="/cookie-consent.js" defer></script>
+  <script src="/site-nav.js" defer></script>
 </body>
 </html>

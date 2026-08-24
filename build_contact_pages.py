@@ -1,7 +1,15 @@
 from pathlib import Path
 import re
 
+from site_chrome import refs_nav_item
+
 ROOT = Path(__file__).parent
+
+AUDIENCE = {
+    "de": {"inv_url": "/de/fuer-investoren/", "ent_url": "/de/fuer-unternehmer/", "inv_label": "Für Investoren", "ent_label": "Für Unternehmer"},
+    "en": {"inv_url": "/en/for-investors/", "ent_url": "/en/for-entrepreneurs/", "inv_label": "For investors", "ent_label": "For entrepreneurs"},
+    "it": {"inv_url": "/it/per-investitori/", "ent_url": "/it/per-imprenditori/", "inv_label": "Per investitori", "ent_label": "Per imprenditori"},
+}
 
 LANGS = {
     "en": {
@@ -213,6 +221,10 @@ def extract_contact_section(html: str) -> str:
 
 def build_nav(lang: str, cfg: dict) -> str:
     n = cfg["nav"]
+    inv_url = AUDIENCE[lang]["inv_url"]
+    ent_url = AUDIENCE[lang]["ent_url"]
+    inv_label = AUDIENCE[lang]["inv_label"]
+    ent_label = AUDIENCE[lang]["ent_label"]
     home = cfg["home"]
     lh = cfg["lang_hrefs"]
 
@@ -224,7 +236,9 @@ def build_nav(lang: str, cfg: dict) -> str:
     return f"""  <nav>
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="{home}">{n['home']}</a></li>
+      <li><a href="{inv_url}">{inv_label}</a></li>
+      <li><a href="{ent_url}">{ent_label}</a></li>
+{refs_nav_item(lang)}
       <li><a href="{n['who'][1] if str(n['who'][1]).startswith('/') else home + n['who'][1]}">{n['who'][0]}</a></li>
       <li><a href="{cfg['contact_url']}" aria-current="page">{n['contact']}</a></li>
     </ul>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finstant Advisory — M&A Beratung mit lokaler Marktexpertise</title>
-  <meta name="description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in der Schweiz, Italien und Europa. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung. Basiert in Zürich." />
+  <meta name="description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in DACH, Italien und Europa. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung. Basiert in Zürich." />
   <meta name="keywords" content="M&A Beratung, Unternehmensverkauf, Mittelstand, Italien, Schweiz, Europa, IT-Services, Buy-and-Build, Private Equity, Zürich, Nachfolge, Off-market, Deal Origination" />
   <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
   <meta name="robots" content="index, follow" />
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.finstantadvisory.com/de/" />
   <meta property="og:title" content="Finstant Advisory — M&A Beratung mit lokaler Marktexpertise" />
-  <meta property="og:description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in der Schweiz, Italien und Europa." />
+  <meta property="og:description" content="Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in DACH, Italien und Europa." />
   <meta property="og:locale" content="de_DE" />
   <meta property="og:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta property="og:image:alt" content="Zürich Skyline bei Sonnenuntergang — Finstant Advisory" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta name="twitter:title" content="Finstant Advisory — M&A Beratung mit lokaler Marktexpertise" />
-  <meta name="twitter:description" content="Diskrete M&A-Beratung mit verwurzelter Lokalexpertise in der Schweiz, Italien und Europa." />
+  <meta name="twitter:description" content="Diskrete M&A-Beratung mit verwurzelter Lokalexpertise in DACH, Italien und Europa." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Finstant Advisory",
-    "description": "Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in der Schweiz, Italien und Europa. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung.",
+    "description": "Diskrete M&A-Beratung für eigentümergeführte Unternehmen — mit verwurzelter Lokalexpertise in DACH, Italien und Europa. Sell-side Advisory, Buy-side Deal Origination und Transaktionsvorbereitung.",
     "url": "https://www.finstantadvisory.com/de/",
     "email": "contact@finstantadvisory.com",
     "address": {
@@ -57,7 +57,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -148,7 +148,7 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 1.6rem;
       list-style: none;
     }
 
@@ -384,7 +384,48 @@
       margin-bottom: 3rem;
     }
 
+    .services-tabs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: -1.5rem 0 2.25rem;
+    }
+
+    .services-tab {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gray-text);
+      border: 0.5px solid var(--border);
+      background: transparent;
+      padding: 10px 18px;
+      border-radius: 1px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .services-tab:hover {
+      color: var(--black);
+      border-color: var(--black);
+    }
+
+    .services-tab.is-active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .service.is-dimmed {
+      opacity: 0.38;
+    }
+
     /* SERVICES */
+    a.service { text-decoration: none; color: inherit; }
+    a.service:hover { background: var(--off-white); }
+    .services-grid--split { grid-template-columns: 1fr 1fr; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -572,6 +613,204 @@
       font-weight: 300;
     }
 
+    .apart {
+      padding: 8.5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+
+    .apart-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 0.85rem;
+    }
+
+    .apart-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    .apart-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    .apart-num {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      margin-bottom: 1.1rem;
+    }
+
+    .apart-item-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      line-height: 1.3;
+    }
+
+    .apart-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .audience-panel[hidden] {
+      display: none !important;
+    }
+
+    .offer {
+      padding: 8.5rem 3.5rem;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .offer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 4rem;
+      align-items: start;
+      max-width: none;
+      width: 100%;
+      margin: 0;
+    }
+
+    .offer-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 1rem;
+    }
+
+    .offer-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+
+    .offer-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 28rem;
+    }
+
+    .offer-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .offer-acc {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .offer-acc.is-open {
+      border-bottom: none;
+    }
+
+    .offer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.85rem 0;
+      border: none;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .offer-acc:first-child .offer-item {
+      border-top: none;
+    }
+
+    .offer-item-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .offer-item-mark {
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    button.offer-item {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+    }
+    .offer-item-mark::before,
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0;
+      inset: auto;
+    }
+    .offer-item-mark::before {
+      width: 8px;
+      height: 1px;
+      left: 4px;
+      top: 7.5px;
+    }
+    .offer-item-mark::after {
+      width: 1px;
+      height: 8px;
+      left: 7.5px;
+      top: 4px;
+    }
+    .offer-acc.is-open .offer-item-mark::after { opacity: 0; }
+    .offer-panel {
+      overflow: hidden;
+    }
+    .offer-panel[hidden] { display: none; }
+    .offer-panel p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 32rem;
+      padding: 0 2rem 0 0;
+    }
+    .offer-more {
+      display: inline-block;
+      margin: 0.85rem 0 1.25rem;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+    }
+    .offer-more:hover { border-bottom-color: var(--white); }
+
     /* SEKTOREN */
     .sectors {
       padding: 5rem 3.5rem;
@@ -648,11 +887,6 @@
     }
 
     /* MARKET */
-    #unternehmer,
-    #markt {
-      display: none;
-    }
-
     .market {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
@@ -849,22 +1083,170 @@
     .page-cta {
       padding: 5.5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
-      background: var(--off-white);
+      background: var(--white);
       text-align: center;
     }
 
     .page-cta-title {
       font-family: var(--serif);
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(24px, 3.2vw, 34px);
       font-weight: 300;
       line-height: 1.25;
-      max-width: 22em;
+      max-width: 28em;
       margin: 0 auto 2rem;
       color: var(--black);
     }
 
     .page-cta-title em {
       font-style: italic;
+    }
+
+    .focus {
+      padding: 5.5rem 3.5rem 6rem;
+      background: var(--white);
+    }
+
+    .focus-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 1rem;
+    }
+
+    .focus-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-top {
+      display: grid;
+      grid-template-columns: minmax(16rem, 0.95fr) minmax(0, 1.35fr);
+      gap: 2.5rem 2rem;
+      align-items: stretch;
+      margin-bottom: 4.5rem;
+    }
+
+    .focus-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .focus-intro-body {
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: var(--gray-text);
+      max-width: 28rem;
+    }
+
+    .focus-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .focus-box {
+      cursor: default;
+      background: var(--black);
+      color: var(--white);
+      padding: 2.25rem 2rem 2rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      border-radius: 1px;
+    }
+
+    .focus-box-title {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-box-body {
+      font-size: 14px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .focus-box-link {
+      display: inline-block;
+      margin-top: 1.75rem;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .focus-box-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .focus-industries-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+
+    .focus-industries {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .focus-industry {
+      position: relative;
+      display: block;
+      aspect-ratio: 3 / 4;
+      min-height: 0;
+      overflow: hidden;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      cursor: default;
+    }
+
+    .focus-industry img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: grayscale(0.15) contrast(1.05);
+    }
+
+    .focus-industry::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.72) 0%, rgba(8, 8, 7, 0.12) 55%);
+    }
+
+    .focus-industry span {
+      position: absolute;
+      left: 1.1rem;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.3;
     }
 
     /* FOOTER */
@@ -901,6 +1283,182 @@
       letter-spacing: 0.04em;
     }
 
+    .team-preview {
+      padding: 1.25rem 2.5rem 3.5rem;
+      background: var(--white);
+    }
+
+    .team-preview-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.95fr;
+      gap: 1.1rem 1.5rem;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: var(--off-white);
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 2rem 1.75rem;
+    }
+
+    .team-preview-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      min-height: 0;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      z-index: 1;
+      cursor: default;
+    }
+
+    .team-preview-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    .team-preview-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.78) 0%, rgba(8, 8, 7, 0.08) 52%);
+    }
+
+    .team-preview-meta {
+      position: absolute;
+      left: 1.15rem;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 1;
+    }
+
+    .team-preview-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-preview-role {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .team-preview-copy {
+      padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+      z-index: 1;
+    }
+
+    .team-preview-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.6vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+
+    .team-preview-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--gray-text);
+      margin-bottom: 1.6rem;
+    }
+
+    .team-preview-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .team-preview-link span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 0.5px solid rgba(13, 13, 11, 0.25);
+      border-radius: 50%;
+      font-size: 13px;
+    }
+
+    .deal-cta {
+      padding: 5.5rem 3.5rem 6.5rem;
+      background: var(--white);
+    }
+
+    .deal-cta-inner {
+      max-width: 760px;
+    }
+
+    .deal-cta-label {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 1.35rem;
+    }
+
+    .deal-cta-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--black);
+      flex-shrink: 0;
+    }
+
+    .deal-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.6vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+      margin-bottom: 2rem;
+      color: var(--black);
+    }
+
+    .deal-cta .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      border-radius: 1px;
+      padding: 13px 16px 13px 24px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .deal-cta-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 13px;
+      line-height: 1;
+      border-radius: 1px;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 800px) {
       nav { padding: 1.25rem 1.75rem; flex-wrap: wrap; row-gap: 0.75rem; }
@@ -916,12 +1474,16 @@
         background-position: 58% 38%;
       }
       .section { padding: 3.5rem 1.75rem; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid, .services-grid--split { grid-template-columns: 1fr; }
       .service {
         padding: 2rem 1.75rem;
       }
       .succession { padding: 3.5rem 1.75rem; }
       .succession-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
+      .apart { padding: 5.5rem 1.75rem; }
+      .apart-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+      .offer { padding: 5.5rem 1.75rem; }
+      .offer-inner { grid-template-columns: 1fr; gap: 2rem; }
       .why { padding: 3.5rem 1.75rem; gap: 2.5rem; }
       .why-items { grid-template-columns: 1fr; gap: 0; }
       .why-item {
@@ -937,10 +1499,19 @@
       .market-grid { grid-template-columns: 1fr; }
       .contact { padding: 4.5rem 1.75rem; }
       .page-cta { padding: 4rem 1.75rem; }
+      .focus { padding: 3.5rem 1.75rem 4rem; }
+      .team-preview { padding: 1rem 1.1rem 2.5rem; }
+      .team-preview-inner { grid-template-columns: 1fr 1fr; padding: 1.15rem; border-radius: 1px; }
+      .team-preview-copy { grid-column: 1 / -1; padding: 0.65rem 0.15rem 0.25rem; }
+      .team-preview-card { min-height: 0; }
+      .deal-cta { padding: 4.5rem 1.75rem 5rem; }
+      .focus-top { grid-template-columns: 1fr; gap: 1.75rem; }
+      .focus-boxes, .focus-industries { grid-template-columns: 1fr 1fr; }
       footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
     }
 
   </style>
+  <link rel="stylesheet" href="/site-footer.css" />
 </head>
 <body>
 
@@ -950,8 +1521,9 @@
     <nav>
       <a href="/de/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="/de/">Home</a></li>
-      <li><a href="/de/ueber-uns/">Über uns</a></li>
+      <li><a href="/de/fuer-investoren/">Für Investoren</a></li>
+      <li><a href="/de/fuer-unternehmer/">Für Unternehmer</a></li>
+<li><a href="/de/ueber-uns/">Über uns</a></li>
       <li><a href="/de/kontakt/">Kontakt</a></li>
     </ul>
     <div class="nav-right">
@@ -965,158 +1537,201 @@
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
-    <p class="hero-sub reveal reveal-delay-2"><span>Sie möchten eine Firma kaufen oder verkaufen?</span><span>Vereinbaren Sie heute noch ein kostenloses Beratungsgespräch mit uns!</span></p>
+    <p class="hero-sub reveal reveal-delay-2">Wir unterstützen Sie bei Unternehmenskäufen /-verkäufen.</p>
     <div class="hero-actions reveal reveal-delay-3">
       <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary" target="_blank" rel="noopener noreferrer">Termin vereinbaren</a>
     </div>
   </section>
 
+  <!-- WAS UNS ANDERS MACHT -->
+  <section class="apart" id="warum-wir">
+    <div class="apart-label reveal">Wieso wir?</div>
+    <h2 class="apart-title reveal">Was uns anders macht</h2>
+    <div class="apart-grid">
+      <div class="apart-item reveal">
+        <div class="apart-num">01</div>
+        <div class="apart-item-title">Verwurzelt im Mittelstand</div>
+        <p class="apart-item-body">Langjährige Zusammenarbeit mit Unternehmern und Investoren im europäischen Mid-Market.</p>
+      </div>
+      <div class="apart-item reveal reveal-delay-1">
+        <div class="apart-num">02</div>
+        <div class="apart-item-title">Käuferperspektive</div>
+        <p class="apart-item-body">Wir denken wie Käufer — weil wir es waren. Das schärft Positionierung, Timing und Transaktionslogik.</p>
+      </div>
+      <div class="apart-item reveal reveal-delay-2">
+        <div class="apart-num">03</div>
+        <div class="apart-item-title">Persönliche Verantwortung</div>
+        <p class="apart-item-body">Ein Mandat, ein Ansprechpartner. Vom ersten Gespräch bis zum Abschluss.</p>
+      </div>
+      <div class="apart-item reveal reveal-delay-3">
+        <div class="apart-num">04</div>
+        <div class="apart-item-title">Technologiegestützter Ansatz</div>
+        <p class="apart-item-body">Persönliches Urteil, geschärft durch daten- und technologiegestützte Analyse.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- LEISTUNGEN -->
-  <section class="section" id="leistungen">
-    <h2 class="section-title reveal">Unsere Leistungen</h2>
-    <div class="services-grid">
-      <div class="service reveal">
-        <div class="service-title">Firma kaufen</div>
-        <p class="service-body">Wir unterstützen Sie beim Unternehmenskauf.</p>
-        <a href="/de/kontakt/" class="btn-ghost">Mehr erfahren</a>
-      </div>
-      <div class="service reveal reveal-delay-1">
-        <div class="service-title">Firma verkaufen</div>
-        <p class="service-body">Wir begleiten Sie diskret und erfahren beim Verkauf Ihres Unternehmens.</p>
-        <a href="/de/kontakt/" class="btn-ghost">Mehr erfahren</a>
-      </div>
-      <div class="service reveal">
-        <div class="service-title">Firma bewerten</div>
-        <p class="service-body">Wir bewerten Ihr Unternehmen fundiert — als Grundlage für Verkauf, Nachfolge oder strategische Entscheidungen.</p>
-        <a href="/de/kontakt/" class="btn-ghost">Mehr erfahren</a>
-      </div>
-      <div class="service reveal reveal-delay-1">
-        <div class="service-title">Firmenwert steigern</div>
-        <p class="service-body">Exit-Readiness: Werttreiber identifizieren und erschliessen.</p>
-        <a href="/de/kontakt/" class="btn-ghost">Mehr erfahren</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- NACHFOLGE -->
-  <section class="succession" id="nachfolge">
-    <div class="succession-intro">
-      <h2 class="section-title reveal">Die Unternehmensnachfolge erfolgreich meistern!</h2>
-      <p class="succession-body reveal">Firmen verkaufen wird leicht dank unseres Fokus auf Firmen mit Unternehmenswerten zwischen zirka CHF&nbsp;2 und CHF&nbsp;100&nbsp;Mio. Sie profitieren von unserem ausgezeichneten Zugang zu Strategen und Finanzinvestoren wie auch weiteren Fachspezialisten im Bereich Unternehmensnachfolge.</p>
-    </div>
-    <div class="succession-grid">
-      <div class="succession-item reveal">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <circle cx="16" cy="16" r="11"/>
-            <path d="M16 9v7l4.5 2.5"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Höchste Transaktionswahrscheinlichkeit und Geschwindigkeit</div>
-        <p class="succession-item-body">Unsere Vorgehensweise ist effizient und effektiv.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-1">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <rect x="6" y="5" width="14" height="18" rx="1"/>
-            <path d="M12 5v-1.5h6V5M10 12h6M10 16h8M10 20h5"/>
-            <path d="M20 11h4v16H10v-3"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Strukturierter Verkauf</div>
-        <p class="succession-item-body">Durch einen strukturierten Prozess optimieren wir Ihre Verhandlungsposition und den Kaufpreis.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-2">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <rect x="8" y="13" width="16" height="12" rx="1.5"/>
-            <path d="M12 13V10a4 4 0 0 1 8 0v3"/>
-            <circle cx="16" cy="19" r="1.5"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Diskretion</div>
-        <p class="succession-item-body">Diskrete Ansprache von Kaufinteressenten.</p>
-      </div>
-      <div class="succession-item reveal reveal-delay-3">
-        <div class="succession-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25">
-            <path d="M6 22l6-6 4 3 10-11"/>
-            <path d="M20 8h6v6"/>
-          </svg>
-        </div>
-        <div class="succession-item-title">Leistungsorientiert</div>
-        <p class="succession-item-body">Wir partizipieren am Ergebnis durch eine erfolgsabhängige Vergütung.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FÜR UNTERNEHMER -->
-  <section class="market" id="unternehmer">
-    <div class="market-intro">
+  <section class="offer" id="unsere-leistungen">
+    <div class="offer-inner">
       <div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">Ihr Lebenswerk verdient<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">den richtigen Abschluss.</em></h2>
+        <div class="offer-label reveal">Leistungen</div>
+        <h2 class="offer-title reveal">Unsere Leistungen</h2>
+        <p class="offer-body reveal">Wir begleiten Investoren und Unternehmer in entscheidenden Transaktionen — von der Deal Origination bis zur Exit-Readiness.</p>
       </div>
-      <p class="market-sub reveal">Ein Unternehmensverkauf ist die wichtigste Transaktion Ihres Lebens. Wir begleiten Sie diskret, erfahren und auf Augenhöhe — vom ersten Gespräch bis zum Closing.</p>
+      <ul class="offer-list">
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">Off-Market Deal Origination</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>Wir bauen für Investoren eine proprietäre Pipeline in fragmentierten Märkten auf und sprechen Inhaber an, bevor ein Unternehmen in einen Auktionsprozess geht.</p>
+            <a class="offer-more" href="/de/fuer-investoren/">Mehr erfahren</a>
+          </div>
+        </li>
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">M&amp;A Advisory beim Unternehmensverkauf</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>Diskrete Begleitung beim Verkauf: Positionierung, Käuferansprache und Verhandlung — mit dem Ziel eines wertmaximierenden Abschlusses.</p>
+            <a class="offer-more" href="/de/fuer-unternehmer/">Mehr erfahren</a>
+          </div>
+        </li>
+        <li class="offer-acc">
+          <button type="button" class="offer-item reveal" aria-expanded="false">
+            <span class="offer-item-title">Fractional CFO &amp; Exit-Readiness</span>
+            <span class="offer-item-mark" aria-hidden="true"></span>
+          </button>
+          <div class="offer-panel" hidden>
+            <p>Wir bereiten Zahlen, Prozesse und die Equity Story so vor, dass das Unternehmen transaktionsfähig ist — bevor ein Prozess startet.</p>
+            <a class="offer-more" href="/de/fuer-unternehmer/">Mehr erfahren</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="market-grid">
-      <div class="market-card reveal">
-        <div class="market-card-title">Der richtige Zeitpunkt</div>
-        <p class="market-card-body">Wir unterstützen Sie bei der Planung. Gemeinsam erarbeiten wir den richtigen Zeitpunkt und sorgen für einen reibungslosen Übergang sowie den bestmöglichen Kaufpreis.</p>
+  </section>
+
+  <!-- FOKUS -->
+  <section class="focus" id="fokus">
+    <div class="focus-label reveal">Fokus</div>
+    <div class="focus-top">
+    <div class="focus-intro">
+    <h2 class="focus-title reveal">Menschen verbinden.<br>Wert schaffen.</h2>
+    <p class="focus-intro-body reveal">Wir schaffen die richtigen Rahmenbedingungen für wertstiftende Deals in ausgewählten Fokus-Industrien, indem wir die richtigen Parteien an einen Tisch bringen.</p>
+    </div>
+    <div class="focus-boxes">
+      <div class="focus-box reveal">
+        <div>
+          <div class="focus-box-title">Private Equity Firmen und<br>Buy &amp; Build Plattformen</div>
+          <p class="focus-box-body">Wir helfen ihnen, eine M&amp;A-Pipeline aufzubauen und eine höhere Zahl an Transaktionen umzusetzen.</p>
+        </div>
+        <a class="focus-box-link" href="/de/fuer-investoren/">Mehr erfahren →</a>
       </div>
-      <div class="market-card reveal reveal-delay-1">
-        <div class="market-card-title">Fairer Preis, kein Kompromiss</div>
-        <p class="market-card-body">Wir kennen beide Seiten des Tisches und verhandeln für Sie auf Augenhöhe mit institutionellen Käufern.</p>
+      <div class="focus-box reveal reveal-delay-1">
+        <div>
+          <div class="focus-box-title">Unternehmensinhaber</div>
+          <p class="focus-box-body">Wir helfen Ihnen, Ihr Unternehmen auf einen Exit vorzubereiten und den M&amp;A Prozess wertmaximierend umzusetzen.</p>
+        </div>
+        <a class="focus-box-link" href="/de/fuer-unternehmer/">Mehr erfahren →</a>
       </div>
-      <div class="market-card reveal reveal-delay-1">
-        <div class="market-card-title">Absolute Diskretion</div>
-        <p class="market-card-body">Kein Auktionsprozess, keine Gerüchte, keine Unruhe bei Mitarbeitern oder Kunden. Vertraulichkeit ist kein Versprechen — es ist unsere Arbeitsweise.</p>
+    </div>
+    </div>
+    <h3 class="focus-industries-title reveal">Unser Fokus: fragmentierte Business-Services-Branchen</h3>
+    <div class="focus-industries">
+      <div class="focus-industry reveal">
+        <img src="/industry-it.png" alt="IT Services" width="900" height="1200" decoding="async">
+        <span>IT Services</span>
       </div>
-      <div class="market-card reveal reveal-delay-2">
-        <div class="market-card-title">Der richtige Käufer</div>
-        <p class="market-card-body">Nicht jeder Käufer passt zu jedem Unternehmen. Wir finden den Partner, der zum Unternehmen, zur Belegschaft und zum Lebenswerk passt — nicht nur zum Preis.</p>
+      <div class="focus-industry reveal reveal-delay-1">
+        <img src="/industry-software.png" alt="Software und Digital" width="1600" height="900" decoding="async">
+        <span>Software &amp; Digital</span>
+      </div>
+      <div class="focus-industry reveal reveal-delay-2">
+        <img src="/industry-professional.png" alt="Professional Services" width="1600" height="900" decoding="async">
+        <span>Professional Services</span>
+      </div>
+      <div class="focus-industry reveal reveal-delay-3">
+        <img src="/industry-engineering.png" alt="Engineering Services" width="900" height="1200" decoding="async">
+        <span>Engineering Services</span>
       </div>
     </div>
   </section>
 
-  <!-- FÜR INVESTOREN -->
-  <section class="market" id="markt" style="background: var(--white);">
-    <div class="market-intro">
-      <div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">Der Markt konsolidiert sich —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">wir haben den Zugang.</em></h2>
+  <!-- TEAM -->
+  <section class="team-preview" id="team">
+    <div class="team-preview-inner">
+      <div class="team-preview-card reveal">
+        <img src="/jkirchmayr.png" alt="Johannes Kirchmayr, CFA" width="640" height="800" decoding="async">
+        <div class="team-preview-meta">
+          <div class="team-preview-name">Johannes Kirchmayr, CFA</div>
+          <div class="team-preview-role">Gründer &amp; Partner</div>
+        </div>
       </div>
-      <p class="market-sub reveal">Tausende eigentümergeführte Unternehmen in Europa stehen vor der Nachfolgefrage. Wir identifizieren die besten Targets bevor sie in den Markt kommen — mit lokaler Marktkenntnis und direkten Beziehungen.</p>
-    </div>
-    <div class="market-grid" style="background: rgba(0,0,0,0.06);">
-      <div class="market-card reveal" style="background: var(--white);">
-        <div class="market-card-title">Generationswechsel als Treiber</div>
-        <p class="market-card-body">57% der mittelständischen Unternehmer sind über 55 Jahre alt. Die Verkaufsbereitschaft steigt — der Zeitdruck wächst.</p>
+      <div class="team-preview-card reveal reveal-delay-1">
+        <img src="/rici-portrait-studio.png" alt="Riccardo Cunego" width="640" height="800" decoding="async">
+        <div class="team-preview-meta">
+          <div class="team-preview-name">Riccardo Cunego</div>
+          <div class="team-preview-role">Gründer &amp; Partner</div>
+        </div>
       </div>
-      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
-        <div class="market-card-title">Business Services Fokus</div>
-        <p class="market-card-body">Unser Schwerpunkt liegt auf inhabergeführten Business-Services-Unternehmen. Asset-light Modelle und fragmentierte Märkte sind unsere Domäne.</p>
-      </div>
-      <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
-        <div class="market-card-title">Steigende PE-Aktivität</div>
-        <p class="market-card-body">Sie suchen systematischen Zugang zu einer Vertical — wir liefern die Branchenexpertise und den proprietären Marktzugang, um dort konsistent zu sourcen.</p>
-      </div>
-      <div class="market-card reveal reveal-delay-2" style="background: var(--white);">
-        <div class="market-card-title">Direkter Marktzugang</div>
-        <p class="market-card-body">Wir sprechen direkt mit Eigentümern in ausgewählten Märkten — ohne Auktionsdruck und ohne anonymes Screening. So entsteht greifbarer Zugang zu Off-market-Gelegenheiten.</p>
+      <div class="team-preview-copy">
+        <h2 class="team-preview-title reveal">Das Team</h2>
+        <p class="team-preview-body reveal">M&amp;A-Beratung mit Private-Equity-Erfahrung. Persönlich, diskret und auf Augenhöhe — für Investoren und Unternehmer.</p>
+        <a class="team-preview-link reveal" href="/de/ueber-uns/">Mehr über uns <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="page-cta" id="kontakt-cta">
-    <h2 class="page-cta-title reveal">Unternehmensverkauf geplant?</h2>
+  <section class="page-cta" id="abschluss">
+    <h2 class="page-cta-title reveal">Lassen Sie uns über Ihre nächste M&amp;A Transaktion sprechen.</h2>
     <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Termin vereinbaren</a>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
-    <div class="footer-text">© 2026 Finstant Advisory · Zürich</div>
-    <div class="footer-links"><a href="/de/impressum/">Impressum</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
+      <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div>
+        <a class="site-footer-logo" href="/de/"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+        <p class="site-footer-blurb">Finstant Advisory ist eine unabhängige M&amp;A-Boutique für Private Equity und inhabergeführte Unternehmen in DACH, Italien und Europa.</p>
+        <div class="site-footer-address">Langgrütstrasse 61<br>8047 Zürich<br>Schweiz</div>
+        <div class="site-footer-contact">
+          <a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a>
+          <a href="tel:+41764970496">+41 76 497 04 96</a>
+        </div>
+        <a class="site-footer-social" href="https://www.linkedin.com/company/finstantadvisory" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5h4.37v2.11h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.77h-4.56v-7.78c0-1.86-.03-4.25-2.59-4.25-2.59 0-2.99 2.02-2.99 4.11V24H8.34V8.5z"/></svg>
+        </a>
+      </div>
+      <div>
+        <div class="site-footer-heading">Navigation</div>
+        <ul class="site-footer-list">
+          <li><a href="/de/">Startseite</a></li>
+          <li><a href="/de/fuer-investoren/">Für Investoren</a></li>
+          <li><a href="/de/fuer-unternehmer/">Für Unternehmer</a></li>
+          <li><a href="/de/ueber-uns/">Über uns</a></li>
+          <li><a href="/de/kontakt/">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer-heading">Leistungen</div>
+        <ul class="site-footer-list">
+          <li><a href="/de/buy-side-origination/">Off-Market Deal Origination</a></li>
+          <li><a href="/de/sell-side-advisory/">M&amp;A Advisory beim Verkauf</a></li>
+          <li><a href="/de/fuer-unternehmer/">Unternehmensnachfolge</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bar">
+      <div>Copyright ©2026 FINSTANT ADVISORY</div>
+      <div class="site-footer-legal">
+        <a href="/de/datenschutz/">Datenschutzerklärung</a><span class="site-footer-dot">·</span>
+        <a href="/de/impressum/">Impressum</a><span class="site-footer-dot">·</span>
+        <button type="button" class="js-cookie-settings" data-cookie-settings>Cookie-Einstellungen</button>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -1134,7 +1749,7 @@
     // NAV — blurred glass over hero, solid white at services section
     (function() {
       const nav = document.querySelector('nav');
-      const servicesSection = document.querySelector('#leistungen');
+      const servicesSection = document.querySelector('#warum-wir');
       if (!nav || !servicesSection) return;
       function updateNav() {
         const navHeight = nav.getBoundingClientRect().height;
@@ -1159,7 +1774,10 @@
         location.href = base.replace(/\/?$/, '/') + h;
       });
     });
+
   </script>
 
+  <script src="/cookie-consent.js" defer></script>
+  <script src="/site-nav.js" defer></script>
 </body>
 </html>

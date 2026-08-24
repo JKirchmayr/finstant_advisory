@@ -2,7 +2,15 @@
 from pathlib import Path
 import re
 
+from site_chrome import refs_nav_item
+
 ROOT = Path(__file__).parent
+
+AUDIENCE = {
+    "de": {"inv_url": "/de/fuer-investoren/", "ent_url": "/de/fuer-unternehmer/", "inv_label": "Für Investoren", "ent_label": "Für Unternehmer"},
+    "en": {"inv_url": "/en/for-investors/", "ent_url": "/en/for-entrepreneurs/", "inv_label": "For investors", "ent_label": "For entrepreneurs"},
+    "it": {"inv_url": "/it/per-investitori/", "ent_url": "/it/per-imprenditori/", "inv_label": "Per investitori", "ent_label": "Per imprenditori"},
+}
 
 LANGS = {
     "de": {
@@ -80,8 +88,8 @@ LANGS = {
                 "id": "riccardo",
                 "name": "Riccardo Cunego",
                 "role": "Gründer & Partner",
-                "photo": "/rici-thumb.jpg",
-                "photo_large": "/rici-portrait.jpg",
+                "photo": "/rici-portrait-studio.png",
+                "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
@@ -169,8 +177,8 @@ LANGS = {
                 "id": "riccardo",
                 "name": "Riccardo Cunego",
                 "role": "Founder & Partner",
-                "photo": "/rici-thumb.jpg",
-                "photo_large": "/rici-portrait.jpg",
+                "photo": "/rici-portrait-studio.png",
+                "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
@@ -257,8 +265,8 @@ LANGS = {
                 "id": "riccardo",
                 "name": "Riccardo Cunego",
                 "role": "Fondatore & Partner",
-                "photo": "/rici-thumb.jpg",
-                "photo_large": "/rici-portrait.jpg",
+                "photo": "/rici-portrait-studio.png",
+                "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
@@ -461,9 +469,8 @@ EXTRA_CSS = """
     }
 
     .team-about-pick-photo .team-photo--riccardo {
-      object-position: center 8%;
-      transform: scale(1.08);
-      transform-origin: center center;
+      object-position: center center;
+      transform: none;
     }
 
     .team-about-pick:hover .team-photo:not(.team-photo--riccardo),
@@ -473,7 +480,7 @@ EXTRA_CSS = """
 
     .team-about-pick:hover .team-photo--riccardo,
     .team-about-pick.is-selected .team-photo--riccardo {
-      transform: scale(1.11);
+      transform: scale(1.03);
     }
 
     .team-about-pick:not(.is-selected) .team-photo {
@@ -614,9 +621,8 @@ EXTRA_CSS = """
     }
 
     .team-about-detail-photo .team-photo--riccardo {
-      object-position: center 8%;
+      object-position: center center;
       transform: none;
-      transform-origin: center center;
     }
 
     .team-about-detail-content {
@@ -756,9 +762,8 @@ TEAM_PHOTO_CSS = """
       filter: grayscale(1) contrast(1.06);
     }
     .team-photo--riccardo {
-      object-position: center 16%;
-      transform: scale(1.1);
-      transform-origin: center center;
+      object-position: center center;
+      transform: none;
     }
 """
 
@@ -770,6 +775,10 @@ def extract_style(html: str) -> str:
 
 def build_nav(lang: str, cfg: dict) -> str:
     n = cfg["nav"]
+    inv_url = AUDIENCE[lang]["inv_url"]
+    ent_url = AUDIENCE[lang]["ent_url"]
+    inv_label = AUDIENCE[lang]["inv_label"]
+    ent_label = AUDIENCE[lang]["ent_label"]
     home = cfg["home"]
 
     def lang_link(code: str) -> str:
@@ -780,7 +789,9 @@ def build_nav(lang: str, cfg: dict) -> str:
     return f"""  <nav>
     <a href="{home}" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="{home}">{n['home']}</a></li>
+      <li><a href="{inv_url}">{inv_label}</a></li>
+      <li><a href="{ent_url}">{ent_label}</a></li>
+{refs_nav_item(lang)}
       <li><a href="{cfg['about_url']}" aria-current="page">{n['about']}</a></li>
       <li><a href="{cfg['contact_url']}">{n['contact']}</a></li>
     </ul>

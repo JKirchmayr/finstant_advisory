@@ -1,0 +1,68 @@
+{
+  "de": {
+    "ent_title": "Für Unternehmer — Finstant Advisory",
+    "ent_desc": "Die Unternehmensnachfolge erfolgreich meistern. Diskrete M&A-Beratung für Eigentümer beim Unternehmensverkauf.",
+    "ent_h1": "Die Unternehmensnachfolge erfolgreich meistern!",
+    "ent_sub": "Firmen verkaufen wird leicht dank unseres Fokus auf Unternehmen mit Werten zwischen zirka CHF 2 und CHF 100 Mio. Sie profitieren von unserem Zugang zu Strategen, Finanzinvestoren und Fachspezialisten im Bereich Nachfolge.",
+    "ent_cta": "Termin vereinbaren",
+    "inv_title": "Für Investoren — Finstant Advisory",
+    "inv_desc": "Off-Market Deal Origination für Buy-and-Build Konzepte.",
+    "inv_h1": "Off-Market Deal Origination für Buy-and-Build Konzepte",
+    "inv_sub": "Proprietäre Off-Market-Pipelines in fragmentierten Business-Services-Märkten für Private-Equity-Plattformen.",
+    "inv_cta": "Pipeline-Gespräch vereinbaren",
+    "inv_engine_label": "Die Engine",
+    "inv_engine_title": "Systematische Origination, nicht opportunistisches Sourcing",
+    "inv_steps": [
+      ["Sektor- und Marktanalyse", "Wir kartieren das Wettbewerbsumfeld Ihrer Buy-and-Build-These, identifizieren White Spots und definieren, welche Unternehmen wirklich zur Plattform passen."],
+      ["Direkte Inhaberansprache", "Wir sprechen Eigentümer vertraulich an — über das bestehende Netzwerk und durch proprietäre Outreach. Keine Auktionen, sondern Beziehungen, die zum richtigen Zeitpunkt reifen."],
+      ["Deal-Phase bis Closing", "Sobald ein Gespräch reift, begleiten wir die Transaktion: Koordination beider Seiten, Due Diligence und die Dynamik bis zur Unterschrift."]
+    ],
+    "inv_page_cta_title": "Lassen Sie uns Ihre Origination-Engine aufbauen.",
+    "inv_page_cta": "Termin vereinbaren",
+    "label": "Finstant Advisory"
+  },
+  "en": {
+    "ent_title": "For entrepreneurs — Finstant Advisory",
+    "ent_desc": "Master business succession successfully. Discreet M&A advisory for owners selling a company.",
+    "ent_h1": "Master business succession successfully!",
+    "ent_sub": "Selling a company becomes easier thanks to our focus on businesses with enterprise values of about CHF 2 to CHF 100 million.",
+    "ent_cta": "Book a meeting",
+    "inv_title": "For investors — Finstant Advisory",
+    "inv_desc": "An off-market deal origination engine for your buy-and-build strategy.",
+    "inv_h1": "Off-market deal origination engine for your buy-and-build strategy",
+    "inv_sub": "We build a proprietary off-market pipeline for private equity platforms in fragmented business-services markets — before targets enter an auction process.",
+    "inv_cta": "Book a pipeline conversation",
+    "inv_engine_label": "The engine",
+    "inv_engine_title": "Systematic origination, not opportunistic sourcing",
+    "inv_steps": [
+      ["Sector and market analysis", "We map the competitive landscape of your buy-and-build thesis, identify white spaces, and define which companies truly fit the platform."],
+      ["Direct owner outreach", "We approach owners confidentially — through our network and proprietary outreach."],
+      ["Deal phase through closing", "Once a conversation matures, we run the transaction through signing."]
+    ],
+    "inv_page_cta_title": "Let us build your origination engine.",
+    "inv_page_cta": "Book a meeting",
+    "label": "Finstant Advisory"
+  },
+  "it": {
+    "ent_title": "Per imprenditori — Finstant Advisory",
+    "ent_desc": "Gestire con successo la successione aziendale.",
+    "ent_h1": "Gestire con successo la successione aziendale!",
+    "ent_sub": "Vendere un’azienda diventa più semplice grazie al nostro focus su imprese con valori tra circa CHF 2 e CHF 100 milioni.",
+    "ent_cta": "Fissare un incontro",
+    "inv_title": "Per investitori — Finstant Advisory",
+    "inv_desc": "Motore di origination off-market per il vostro concetto buy-and-build.",
+    "inv_h1": "Motore di origination off-market per il vostro concetto buy-and-build",
+    "inv_sub": "Costruiamo per piattaforme di private equity una pipeline off-market proprietaria nei mercati frammentati dei business services.",
+    "inv_cta": "Prenotare un colloquio sulla pipeline",
+    "inv_engine_label": "Il motore",
+    "inv_engine_title": "Origination sistematica, non sourcing opportunistico",
+    "inv_steps": [
+      ["Analisi di settore e di mercato", "Mappiamo il contesto competitivo della tesi buy-and-build e definiamo quali aziende si adattano alla piattaforma."],
+      ["Contatto diretto con gli imprenditori", "Contattiamo i soci in modo riservato — tramite network e outreach proprietario."],
+      ["Fase di deal fino al closing", "Quando il dialogo matura, gestiamo la transazione fino alla firma."]
+    ],
+    "inv_page_cta_title": "Costruiamo il vostro motore di origination.",
+    "inv_page_cta": "Fissa un appuntamento",
+    "label": "Finstant Advisory"
+  }
+}
