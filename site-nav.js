@@ -1,4 +1,35 @@
 (function () {
+  document.querySelectorAll("nav").forEach(function (nav) {
+    if (nav.querySelector(".nav-menu-btn")) return;
+    var links = nav.querySelector(".nav-links");
+    if (!links) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "nav-menu-btn";
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Menu");
+    btn.innerHTML = "<span></span><span></span>";
+    var right = nav.querySelector(".nav-right");
+    if (right) right.appendChild(btn);
+    else nav.appendChild(btn);
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      var open = !nav.classList.contains("is-menu-open");
+      nav.classList.toggle("is-menu-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+    document.querySelectorAll("nav.is-menu-open").forEach(function (nav) {
+      nav.classList.remove("is-menu-open");
+      var btn = nav.querySelector(".nav-menu-btn");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+
+(function () {
   function closeAll(except) {
     document.querySelectorAll(".nav-dropdown.is-open").forEach(function (item) {
       if (item === except) return;

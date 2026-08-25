@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 
-from site_chrome import refs_nav_item
+from site_chrome import ASSETS, SCRIPT, footer_html, refs_nav_item
 
 ROOT = Path(__file__).parent
 
@@ -33,6 +33,7 @@ LANGS = {
         },
         "hero_label": "Über uns",
         "hero_title": "Wer wir sind",
+        "hero_photo_alt": "Johannes Kirchmayr und Riccardo Cunego",
         "hero_intro": (
             "Finstant Advisory ist eine unabhängige M&A-Beratung für den europäischen Mittelstand. "
             "Wir verbinden über 12 Jahre Erfahrung in Private Equity und M&A mit einem tiefgreifenden "
@@ -122,6 +123,7 @@ LANGS = {
         },
         "hero_label": "About us",
         "hero_title": "Who we are",
+        "hero_photo_alt": "Johannes Kirchmayr and Riccardo Cunego",
         "hero_intro": (
             "Finstant Advisory is an independent M&A advisory firm focused on the European mid-market. "
             "We combine over 12 years of private equity and M&A experience with a deep network among "
@@ -211,6 +213,7 @@ LANGS = {
         },
         "hero_label": "Chi siamo",
         "hero_title": "Chi siamo",
+        "hero_photo_alt": "Johannes Kirchmayr e Riccardo Cunego",
         "hero_intro": (
             "Finstant Advisory è una boutique di consulenza M&A indipendente per il mid-market europeo. "
             "Uniamo oltre 12 anni di esperienza in private equity e M&A a una rete consolidata tra i "
@@ -316,14 +319,30 @@ EXTRA_CSS = """
     }
 
     .about-hero {
+      overflow: hidden;
       padding-top: 5.5rem;
-      padding-bottom: 5rem;
-      text-align: center;
+      padding-bottom: 0;
+      text-align: left;
     }
 
-    .about-hero .section-title {
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1.05fr) minmax(280px, 1fr);
+      gap: 2.5rem 3.25rem;
+      align-items: end;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .about-hero-copy {
+      padding-bottom: 7.25rem;
+      transform: translateY(-1.65rem);
+    }
+
+    .about-hero-copy .section-title {
       max-width: none;
-      margin: 0 auto 1.5rem;
+      margin: 0 0 1.35rem;
+      text-align: left;
     }
 
     .about-lead {
@@ -331,9 +350,29 @@ EXTRA_CSS = """
       line-height: 1.9;
       font-weight: 300;
       color: var(--gray-text);
-      max-width: 40rem;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 36rem;
+      margin: 0;
+      text-align: left;
+    }
+
+    .about-hero-portraits {
+      position: relative;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .about-hero-portraits img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: bottom right;
+      filter: drop-shadow(0 10px 18px rgba(13, 13, 11, 0.18)) drop-shadow(0 22px 40px rgba(13, 13, 11, 0.12));
+      pointer-events: none;
     }
 
     #values {
@@ -699,6 +738,18 @@ EXTRA_CSS = """
 
     @media (max-width: 800px) {
       .about-section { padding: 3.5rem 1.75rem; }
+      .about-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .about-hero-copy {
+        padding-bottom: 0.5rem;
+        transform: none;
+      }
+      .about-hero-portraits { max-width: 420px; margin: 0 auto; }
+      .about-hero-copy .section-title,
+      .about-lead { text-align: center; }
+      .about-lead { margin-left: auto; margin-right: auto; }
       .values-grid { grid-template-columns: 1fr; }
       .value-card { border-right: none; }
       .value-card:last-child { border-bottom: none; }
@@ -903,14 +954,22 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 {TEAM_PHOTO_CSS}
 {EXTRA_CSS}
   </style>
+{ASSETS}
 </head>
 <body class="page-about">
 
 {build_nav(lang, cfg)}
 
   <section class="about-section about-hero" id="about">
-    <h1 class="section-title reveal">{cfg['hero_title']}</h1>
-    <p class="about-lead reveal">{cfg['hero_intro']}</p>
+    <div class="about-hero-grid">
+      <div class="about-hero-copy">
+        <h1 class="section-title reveal">{cfg['hero_title']}</h1>
+        <p class="about-lead reveal">{cfg['hero_intro']}</p>
+      </div>
+      <div class="about-hero-portraits">
+        <img src="/about-partners-cutout.png" alt="{cfg['hero_photo_alt']}" width="1200" height="900" decoding="async">
+      </div>
+    </div>
   </section>
 
   <section class="about-section" id="values">
@@ -937,11 +996,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 
 {build_team_overlay(cfg)}
 
-  <footer>
-    <div class="footer-logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></div>
-    <div class="footer-text">© 2026 Finstant Advisory · Zurich</div>
-    <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
-  </footer>
+{footer_html(lang)}
 
   <script>
     const observer = new IntersectionObserver((entries) => {{
@@ -1053,7 +1108,7 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
       }}
     }})();
   </script>
-
+{SCRIPT}
 </body>
 </html>
 """

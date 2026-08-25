@@ -273,3 +273,84 @@ body.page-refs .nav-dropdown-btn:hover {
   .site-footer-bar { flex-direction: column; align-items: flex-start; }
   .cookie-banner { left: 0.85rem; right: 0.85rem; bottom: 0.85rem; }
 }
+
+html {
+  overflow-x: clip;
+}
+
+.nav-menu-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  flex-shrink: 0;
+}
+.nav-menu-btn span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-menu-btn[aria-expanded="true"] span:first-child {
+  transform: translateY(3.75px) rotate(45deg);
+}
+.nav-menu-btn[aria-expanded="true"] span:last-child {
+  transform: translateY(-3.75px) rotate(-45deg);
+}
+nav:not(.is-scrolled) .nav-menu-btn { color: var(--white, #f9f8f5); }
+nav.is-scrolled .nav-menu-btn,
+body.page-about .nav-menu-btn,
+body.page-contact .nav-menu-btn,
+body.page-legal .nav-menu-btn,
+body.page-service .nav-menu-btn,
+body.page-audience .nav-menu-btn {
+  color: var(--black, #0d0d0b);
+}
+
+@media (max-width: 800px) {
+  .nav-menu-btn { display: flex; }
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.95rem;
+    width: 100%;
+    order: 20;
+    padding: 0.35rem 0 1rem;
+  }
+  nav.is-menu-open .nav-links { display: flex; }
+  nav.is-menu-open:not(.is-scrolled) {
+    background: rgba(13, 13, 11, 0.96) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  nav.is-scrolled.is-menu-open,
+  body.page-about nav.is-menu-open,
+  body.page-contact nav.is-menu-open,
+  body.page-legal nav.is-menu-open,
+  body.page-service nav.is-menu-open,
+  body.page-audience nav.is-menu-open {
+    background: rgba(249, 248, 245, 0.98) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .focus-boxes,
+  .focus-industries,
+  .apart-grid,
+  .succession-grid,
+  .engine-grid,
+  .engine-grid--4,
+  .values-grid { grid-template-columns: 1fr !important; }
+  .team-preview-inner { grid-template-columns: 1fr !important; }
+  .team-preview-copy { grid-column: 1 / -1; }
+}
