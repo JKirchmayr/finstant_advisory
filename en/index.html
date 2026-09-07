@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finstant Advisory — M&A Advisory with Local Market Expertise</title>
-  <meta name="description" content="Discreet M&A advisory for owner-managed businesses — with deep localket expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness. Based in Zurich." />
+  <meta name="description" content="Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness. Based in Zurich." />
   <meta name="keywords" content="M&A advisory, business sale, mid-market, Italy, Switzerland, Europe, IT services, buy-and-build, private equity, Zurich, succession, off-market, deal origination" />
   <meta name="author" content="Johannes Kirchmayr, Finstant Advisory" />
   <meta name="robots" content="index, follow" />
@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.finstantadvisory.com/en/" />
   <meta property="og:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
-  <meta property="og:description" content="Discreet M&A advisory with deep localket expertise across Switzerland, Italy, and Europe." />
+  <meta property="og:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta property="og:image:alt" content="Zurich skyline at sunset — Finstant Advisory" />
@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.finstantadvisory.com/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg" />
   <meta name="twitter:title" content="Finstant Advisory — M&A Advisory with Local Market Expertise" />
-  <meta name="twitter:description" content="Discreet M&A advisory with deep localket expertise across Switzerland, Italy, and Europe." />
+  <meta name="twitter:description" content="Discreet M&A advisory with deep local market expertise across Switzerland, Italy, and Europe." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Finstant Advisory",
-    "description": "Discreet M&A advisory for owner-managed businesses — with deep localket expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness.",
+    "description": "Discreet M&A advisory for owner-managed businesses — with deep local market expertise across Switzerland, Italy, and Europe. Sell-side advisory, buy-side deal origination, and transaction readiness.",
     "url": "https://www.finstantadvisory.com/en/",
     "email": "contact@finstantadvisory.com",
     "address": {
@@ -87,11 +87,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -1507,7 +1515,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=3" />
 </head>
 <body>
 
@@ -1519,7 +1527,8 @@
     <ul class="nav-links">
       <li><a href="/en/for-investors/">For investors</a></li>
       <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
-<li><a href="/en/about/">About us</a></li>
+      <li><a href="/en/references/">References</a></li>
+      <li><a href="/en/about/">About us</a></li>
       <li><a href="/en/contact/">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -1530,12 +1539,13 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Login</a>
     </div>
     </nav>
     <h1 class="hero-title reveal reveal-delay-1">M&amp;A Advisory</h1>
     <p class="hero-sub reveal reveal-delay-2">We support you with company acquisitions / sales.</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+      <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary" target="_blank" rel="noopener noreferrer">Book a meeting</a>
     </div>
   </section>
 
@@ -1683,7 +1693,7 @@
 
   <section class="page-cta" id="close">
     <h2 class="page-cta-title reveal">Let’s talk about your next M&amp;A transaction.</h2>
-    <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+    <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book a meeting</a>
   </section>
 
   <!-- FOOTER -->
@@ -1707,6 +1717,7 @@
           <li><a href="/en/">Home</a></li>
           <li><a href="/en/for-investors/">For investors</a></li>
           <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
+      <li><a href="/en/references/">References</a></li>
           <li><a href="/en/about/">About us</a></li>
           <li><a href="/en/contact/">Contact</a></li>
         </ul>
@@ -1731,16 +1742,7 @@
   </footer>
 
   <script>
-    // SCROLL REVEAL
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
 
     // NAV — blurred glass over hero, solid white at services section
     (function() {
@@ -1775,5 +1777,6 @@
 
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>

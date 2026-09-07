@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -1420,7 +1428,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=3" />
 </head>
 <body class="page-audience">
 
@@ -1430,6 +1438,7 @@
     <ul class="nav-links">
       <li><a href="/en/for-investors/" aria-current="page">For investors</a></li>
       <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
+      <li><a href="/en/references/">References</a></li>
 <li><a href="/en/about/">About us</a></li>
       <li><a href="/en/contact/">Contact</a></li>
     </ul>
@@ -1441,13 +1450,14 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/per-investitori/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Login</a>
     </div>
     </nav>
     <div class="label reveal">Finstant Advisory</div>
     <h1 class="hero-title hero-title--long reveal reveal-delay-1">Off-market deal origination engine for your buy-and-build strategy</h1>
     <p class="hero-sub reveal reveal-delay-2">We build a proprietary off-market pipeline for private equity platforms in fragmented business-services markets — before targets enter an auction process.</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary" target="_blank" rel="noopener noreferrer">Book a pipeline conversation</a>
+      <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary" target="_blank" rel="noopener noreferrer">Book a pipeline conversation</a>
     </div>
   </section>
   <section class="engine" id="engine">
@@ -1476,9 +1486,9 @@
   <section class="market" id="markt">
     <div class="market-intro">
       <div>
-        <h2 class="section-title reveal" style="margin-bottom:0;">Theket is consolidating —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">we have the access.</em></h2>
+        <h2 class="section-title reveal" style="margin-bottom:0;">The market is consolidating —<br><em style="font-family:var(--serif);font-style:italic;font-weight:300;">we have the access.</em></h2>
       </div>
-      <p class="market-sub reveal">Thousands of owner-managed businesses across Europe face succession questions. We identify the best targets before they come toket — with localket knowledge and direct relationships.</p>
+      <p class="market-sub reveal">Thousands of owner-managed businesses across Europe face succession questions. We identify the best targets before they come to market — with local market knowledge and direct relationships.</p>
     </div>
     <div class="market-grid" style="background: rgba(0,0,0,0.06);">
       <div class="market-card reveal" style="background: var(--white);">
@@ -1487,15 +1497,15 @@
       </div>
       <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
         <div class="market-card-title">Business services focus</div>
-        <p class="market-card-body">We focus on owner-managed business services companies. Asset-light models and fragmentedkets are our domain.</p>
+        <p class="market-card-body">We focus on owner-managed business services companies. Asset-light models and fragmented markets are our domain.</p>
       </div>
       <div class="market-card reveal reveal-delay-1" style="background: var(--white);">
         <div class="market-card-title">Rising PE activity</div>
-        <p class="market-card-body">You want systematic access to a vertical — we bring sector expertise and proprietaryket access to source there consistently.</p>
+        <p class="market-card-body">You want systematic access to a vertical — we bring sector expertise and proprietary market access to source there consistently.</p>
       </div>
       <div class="market-card reveal reveal-delay-2" style="background: var(--white);">
-        <div class="market-card-title">Directket access</div>
-        <p class="market-card-body">We speak directly with owners in selectedkets — without auction pressure or anonymous screening. That yields tangible access to off-market opportunities.</p>
+        <div class="market-card-title">Direct market access</div>
+        <p class="market-card-body">We speak directly with owners in selected markets — without auction pressure or anonymous screening. That yields tangible access to off-market opportunities.</p>
       </div>
     </div>
   </section>
@@ -1503,7 +1513,7 @@
   
   <section class="page-cta" id="kontakt-cta">
     <h2 class="page-cta-title reveal">Let us build your origination engine.</h2>
-    <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book a meeting</a>
+    <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Book a meeting</a>
   </section>
 <!-- FOOTER -->
       <footer class="site-footer">
@@ -1526,6 +1536,7 @@
           <li><a href="/en/">Home</a></li>
           <li><a href="/en/for-investors/">For investors</a></li>
           <li><a href="/en/for-entrepreneurs/">For entrepreneurs</a></li>
+          <li><a href="/en/references/">References</a></li>
           <li><a href="/en/about/">About us</a></li>
           <li><a href="/en/contact/">Contact</a></li>
         </ul>
@@ -1551,15 +1562,7 @@
 
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
     (function() {
       const nav = document.querySelector('nav');
       const afterHero = document.querySelector('.succession, .engine, .market');
@@ -1579,5 +1582,6 @@
 
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>

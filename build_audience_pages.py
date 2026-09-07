@@ -5,11 +5,11 @@ import json
 import re
 from pathlib import Path
 
-from site_chrome import refs_nav_item
+from site_chrome import refs_nav_item, nav_login
 
 ROOT = Path(__file__).parent
 COPY = json.loads((ROOT / "audience_copy.json").read_text(encoding="utf-8"))
-CALENDLY = "https://calendly.com/finstant/new-meeting?month=2026-08"
+BOOKING_URL = "https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/"
 
 PATHS = {
     "de": {
@@ -171,6 +171,7 @@ def nav_html(lang: str, current: str) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
+      {nav_login(lang)}
     </div>
     </nav>"""
 
@@ -229,15 +230,7 @@ def engine_html(c: dict) -> str:
 
 def scripts() -> str:
     return """  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
     (function() {
       const nav = document.querySelector('nav');
       const afterHero = document.querySelector('.succession, .engine, .market');
@@ -291,7 +284,7 @@ def build_pages() -> None:
     <h1 class="hero-title hero-title--long reveal reveal-delay-1">{c['ent_h1']}</h1>
     <p class="hero-sub reveal reveal-delay-2">{c['ent_sub']}</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="{CALENDLY}" class="btn-primary" target="_blank" rel="noopener noreferrer">{c['ent_cta']}</a>
+      <a href="{BOOKING_URL}" class="btn-primary" target="_blank" rel="noopener noreferrer">{c['ent_cta']}</a>
     </div>
   </section>
 {b['succ']}
@@ -311,14 +304,14 @@ def build_pages() -> None:
     <h1 class="hero-title hero-title--long reveal reveal-delay-1">{c['inv_h1']}</h1>
     <p class="hero-sub reveal reveal-delay-2">{c['inv_sub']}</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="{CALENDLY}" class="btn-primary" target="_blank" rel="noopener noreferrer">{c['inv_cta']}</a>
+      <a href="{BOOKING_URL}" class="btn-primary" target="_blank" rel="noopener noreferrer">{c['inv_cta']}</a>
     </div>
   </section>
 {engine_html(c)}
 {b['inv_m']}
   <section class="page-cta" id="kontakt-cta">
     <h2 class="page-cta-title reveal">{c['inv_page_cta_title']}</h2>
-    <a href="{CALENDLY}" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">{c['inv_page_cta']}</a>
+    <a href="{BOOKING_URL}" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">{c['inv_page_cta']}</a>
   </section>
 {b['foot']}
 {scripts()}

@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -1420,7 +1428,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=3" />
 </head>
 <body class="page-audience">
 
@@ -1430,6 +1438,7 @@
     <ul class="nav-links">
       <li><a href="/it/per-investitori/" aria-current="page">Per investitori</a></li>
       <li><a href="/it/per-imprenditori/">Per imprenditori</a></li>
+      <li><a href="/it/referenze/">Referenze</a></li>
 <li><a href="/it/chi-siamo/">Chi siamo</a></li>
       <li><a href="/it/contatto/">Contatto</a></li>
     </ul>
@@ -1441,13 +1450,14 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/per-investitori/" class="nav-lang-link is-active" hreflang="it" lang="it" aria-current="true">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Accedi</a>
     </div>
     </nav>
     <div class="label reveal">Finstant Advisory</div>
     <h1 class="hero-title hero-title--long reveal reveal-delay-1">Motore di origination off-market per il vostro concetto buy-and-build</h1>
     <p class="hero-sub reveal reveal-delay-2">Costruiamo per piattaforme di private equity una pipeline off-market proprietaria nei mercati frammentati dei business services.</p>
     <div class="hero-actions reveal reveal-delay-3">
-      <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary" target="_blank" rel="noopener noreferrer">Prenotare un colloquio sulla pipeline</a>
+      <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary" target="_blank" rel="noopener noreferrer">Prenotare un colloquio sulla pipeline</a>
     </div>
   </section>
   <section class="engine" id="engine">
@@ -1503,7 +1513,7 @@
   
   <section class="page-cta" id="kontakt-cta">
     <h2 class="page-cta-title reveal">Costruiamo il vostro motore di origination.</h2>
-    <a href="https://calendly.com/finstant/new-meeting?month=2026-08" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Fissa un appuntamento</a>
+    <a href="https://outlook.office.com/book/FinstantIntro1@finstantadvisory.com/" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Fissa un appuntamento</a>
   </section>
 <!-- FOOTER -->
       <footer class="site-footer">
@@ -1526,6 +1536,7 @@
           <li><a href="/it/">Home</a></li>
           <li><a href="/it/per-investitori/">Per investitori</a></li>
           <li><a href="/it/per-imprenditori/">Per imprenditori</a></li>
+          <li><a href="/it/referenze/">Referenze</a></li>
           <li><a href="/it/chi-siamo/">Chi siamo</a></li>
           <li><a href="/it/contatto/">Contatto</a></li>
         </ul>
@@ -1551,15 +1562,7 @@
 
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
     (function() {
       const nav = document.querySelector('nav');
       const afterHero = document.querySelector('.succession, .engine, .market');
@@ -1579,5 +1582,6 @@
 
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>
