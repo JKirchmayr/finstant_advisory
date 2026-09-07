@@ -77,8 +77,13 @@ REFS_NAV = {
     },
 }
 
+# Temporarily hide Referenzen from nav/footer (set True to restore).
+SHOW_REFS = False
+
 
 def refs_nav_item(lang: str, current: str | None = None) -> str:
+    if not SHOW_REFS:
+        return ""
     item = REFS_NAV[lang]
     href = item["href"]
     label = item["label"]
@@ -102,6 +107,11 @@ def nav_login(lang: str) -> str:
 def footer_html(lang: str) -> str:
     c = FOOTER_COPY[lang]
     a = AUDIENCE[lang]
+    refs_li = (
+        f'<li><a href="{REFS_NAV[lang]["href"]}">{REFS_NAV[lang]["label"]}</a></li>\n          '
+        if SHOW_REFS
+        else ""
+    )
     return f"""  <footer class="site-footer">
     <div class="site-footer-grid">
       <div>
@@ -122,8 +132,7 @@ def footer_html(lang: str) -> str:
           <li><a href="{c['home'][1]}">{c['home'][0]}</a></li>
           <li><a href="{a['inv']}">{a['inv_l']}</a></li>
           <li><a href="{a['ent']}">{a['ent_l']}</a></li>
-          <li><a href="{REFS_NAV[lang]['href']}">{REFS_NAV[lang]['label']}</a></li>
-          <li><a href="{c['about'][1]}">{c['about'][0]}</a></li>
+          {refs_li}<li><a href="{c['about'][1]}">{c['about'][0]}</a></li>
           <li><a href="{c['contact'][1]}">{c['contact'][0]}</a></li>
         </ul>
       </div>

@@ -1,9 +1,9 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Studies â€” Finstant Advisory</title>
+  <title>Case Studies — Finstant Advisory</title>
   <meta name="description" content="Case study di Finstant Advisory." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.finstantadvisory.com/it/case-studies/" />
@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -360,7 +368,7 @@
       margin-top: 1.75rem;
     }
 
-    /* WHY â€” dark */
+    /* WHY — dark */
     .why {
       padding: 5rem 3.5rem;
       border-bottom: 0.5px solid var(--border);
@@ -943,16 +951,16 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=4" />
 </head>
 <body class="page-refs page-legal">
 
   <nav>
     <a href="/de/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
     <ul class="nav-links">
-      <li><a href="/de/fuer-investoren/">FÃ¼r Investoren</a></li>
-      <li><a href="/de/fuer-unternehmer/">FÃ¼r Unternehmer</a></li>
-<li><a href="/de/ueber-uns/">Ãœber uns</a></li>
+      <li><a href="/de/fuer-investoren/">Für Investoren</a></li>
+      <li><a href="/de/fuer-unternehmer/">Für Unternehmer</a></li>
+<li><a href="/de/ueber-uns/">Über uns</a></li>
       <li><a href="/de/kontakt/">Kontakt</a></li>
     </ul>
     <div class="nav-right">
@@ -963,6 +971,7 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/case-studies/" class="nav-lang-link is-active" aria-current="true hreflang="it" lang="it">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Accedi</a>
     </div>
   </nav>
 
@@ -977,8 +986,8 @@
     <div class="site-footer-grid">
       <div>
         <a class="site-footer-logo" href="/it/"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
-        <p class="site-footer-blurb">Finstant Advisory Ã¨ una boutique M&amp;A indipendente per private equity e imprese a conduzione familiare in DACH, Italia ed Europa.</p>
-        <div class="site-footer-address">LanggrÃ¼tstrasse 61<br>8047 ZÃ¼rich<br>Schweiz</div>
+        <p class="site-footer-blurb">Finstant Advisory è una boutique M&amp;A indipendente per private equity e imprese a conduzione familiare in DACH, Italia ed Europa.</p>
+        <div class="site-footer-address">Langgrütstrasse 61<br>8047 Zürich<br>Schweiz</div>
         <div class="site-footer-contact">
           <a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a>
           <a href="tel:+41764970496">+41 76 497 04 96</a>
@@ -1007,28 +1016,21 @@
       </div>
     </div>
     <div class="site-footer-bar">
-      <div>Copyright Â©2026 FINSTANT ADVISORY</div>
+      <div>Copyright ©2026 FINSTANT ADVISORY</div>
       <div class="site-footer-legal">
-        <a href="/it/privacy/">Informativa sulla privacy</a><span class="site-footer-dot">Â·</span>
-        <a href="/it/impressum/">Note legali</a><span class="site-footer-dot">Â·</span>
+        <a href="/it/privacy/">Informativa sulla privacy</a><span class="site-footer-dot">·</span>
+        <a href="/it/impressum/">Note legali</a><span class="site-footer-dot">·</span>
         <button type="button" class="js-cookie-settings" data-cookie-settings>Impostazioni cookie</button>
       </div>
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
   </script>
 
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>

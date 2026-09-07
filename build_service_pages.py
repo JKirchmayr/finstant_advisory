@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 
-from site_chrome import refs_nav_item
+from site_chrome import refs_nav_item, nav_login
 
 ROOT = Path(__file__).parent
 
@@ -388,6 +388,7 @@ def build_nav_html(lang: str, service_key: str) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
+      {nav_login(lang)}
     </div>
   </nav>"""
 
@@ -462,17 +463,7 @@ def build_page(lang: str, service_key: str, style: str) -> str:
     <div class="footer-links"><a href="{n['impressum_url']}">{n['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {{
-      entries.forEach(e => {{
-        if (e.isIntersecting) {{
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }}
-      }});
-    }}, {{ threshold: 0.1 }});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>
 """

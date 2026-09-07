@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -2001,7 +2009,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=4" />
 
 </head>
 <body class="page-about">
@@ -2023,6 +2031,7 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/chi-siamo/" class="nav-lang-link is-active" hreflang="it" lang="it" aria-current="true">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Accedi</a>
     </div>
   </nav>
 
@@ -2108,7 +2117,8 @@
         <div class="team-about-detail-role">Fondatore & Partner</div>
         <p class="team-about-detail-bio">Johannes Kirchmayr ha iniziato nel turnaround private equity prima di entrare in uno dei principali asset manager istituzionali della Svizzera. Per diversi anni ha guidato transazioni mid-market in Svizzera ed Europa e ha imparato il mestiere dall'inizio alla fine — dal primo contatto al closing. L'energia imprenditoriale e il desiderio di un dialogo diretto e fidato con imprenditori e clienti lo hanno portato a fondare Finstant Advisory. Il suo focus è il mercato DACH.</p>
         <div class="team-about-actions">
-          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-about-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+41764970496" class="team-about-btn">Telefono</a>
+          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-about-btn team-about-btn--ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:jkirchmayr@finstantadvisory.com" class="team-about-btn team-about-btn--ghost">Email</a>
         </div>
       </div>
@@ -2122,7 +2132,8 @@
         <div class="team-about-detail-role">Fondatore & Partner</div>
         <p class="team-about-detail-bio">Riccardo porta oltre 6 anni di esperienza in private equity e M&A — nella divisione private equity di Schroders Capital e in M&A presso BNP Paribas, Rabobank e Promethiem. Ha lavorato sull'intero ciclo del deal — dall'origination e screening fino all'esecuzione — costruendo una rete tra i principali investitori finanziari europei.</p>
         <div class="team-about-actions">
-          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-about-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+41797458896" class="team-about-btn">Telefono</a>
+          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-about-btn team-about-btn--ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:rcunego@finstantadvisory.com" class="team-about-btn team-about-btn--ghost">Email</a>
         </div>
       </div>
@@ -2174,15 +2185,6 @@
 
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     (function() {
       const overlay = document.getElementById('team-overlay');
@@ -2285,6 +2287,7 @@
   </script>
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 
 </body>
 </html>

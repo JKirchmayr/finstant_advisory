@@ -10,6 +10,36 @@
       "source": "/index.html",
       "destination": "/de/",
       "permanent": true
+    },
+    {
+      "source": "/de/referenzen",
+      "destination": "/de/",
+      "permanent": false
+    },
+    {
+      "source": "/de/referenzen/",
+      "destination": "/de/",
+      "permanent": false
+    },
+    {
+      "source": "/en/references",
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/en/references/",
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/it/referenze",
+      "destination": "/it/",
+      "permanent": false
+    },
+    {
+      "source": "/it/referenze/",
+      "destination": "/it/",
+      "permanent": false
     }
   ]
 }

@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 
-from site_chrome import ASSETS, SCRIPT, footer_html, refs_nav_item
+from site_chrome import ASSETS, SCRIPT, footer_html, nav_login, refs_nav_item
 
 ROOT = Path(__file__).parent
 
@@ -67,6 +67,7 @@ LANGS = {
         "close_label": "Schließen",
         "linkedin": "LinkedIn",
         "email": "E-Mail",
+        "phone": "Telefon",
         "members": [
             {
                 "id": "johannes",
@@ -75,6 +76,8 @@ LANGS = {
                 "photo": "/jkirchmayr.png",
                 "photo_class": "",
                 "email": "jkirchmayr@finstantadvisory.com",
+                "phone": "+41 76 497 04 96",
+                "phone_href": "tel:+41764970496",
                 "linkedin": "https://www.linkedin.com/in/johanneskirchmayr/",
                 "bio": (
                     "Johannes Kirchmayr begann seine Karriere im Turnaround Private Equity, bevor er zu einem der "
@@ -93,6 +96,8 @@ LANGS = {
                 "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
+                "phone": "+41 79 745 88 96",
+                "phone_href": "tel:+41797458896",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo bringt über 6 Jahre Erfahrung in Private Equity und M&A mit — in der Private-Equity-Sparte "
@@ -157,6 +162,7 @@ LANGS = {
         "close_label": "Close",
         "linkedin": "LinkedIn",
         "email": "Email",
+        "phone": "Phone",
         "members": [
             {
                 "id": "johannes",
@@ -165,6 +171,8 @@ LANGS = {
                 "photo": "/jkirchmayr.png",
                 "photo_class": "",
                 "email": "jkirchmayr@finstantadvisory.com",
+                "phone": "+41 76 497 04 96",
+                "phone_href": "tel:+41764970496",
                 "linkedin": "https://www.linkedin.com/in/johanneskirchmayr/",
                 "bio": (
                     "Johannes Kirchmayr began his career in turnaround private equity before joining one of "
@@ -183,6 +191,8 @@ LANGS = {
                 "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
+                "phone": "+41 79 745 88 96",
+                "phone_href": "tel:+41797458896",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo brings over 6 years of private equity and M&A experience — at Schroders Capital's "
@@ -247,6 +257,7 @@ LANGS = {
         "close_label": "Chiudi",
         "linkedin": "LinkedIn",
         "email": "Email",
+        "phone": "Telefono",
         "members": [
             {
                 "id": "johannes",
@@ -255,6 +266,8 @@ LANGS = {
                 "photo": "/jkirchmayr.png",
                 "photo_class": "",
                 "email": "jkirchmayr@finstantadvisory.com",
+                "phone": "+41 76 497 04 96",
+                "phone_href": "tel:+41764970496",
                 "linkedin": "https://www.linkedin.com/in/johanneskirchmayr/",
                 "bio": (
                     "Johannes Kirchmayr ha iniziato nel turnaround private equity prima di entrare in uno dei "
@@ -272,6 +285,8 @@ LANGS = {
                 "photo_large": "/rici-portrait-studio.png",
                 "photo_class": "team-photo--riccardo",
                 "email": "rcunego@finstantadvisory.com",
+                "phone": "+41 79 745 88 96",
+                "phone_href": "tel:+41797458896",
                 "linkedin": "https://www.linkedin.com/in/riccardocunego/",
                 "bio": (
                     "Riccardo porta oltre 6 anni di esperienza in private equity e M&A — nella divisione private equity "
@@ -854,6 +869,7 @@ def build_nav(lang: str, cfg: dict) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
+      {nav_login(lang)}
     </div>
   </nav>"""
 
@@ -910,7 +926,8 @@ def build_team_details(cfg: dict) -> str:
         <div class="team-about-detail-role">{m['role']}</div>
         <p class="team-about-detail-bio">{m['bio']}</p>
         <div class="team-about-actions">
-          <a href="{m['linkedin']}" class="team-about-btn" target="_blank" rel="noopener noreferrer">{cfg['linkedin']}</a>
+          <a href="{m['phone_href']}" class="team-about-btn">{cfg['phone']}</a>
+          <a href="{m['linkedin']}" class="team-about-btn team-about-btn--ghost" target="_blank" rel="noopener noreferrer">{cfg['linkedin']}</a>
           <a href="mailto:{m['email']}" class="team-about-btn team-about-btn--ghost">{cfg['email']}</a>
         </div>
       </div>
@@ -999,15 +1016,6 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 {footer_html(lang)}
 
   <script>
-    const observer = new IntersectionObserver((entries) => {{
-      entries.forEach(e => {{
-        if (e.isIntersecting) {{
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }}
-      }});
-    }}, {{ threshold: 0.1 }});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     (function() {{
       const overlay = document.getElementById('team-overlay');

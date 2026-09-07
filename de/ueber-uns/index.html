@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -2001,7 +2009,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=4" />
 
 </head>
 <body class="page-about">
@@ -2023,6 +2031,7 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/chi-siamo/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Login</a>
     </div>
   </nav>
 
@@ -2108,7 +2117,8 @@
         <div class="team-about-detail-role">Gründer & Partner</div>
         <p class="team-about-detail-bio">Johannes Kirchmayr begann seine Karriere im Turnaround Private Equity, bevor er zu einem der führenden institutionellen Asset Manager der Schweiz wechselte. Dort verantwortete er über mehrere Jahre Mid-Market-Transaktionen in der Schweiz und Europa und erlernte das Handwerk von Grund auf — von der ersten Ansprache bis zum Closing. Die eigene unternehmerische Energie und der Wunsch nach einem direkten, vertrauensvollen Austausch mit Unternehmern und Mandanten führten zur Gründung von Finstant Advisory. Bei Finstant Advisory liegt sein Schwerpunkt auf dem DACH-Markt.</p>
         <div class="team-about-actions">
-          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-about-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+41764970496" class="team-about-btn">Telefon</a>
+          <a href="https://www.linkedin.com/in/johanneskirchmayr/" class="team-about-btn team-about-btn--ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:jkirchmayr@finstantadvisory.com" class="team-about-btn team-about-btn--ghost">E-Mail</a>
         </div>
       </div>
@@ -2122,7 +2132,8 @@
         <div class="team-about-detail-role">Gründer & Partner</div>
         <p class="team-about-detail-bio">Riccardo bringt über 6 Jahre Erfahrung in Private Equity und M&A mit — in der Private-Equity-Sparte von Schroders Capital sowie in M&A bei BNP Paribas, Rabobank und Promethiem. Er war über den gesamten Deal-Lebenszyklus hinweg tätig — von Origination und Target-Screening bis zur Umsetzung — und hat ein umfassendes Netzwerk bei Europas führenden Finanzinvestoren aufgebaut.</p>
         <div class="team-about-actions">
-          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-about-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="tel:+41797458896" class="team-about-btn">Telefon</a>
+          <a href="https://www.linkedin.com/in/riccardocunego/" class="team-about-btn team-about-btn--ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:rcunego@finstantadvisory.com" class="team-about-btn team-about-btn--ghost">E-Mail</a>
         </div>
       </div>
@@ -2174,15 +2185,6 @@
 
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
     (function() {
       const overlay = document.getElementById('team-overlay');
@@ -2285,6 +2287,7 @@
   </script>
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 
 </body>
 </html>

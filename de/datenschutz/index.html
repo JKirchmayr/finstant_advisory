@@ -44,11 +44,19 @@
 
     /* SCROLL REVEAL */
     .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
       opacity: 0;
       transform: translateY(22px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
+      transition: none;
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
     .reveal-delay-1 { transition-delay: 0.12s; }
     .reveal-delay-2 { transition-delay: 0.24s; }
     .reveal-delay-3 { transition-delay: 0.36s; }
@@ -952,7 +960,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="/site-footer.css" />
+  <link rel="stylesheet" href="/site-footer.css?v=4" />
 </head>
 <body class="page-legal">
 
@@ -972,6 +980,7 @@
         <span class="nav-lang-sep">/</span>
         <a href="/it/privacy/" class="nav-lang-link" hreflang="it" lang="it">IT</a>
       </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Login</a>
     </div>
   </nav>
 
@@ -1043,18 +1052,11 @@
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
   </script>
 
   <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 </body>
 </html>

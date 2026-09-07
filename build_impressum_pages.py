@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-from site_chrome import ASSETS, SCRIPT, footer_html, refs_nav_item
+from site_chrome import ASSETS, SCRIPT, footer_html, nav_login, refs_nav_item
 
 ROOT = Path(__file__).parent
 
@@ -196,6 +196,7 @@ def build_nav(lang: str, cfg: dict) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
+      {nav_login(lang)}
     </div>
   </nav>"""
 
@@ -251,17 +252,6 @@ def build_page(lang: str, cfg: dict, style: str) -> str:
 
 {build_footer(lang, cfg)}
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {{
-      entries.forEach(e => {{
-        if (e.isIntersecting) {{
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }}
-      }});
-    }}, {{ threshold: 0.1 }});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
 {SCRIPT}
 </body>
 </html>

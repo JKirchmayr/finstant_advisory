@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-from site_chrome import refs_nav_item
+from site_chrome import refs_nav_item, nav_login
 
 ROOT = Path(__file__).parent
 
@@ -103,12 +103,20 @@ EXTRA_CSS = """
       color: var(--black);
     }
 
+    .contact-people {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      max-width: 980px;
+      margin: 0 auto 2.5rem;
+    }
+
     .contact-person {
       display: flex;
       align-items: stretch;
       gap: 0;
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
+      max-width: none;
+      margin: 0;
       text-align: left;
       padding: 0;
       overflow: hidden;
@@ -134,6 +142,10 @@ EXTRA_CSS = """
       display: block;
     }
 
+    .contact-person-photo--riccardo {
+      object-position: center 12%;
+    }
+
     .contact-person-body {
       flex: 1;
       min-width: 0;
@@ -151,7 +163,23 @@ EXTRA_CSS = """
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gray-text);
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-person-scope {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+      font-weight: 500;
       margin-bottom: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .contact-people {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
     }
 
     .contact-person-list {
@@ -250,6 +278,7 @@ def build_nav(lang: str, cfg: dict) -> str:
         <span class="nav-lang-sep">/</span>
         {lang_link('it')}
       </div>
+      {nav_login(lang)}
     </div>
   </nav>"""
 
@@ -302,18 +331,8 @@ def build_contact_page(lang: str, cfg: dict, html: str) -> str:
     <div class="footer-links"><a href="{cfg['impressum_url']}">{cfg['footer_label']}</a><span class="footer-sep">·</span><a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a></div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {{
-      entries.forEach(e => {{
-        if (e.isIntersecting) {{
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }}
-      }});
-    }}, {{ threshold: 0.1 }});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
   <script src="/contact-form.js"></script>
+  <script src="/site-reveal.js" defer></script>
 
 </body>
 </html>
