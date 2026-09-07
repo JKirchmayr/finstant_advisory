@@ -294,6 +294,61 @@ html {
   color: inherit;
   flex-shrink: 0;
 }
+
+/* Temporarily hidden — remove display:none to restore Login CTA */
+.nav-login {
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #f9f8f5 !important;
+  background: #0d0d0b !important;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 1px;
+  white-space: nowrap;
+  transition: opacity 0.2s, background 0.25s, color 0.25s;
+}
+.nav-login:hover {
+  opacity: 0.72;
+}
+/* Dark hero (landing): white button until scroll */
+nav:not(.is-scrolled) .nav-login {
+  color: #0d0d0b !important;
+  background: #f9f8f5 !important;
+}
+nav:not(.is-scrolled) .nav-login:hover {
+  opacity: 0.88;
+  color: #0d0d0b !important;
+  background: #f9f8f5 !important;
+}
+/* Light nav pages + scrolled landing: black button */
+body.page-about .nav-login,
+body.page-contact .nav-login,
+body.page-legal .nav-login,
+body.page-service .nav-login,
+body.page-audience .nav-login,
+body.page-refs .nav-login,
+nav.is-scrolled .nav-login {
+  color: #f9f8f5 !important;
+  background: #0d0d0b !important;
+  border: none;
+}
+body.page-about .nav-login:hover,
+body.page-contact .nav-login:hover,
+body.page-legal .nav-login:hover,
+body.page-service .nav-login:hover,
+body.page-audience .nav-login:hover,
+body.page-refs .nav-login:hover,
+nav.is-scrolled .nav-login:hover {
+  opacity: 0.72;
+  color: #f9f8f5 !important;
+  background: #0d0d0b !important;
+}
 .nav-menu-btn span {
   display: block;
   width: 18px;
@@ -319,6 +374,7 @@ body.page-audience .nav-menu-btn {
 
 @media (max-width: 800px) {
   .nav-menu-btn { display: flex; }
+  .nav-login { padding: 7px 14px; font-size: 11px; }
   nav .nav-links {
     display: none;
     flex-direction: column;
@@ -353,4 +409,29 @@ body.page-audience .nav-menu-btn {
   .values-grid { grid-template-columns: 1fr !important; }
   .team-preview-inner { grid-template-columns: 1fr !important; }
   .team-preview-copy { grid-column: 1 / -1; }
+}
+
+/* Scroll reveal: visible by default; hide only while JS marks below-fold items waiting */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.reveal.is-waiting:not(.visible) {
+  opacity: 0 !important;
+  transform: translateY(22px) !important;
+  transition: none !important;
+}
+.reveal.visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.7s ease, transform 0.7s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-waiting:not(.visible),
+  .reveal.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

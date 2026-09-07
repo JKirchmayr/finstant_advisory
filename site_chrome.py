@@ -55,33 +55,48 @@ FOOTER_COPY = {
 }
 
 LINKEDIN = "https://www.linkedin.com/company/finstantadvisory"
-ASSETS = """  <link rel="stylesheet" href="/site-footer.css" />
+ASSETS = """  <link rel="stylesheet" href="/site-footer.css?v=4" />
 """
 SCRIPT = """  <script src="/cookie-consent.js" defer></script>
   <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
 """
 
 REFS_NAV = {
     "de": {
         "label": "Referenzen",
-        "deals": ("Deals", "/de/deals/"),
-        "cases": ("Case Studies", "/de/case-studies/"),
+        "href": "/de/referenzen/",
     },
     "en": {
         "label": "References",
-        "deals": ("Deals", "/en/deals/"),
-        "cases": ("Case Studies", "/en/case-studies/"),
+        "href": "/en/references/",
     },
     "it": {
         "label": "Referenze",
-        "deals": ("Deals", "/it/deals/"),
-        "cases": ("Case Studies", "/it/case-studies/"),
+        "href": "/it/referenze/",
     },
 }
 
 
 def refs_nav_item(lang: str, current: str | None = None) -> str:
-    return ""
+    item = REFS_NAV[lang]
+    href = item["href"]
+    label = item["label"]
+    is_current = current == "refs" or current == href
+    attrs = ' aria-current="page"' if is_current else ""
+    return f'      <li><a href="{href}"{attrs}>{label}</a></li>\n'
+
+
+LOGIN_URL = "https://dev.finstant.ai/"
+LOGIN_LABEL = {"de": "Login", "en": "Login", "it": "Accedi"}
+
+
+def nav_login(lang: str) -> str:
+    label = LOGIN_LABEL.get(lang, "Login")
+    return (
+        f'<a class="nav-login" href="{LOGIN_URL}" target="_blank" '
+        f'rel="noopener noreferrer">{label}</a>'
+    )
 
 
 def footer_html(lang: str) -> str:
@@ -107,6 +122,7 @@ def footer_html(lang: str) -> str:
           <li><a href="{c['home'][1]}">{c['home'][0]}</a></li>
           <li><a href="{a['inv']}">{a['inv_l']}</a></li>
           <li><a href="{a['ent']}">{a['ent_l']}</a></li>
+          <li><a href="{REFS_NAV[lang]['href']}">{REFS_NAV[lang]['label']}</a></li>
           <li><a href="{c['about'][1]}">{c['about'][0]}</a></li>
           <li><a href="{c['contact'][1]}">{c['contact'][0]}</a></li>
         </ul>

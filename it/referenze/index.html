@@ -1,0 +1,2699 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referenze — Finstant Advisory</title>
+  <meta name="description" content="Transazioni e referenze di Finstant Advisory — accesso a entrambi i lati del mid-market." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.finstantadvisory.com/it/referenze/" />
+  <link rel="alternate" hreflang="de" href="https://www.finstantadvisory.com/de/referenzen/" />
+  <link rel="alternate" hreflang="en" href="https://www.finstantadvisory.com/en/references/" />
+  <link rel="alternate" hreflang="it" href="https://www.finstantadvisory.com/it/referenze/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.finstantadvisory.com/de/referenzen/" />
+  <link rel="icon" href="/favi.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/favi.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0b;
+      --white: #f9f8f5;
+      --off-white: #f2f1ed;
+      --gray-light: #eceae4;
+      --gray-text: #8a8880;
+      --gray-mid: #c8c6be;
+      --border: rgba(0,0,0,0.10);
+      --nav-height: 5.25rem;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal.is-waiting:not(.visible) {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: none;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3.5rem;
+      border-bottom: 0.5px solid transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: transparent !important;
+      z-index: 100;
+      transition: border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    }
+
+    nav.is-blurred:not(.is-scrolled) {
+      background: rgba(13, 13, 11, 0.32) !important;
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px) saturate(1.15);
+      -webkit-backdrop-filter: blur(16px) saturate(1.15);
+    }
+
+    nav.is-scrolled {
+      background: rgba(249, 248, 245, 0.96) !important;
+      border-bottom-color: var(--border);
+      backdrop-filter: blur(16px) saturate(1.15);
+      -webkit-backdrop-filter: blur(16px) saturate(1.15);
+      transition: border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .logo img {
+      height: 34px;
+      width: auto;
+      display: block;
+      transition: filter 0.35s ease;
+    }
+
+    nav:not(.is-scrolled) .logo img {
+      filter: brightness(0) invert(1);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    nav:not(.is-scrolled) .nav-links a {
+      color: rgba(249, 248, 245, 0.78);
+    }
+
+    nav:not(.is-scrolled) .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 0.5px solid var(--black);
+      padding: 9px 22px;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--black);
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--black); color: var(--white); }
+
+    nav:not(.is-scrolled) .nav-cta {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    nav:not(.is-scrolled) .nav-cta:hover {
+      background: rgba(249, 248, 245, 0.88);
+      color: var(--black);
+      border-color: rgba(249, 248, 245, 0.88);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .nav-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-lang-link {
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .nav-lang-link:hover { color: var(--black); }
+
+    .nav-lang-link.is-active {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    nav:not(.is-scrolled) .nav-lang-link {
+      color: rgba(249, 248, 245, 0.65);
+    }
+
+    nav:not(.is-scrolled) .nav-lang-link:hover,
+    nav:not(.is-scrolled) .nav-lang-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-lang-sep {
+      color: var(--gray-mid);
+      font-weight: 300;
+      user-select: none;
+      transition: color 0.25s;
+    }
+
+    nav:not(.is-scrolled) .nav-lang-sep {
+      color: rgba(249, 248, 245, 0.35);
+    }
+
+    /* HERO */
+    .hero {
+      padding: calc(6rem + var(--nav-height)) 3.5rem 3rem;
+      border-bottom: 0.5px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      background: url('/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg') 62% 36% / cover no-repeat;
+      min-height: 100vh;
+      min-height: 100dvh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        100deg,
+        rgba(8, 8, 7, 0.97) 0%,
+        rgba(8, 8, 7, 0.93) 28%,
+        rgba(8, 8, 7, 0.72) 58%,
+        rgba(8, 8, 7, 0.42) 100%
+      );
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.4) 0%, transparent 48%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero > *:not(nav) { position: relative; z-index: 1; }
+
+    .hero .label { color: rgba(249, 248, 245, 0.65); }
+    .hero .hero-title { color: var(--white); }
+    .hero .hero-sub { color: rgba(249, 248, 245, 0.92); }
+    .hero .btn-primary {
+      background: var(--white);
+      color: var(--black);
+      padding: 16px 36px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+    }
+    .hero .btn-primary:hover { opacity: 0.92; }
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5.5vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      max-width: 680px;
+    }
+
+    .hero-title em { font-style: italic; }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-text);
+      max-width: 620px;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .hero-sub span {
+      display: block;
+    }
+
+    .hero-sub span + span {
+      margin-top: 0.85em;
+    }
+
+    .hero-actions { display: flex; gap: 2rem; align-items: center; }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      padding: 14px 32px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: var(--sans);
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { opacity: 0.72; }
+
+    .btn-ghost {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--gray-text);
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--gray-mid);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover { color: var(--black); border-color: var(--black); }
+
+    /* SECTIONS */
+    .section {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    .services-tabs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: -1.5rem 0 2.25rem;
+    }
+
+    .services-tab {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gray-text);
+      border: 0.5px solid var(--border);
+      background: transparent;
+      padding: 10px 18px;
+      border-radius: 1px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .services-tab:hover {
+      color: var(--black);
+      border-color: var(--black);
+    }
+
+    .services-tab.is-active {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .service.is-dimmed {
+      opacity: 0.38;
+    }
+
+    /* SERVICES */
+    a.service { text-decoration: none; color: inherit; }
+    a.service:hover { background: var(--off-white); }
+    .services-grid--split { grid-template-columns: 1fr 1fr; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 0.5px solid var(--border);
+    }
+
+    .service {
+      padding: 2.25rem 1.75rem;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: 12px;
+      color: var(--gray-mid);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.08em;
+    }
+
+    .service-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .service-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .service .btn-ghost {
+      display: inline-block;
+      margin-top: 1.75rem;
+      align-self: flex-start;
+    }
+
+    /* SUCCESSION */
+    .succession {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+      text-align: center;
+    }
+
+    .succession-intro {
+      max-width: 42rem;
+      margin: 0 auto 3rem;
+    }
+
+    .succession-intro .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .succession-body {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .succession-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem 1.5rem;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .succession-item {
+      padding: 0.25rem 0.35rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .succession-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      margin: 0 auto 1rem;
+      color: var(--black);
+    }
+
+    .succession-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .succession-item-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.55rem;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .succession-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    /* WHY */
+    .why {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      background: var(--off-white);
+      color: var(--black);
+    }
+
+    .why-intro {
+      width: 100%;
+      max-width: 40rem;
+    }
+
+    .why-intro .label {
+      margin-bottom: 1rem;
+    }
+
+    .why .label { color: var(--gray-mid); }
+
+    .why-title {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      color: var(--black);
+    }
+
+    .why-title em { font-style: italic; }
+
+    .why-body {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .why-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 100%;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+    }
+
+    .why-item {
+      padding: 0 1.5rem 0 0;
+      border-right: 0.5px solid var(--border);
+    }
+
+    .why-item:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    .why-item-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--black);
+    }
+
+    .why-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .apart {
+      padding: 8.5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+
+    .apart-label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 0.85rem;
+    }
+
+    .apart-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    .apart-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    .apart-num {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--gray-mid);
+      margin-bottom: 1.1rem;
+    }
+
+    .apart-item-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      line-height: 1.3;
+    }
+
+    .apart-item-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .audience-panel[hidden] {
+      display: none !important;
+    }
+
+    .offer {
+      padding: 8.5rem 3.5rem;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .offer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 4rem;
+      align-items: start;
+      max-width: none;
+      width: 100%;
+      margin: 0;
+    }
+
+    .offer-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 1rem;
+    }
+
+    .offer-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+
+    .offer-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 28rem;
+    }
+
+    .offer-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .offer-acc {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .offer-acc.is-open {
+      border-bottom: none;
+    }
+
+    .offer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1.85rem 0;
+      border: none;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .offer-acc:first-child .offer-item {
+      border-top: none;
+    }
+
+    .offer-item-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .offer-item-mark {
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    button.offer-item {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+    }
+    .offer-item-mark::before,
+    .offer-item-mark::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0;
+      inset: auto;
+    }
+    .offer-item-mark::before {
+      width: 8px;
+      height: 1px;
+      left: 4px;
+      top: 7.5px;
+    }
+    .offer-item-mark::after {
+      width: 1px;
+      height: 8px;
+      left: 7.5px;
+      top: 4px;
+    }
+    .offer-acc.is-open .offer-item-mark::after { opacity: 0; }
+    .offer-panel {
+      overflow: hidden;
+    }
+    .offer-panel[hidden] { display: none; }
+    .offer-panel p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 32rem;
+      padding: 0 2rem 0 0;
+    }
+    .offer-more {
+      display: inline-block;
+      margin: 0.85rem 0 1.25rem;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+    }
+    .offer-more:hover { border-bottom-color: var(--white); }
+
+    /* SEKTOREN */
+    .sectors {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+
+    .sectors-intro {
+      max-width: 44rem;
+      margin-bottom: 0;
+    }
+
+    .sectors-body strong {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    .sectors-intro .label {
+      margin-bottom: 1rem;
+    }
+
+    .sectors-intro .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .sectors-body {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .sectors-body + .sectors-body {
+      margin-top: 1.25rem;
+    }
+
+    .sectors-grid-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin: 2rem 0 1rem;
+      font-weight: 500;
+    }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .sector-item {
+      padding: 1.35rem 1.5rem;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .sector-item--focus {
+      background: var(--off-white);
+      font-weight: 600;
+    }
+
+    .sectors-grid--focus {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 36rem;
+    }
+
+    .sectors-grid--subs {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* MARKET */
+    .market {
+      padding: 5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--off-white);
+    }
+
+    .market-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      align-items: end;
+    }
+
+    .market-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .market-card {
+      background: var(--off-white);
+      padding: 2.25rem 2.5rem;
+    }
+
+    .market-card-title {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .market-card-body {
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+
+    /* CONTACT */
+    .contact {
+      padding: 7rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: clamp(80px, 16vw, 200px);
+      font-weight: 300;
+      color: rgba(0,0,0,0.022);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .contact-inner { position: relative; z-index: 2; }
+
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-title em { font-style: italic; }
+
+    .contact-sub {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.85;
+      max-width: 400px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--black);
+      padding-bottom: 3px;
+      margin-bottom: 3rem;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+
+    .contact-email:hover { opacity: 0.5; }
+
+    .contact-note {
+      font-size: 10px;
+      color: var(--gray-mid);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .contact-form {
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+
+    .contact-honeypot {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .contact-field { margin-bottom: 1.25rem; }
+
+    .contact-field label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+      width: 100%;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--black);
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 12px 14px;
+      transition: border-color 0.2s;
+    }
+
+    .contact-field input:focus,
+    .contact-field textarea:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+
+    .contact-field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    .contact-form-status {
+      margin-top: 1rem;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .contact-form-status.is-success { color: var(--black); }
+    .contact-form-status.is-error { color: #8b3a3a; }
+
+    .contact-direct { margin-bottom: 2.5rem; }
+
+    .contact-direct-label {
+      font-size: 12px;
+      color: var(--gray-text);
+      margin-bottom: 0.75rem;
+      font-weight: 300;
+    }
+
+    .contact-direct .contact-email { margin-bottom: 0; }
+
+
+    /* PAGE CTA */
+    .page-cta {
+      padding: 5.5rem 3.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+      text-align: center;
+    }
+
+    .page-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.2vw, 34px);
+      font-weight: 300;
+      line-height: 1.25;
+      max-width: 28em;
+      margin: 0 auto 2rem;
+      color: var(--black);
+    }
+
+    .page-cta-title em {
+      font-style: italic;
+    }
+
+    .focus {
+      padding: 5.5rem 3.5rem 6rem;
+      background: var(--white);
+    }
+
+    .focus-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 1rem;
+    }
+
+    .focus-title {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-top {
+      display: grid;
+      grid-template-columns: minmax(16rem, 0.95fr) minmax(0, 1.35fr);
+      gap: 2.5rem 2rem;
+      align-items: stretch;
+      margin-bottom: 4.5rem;
+    }
+
+    .focus-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .focus-intro-body {
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: var(--gray-text);
+      max-width: 28rem;
+    }
+
+    .focus-boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    .focus-box {
+      cursor: default;
+      background: var(--black);
+      color: var(--white);
+      padding: 2.25rem 2rem 2rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      border-radius: 1px;
+    }
+
+    .focus-box-title {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+    }
+
+    .focus-box-body {
+      font-size: 14px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .focus-box-link {
+      display: inline-block;
+      margin-top: 1.75rem;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .focus-box-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .focus-industries-title {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.25;
+      margin-bottom: 1.75rem;
+    }
+
+    .focus-industries {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .focus-industry {
+      position: relative;
+      display: block;
+      aspect-ratio: 3 / 4;
+      min-height: 0;
+      overflow: hidden;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      cursor: default;
+    }
+
+    .focus-industry img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: grayscale(0.15) contrast(1.05);
+    }
+
+    .focus-industry::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.72) 0%, rgba(8, 8, 7, 0.12) 55%);
+    }
+
+    .focus-industry span {
+      position: absolute;
+      left: 1.1rem;
+      right: 1.1rem;
+      bottom: 1.1rem;
+      z-index: 1;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo img {
+      height: 22px;
+      width: auto;
+      display: block;
+      opacity: 0.92;
+    }
+
+
+    .footer-links {
+      font-size: 11px;
+      color: var(--gray-text);
+      letter-spacing: 0.04em;
+    }
+    .footer-links a {
+      color: var(--gray-text);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--black); }
+    .footer-sep { margin: 0 0.35rem; }
+
+    .footer-text {
+      font-size: 11px;
+      color: var(--gray-text);
+      letter-spacing: 0.04em;
+    }
+
+    .team-preview {
+      padding: 1.25rem 2.5rem 3.5rem;
+      background: var(--white);
+    }
+
+    .team-preview-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.95fr;
+      gap: 1.1rem 1.5rem;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: var(--off-white);
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 2rem 1.75rem;
+    }
+
+    .team-preview-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      min-height: 0;
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 1px;
+      z-index: 1;
+      cursor: default;
+    }
+
+    .team-preview-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    .team-preview-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.78) 0%, rgba(8, 8, 7, 0.08) 52%);
+    }
+
+    .team-preview-meta {
+      position: absolute;
+      left: 1.15rem;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 1;
+    }
+
+    .team-preview-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-preview-role {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .team-preview-copy {
+      padding: 0.35rem 0.35rem 0.35rem 0.75rem;
+      z-index: 1;
+    }
+
+    .team-preview-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 3.6vw, 44px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+
+    .team-preview-body {
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--gray-text);
+      margin-bottom: 1.6rem;
+    }
+
+    .team-preview-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .team-preview-link span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 0.5px solid rgba(13, 13, 11, 0.25);
+      border-radius: 50%;
+      font-size: 13px;
+    }
+
+    .deal-cta {
+      padding: 5.5rem 3.5rem 6.5rem;
+      background: var(--white);
+    }
+
+    .deal-cta-inner {
+      max-width: 760px;
+    }
+
+    .deal-cta-label {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 1.35rem;
+    }
+
+    .deal-cta-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--black);
+      flex-shrink: 0;
+    }
+
+    .deal-cta-title {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.6vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+      margin-bottom: 2rem;
+      color: var(--black);
+    }
+
+    .deal-cta .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      border-radius: 1px;
+      padding: 13px 16px 13px 24px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .deal-cta-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 13px;
+      line-height: 1;
+      border-radius: 1px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      nav { padding: 1.25rem 1.75rem; flex-wrap: wrap; row-gap: 0.75rem; }
+      .nav-links { display: none; }
+      .nav-right { margin-left: auto; gap: 0.85rem; }
+      .nav-lang { font-size: 10px; letter-spacing: 0.1em; }
+      .nav-cta { padding: 8px 16px; font-size: 11px; }
+      :root { --nav-height: 4.25rem; }
+      .hero {
+        padding: calc(4rem + var(--nav-height)) 1.75rem 2.5rem;
+        min-height: 100vh;
+        min-height: 100dvh;
+        background-position: 58% 38%;
+      }
+      .section { padding: 3.5rem 1.75rem; }
+      .services-grid, .services-grid--split { grid-template-columns: 1fr; }
+      .service {
+        padding: 2rem 1.75rem;
+      }
+      .succession { padding: 3.5rem 1.75rem; }
+      .succession-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.25rem; }
+      .apart { padding: 5.5rem 1.75rem; }
+      .apart-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+      .offer { padding: 5.5rem 1.75rem; }
+      .offer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .why { padding: 3.5rem 1.75rem; gap: 2.5rem; }
+      .why-items { grid-template-columns: 1fr; gap: 0; }
+      .why-item {
+        padding: 1.75rem 0;
+        border-right: none;
+        border-bottom: 0.5px solid var(--border);
+      }
+      .why-item:last-child { border-bottom: none; padding-bottom: 0; }
+      .sectors { padding: 3.5rem 1.75rem; }
+      .sectors-grid { grid-template-columns: 1fr; }
+      .market { padding: 3.5rem 1.75rem; }
+      .market-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .market-grid { grid-template-columns: 1fr; }
+      .contact { padding: 4.5rem 1.75rem; }
+      .page-cta { padding: 4rem 1.75rem; }
+      .focus { padding: 3.5rem 1.75rem 4rem; }
+      .team-preview { padding: 1rem 1.1rem 2.5rem; }
+      .team-preview-inner { grid-template-columns: 1fr 1fr; padding: 1.15rem; border-radius: 1px; }
+      .team-preview-copy { grid-column: 1 / -1; padding: 0.65rem 0.15rem 0.25rem; }
+      .team-preview-card { min-height: 0; }
+      .deal-cta { padding: 4.5rem 1.75rem 5rem; }
+      .focus-top { grid-template-columns: 1fr; gap: 1.75rem; }
+      .focus-boxes, .focus-industries { grid-template-columns: 1fr 1fr; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem; }
+    }
+
+  
+
+    body.page-refs { padding-top: var(--nav-height); background: var(--white); }
+    body.page-refs nav {
+      background: rgba(249, 248, 245, 0.96) !important;
+      border-bottom-color: var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    body.page-refs nav .logo img { filter: none; }
+    body.page-refs .nav-links a,
+    body.page-refs .nav-lang-link { color: var(--gray-text); }
+    body.page-refs .nav-links a:hover { color: var(--black); }
+    body.page-refs .nav-links a[aria-current="page"] { color: var(--black); font-weight: 500; }
+    body.page-refs .nav-lang-link.is-active { color: var(--black); font-weight: 500; }
+
+    .refs-hero {
+      padding: 5rem 3.5rem 4.5rem;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--white);
+    }
+    .refs-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 3rem 4rem;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .refs-hero-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4.2vw, 48px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.35rem;
+    }
+    .refs-hero-body {
+      font-size: 15px;
+      line-height: 1.85;
+      font-weight: 300;
+      color: var(--gray-text);
+      max-width: 34rem;
+    }
+    .refs-feature {
+      position: relative;
+      display: block;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      color: var(--white);
+      text-decoration: none;
+      max-height: 420px;
+      width: 100%;
+      max-width: 420px;
+      justify-self: end;
+    }
+    .refs-feature img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .refs-feature::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 7, 0.72) 0%, rgba(8, 8, 7, 0.18) 55%, rgba(8, 8, 7, 0.28) 100%);
+    }
+    .refs-feature-copy {
+      position: absolute;
+      left: 1.35rem;
+      right: 1.35rem;
+      bottom: 1.35rem;
+      z-index: 1;
+    }
+    .refs-feature-label {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+    .refs-feature-title {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.4vw, 30px);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+    .refs-feature-link {
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+      padding-bottom: 2px;
+    }
+    .refs-feature:hover .refs-feature-link {
+      border-bottom-color: var(--white);
+    }
+
+    .refs-deals {
+      padding: 5rem 3.5rem 5.5rem;
+      background: var(--off-white);
+    }
+    .refs-deals-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .refs-deals-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.4vw, 40px);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .refs-deals-hint {
+      font-size: 13px;
+      line-height: 1.6;
+      font-weight: 300;
+      color: var(--gray-text);
+      margin-bottom: 1.75rem;
+    }
+    .refs-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.35rem;
+      margin-bottom: 2.25rem;
+    }
+    .refs-deals-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-end;
+    }
+    .refs-select-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      min-width: 9.5rem;
+    }
+    .refs-select-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+    }
+    .refs-select {
+      appearance: none;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--black);
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M1 1l5 5 5-5'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+      border: 0.5px solid var(--border);
+      border-radius: 1px;
+      padding: 0.55rem 2rem 0.55rem 0.75rem;
+      cursor: pointer;
+      min-width: 9.5rem;
+    }
+    .refs-select:hover,
+    .refs-select:focus {
+      border-color: var(--gray-mid);
+      outline: none;
+    }
+    .refs-filter {
+      appearance: none;
+      border: 0.5px solid var(--border);
+      background: transparent;
+      color: var(--gray-text);
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      padding: 0.45rem 0.85rem;
+      cursor: pointer;
+      border-radius: 1px;
+    }
+    .refs-filter:hover { color: var(--black); border-color: var(--gray-mid); }
+    .refs-filter.is-active {
+      color: var(--black);
+      border-color: var(--black);
+      background: var(--white);
+    }
+
+    .refs-tombstones {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.65rem;
+      justify-content: start;
+      max-width: 100%;
+    }
+    .refs-tombstone {
+      appearance: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0.5px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      min-height: 228px;
+      max-width: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s, box-shadow 0.25s ease;
+    }
+    .refs-tombstone:hover,
+    .refs-tombstone:focus-visible {
+      border-color: rgba(0, 0, 0, 0.22);
+      outline: none;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .refs-tombstone.is-selected {
+      border-color: var(--black);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .refs-tombstone[hidden] { display: none !important; }
+    .refs-tombstone-face {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 0;
+      background: #fff;
+    }
+    .refs-tombstone-logos {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 1.15rem 0.85rem 1rem;
+      text-align: center;
+      background: #fff;
+    }
+    .refs-logo-slot {
+      width: 100%;
+      height: 2.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .refs-logo-slot--buyer {
+      height: 2rem;
+    }
+    .refs-logo {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 7.25rem;
+      max-height: 2.15rem;
+      object-fit: contain;
+      object-position: center;
+    }
+    .refs-logo--buyer {
+      max-width: 6.75rem;
+      max-height: 1.85rem;
+    }
+    .refs-logo[src*="gustav-wolf"],
+    .refs-logo[src*="/cmp."] {
+      max-width: 10.5rem;
+      max-height: 3.65rem;
+    }
+    .refs-logo-slot:has(.refs-logo[src*="gustav-wolf"]),
+    .refs-logo-slot:has(.refs-logo[src*="/cmp."]) {
+      height: 3.85rem;
+    }
+    .refs-overlay-visual .refs-logo[src*="gustav-wolf"],
+    .refs-overlay-visual .refs-logo[src*="/cmp."] {
+      max-width: 280px;
+      max-height: 4.5rem;
+    }
+    .refs-overlay-visual .refs-logo-slot:has(.refs-logo[src*="gustav-wolf"]),
+    .refs-overlay-visual .refs-logo-slot:has(.refs-logo[src*="/cmp."]) {
+      height: 4.75rem;
+    }
+    .refs-tombstone-rule {
+      width: 1.75rem;
+      height: 0.5px;
+      background: rgba(0, 0, 0, 0.18);
+      margin: 0.1rem 0;
+    }
+    .refs-tombstone-acquired {
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin: 0;
+    }
+    .refs-tombstone-badges {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+    }
+    .refs-badge {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.42rem 0.4rem;
+    }
+    .refs-badge--sector {
+      background: var(--black);
+      color: var(--white);
+    }
+    .refs-badge--type {
+      background: #e8e6e0;
+      color: var(--black);
+    }
+    .refs-footnote {
+      margin-top: 1.75rem;
+      font-size: 12px;
+      line-height: 1.65;
+      font-weight: 300;
+      color: var(--gray-text);
+      max-width: 40rem;
+    }
+
+    body.refs-overlay-open { overflow: hidden; }
+    .refs-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 400;
+      background: var(--white);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .refs-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .refs-overlay[hidden] { display: block; }
+    .refs-overlay:not(.is-open)[hidden] { display: none; }
+    .refs-overlay-close {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.5rem;
+      z-index: 420;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0;
+      padding: 0;
+      border: 0.5px solid var(--border);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--black);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .refs-overlay-close:hover {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+    .refs-overlay-detail {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: stretch;
+      min-height: 100dvh;
+    }
+    .refs-overlay-detail[hidden] { display: none; }
+    .refs-overlay-visual {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 4rem 3rem;
+      background: var(--off-white);
+      border-right: 0.5px solid var(--border);
+      text-align: center;
+    }
+    .refs-overlay-visual .refs-logo {
+      max-width: 200px;
+      max-height: 2.75rem;
+    }
+    .refs-overlay-visual .refs-logo--buyer {
+      max-height: 2.35rem;
+    }
+    .refs-overlay-visual .refs-logo-slot {
+      width: 100%;
+      max-width: 220px;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .refs-overlay-visual .refs-logo-slot--buyer {
+      height: 2.5rem;
+    }
+    .refs-overlay-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .refs-overlay-badges .refs-badge {
+      width: auto;
+      padding: 0.4rem 0.7rem;
+    }
+    .refs-overlay-content {
+      padding: calc(var(--nav-height) + 2.5rem) 3.5rem 3rem 3rem;
+      overflow-y: auto;
+      align-self: stretch;
+      max-height: 100dvh;
+    }
+    .refs-overlay-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .refs-overlay-sub {
+      font-size: 13px;
+      color: var(--gray-text);
+      margin-bottom: 1.75rem;
+    }
+    .refs-overlay-body {
+      font-family: var(--serif);
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 300;
+      color: var(--black);
+      max-width: 36rem;
+      margin-bottom: 1.75rem;
+    }
+    .refs-overlay-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
+      margin: 0 0 1.5rem;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+    }
+    .refs-overlay-facts-label,
+    .refs-overlay-sources-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin: 0 0 0.75rem;
+    }
+    .refs-overlay-facts {
+      list-style: none;
+      margin: 0 0 2rem;
+      padding: 0;
+      max-width: 36rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .refs-overlay-facts li {
+      padding: 0.7rem 0;
+      border-bottom: 0.5px solid var(--border);
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 300;
+      color: var(--black);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .refs-overlay-facts li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.15rem;
+      width: 0.35rem;
+      height: 0.35rem;
+      background: var(--black);
+    }
+    .refs-overlay-sources {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 36rem;
+    }
+    .refs-overlay-sources li {
+      margin: 0 0 0.55rem;
+    }
+    .refs-overlay-sources a {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--gray-text);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .refs-overlay-sources a:hover {
+      color: var(--black);
+      border-bottom-color: var(--black);
+    }
+
+    .refs-cases {
+      padding: 5rem 3.5rem 4.5rem;
+      background: var(--white);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .refs-cases-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .refs-cases-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.4vw, 40px);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.75rem;
+    }
+    .refs-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .refs-case {
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+      text-decoration: none;
+      background: var(--off-white);
+      border: 0.5px solid var(--border);
+      min-height: 100%;
+    }
+    .refs-case[hidden] { display: none !important; }
+    .refs-case-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--gray-light);
+    }
+    .refs-case-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .refs-case-body {
+      padding: 1.25rem 1.2rem 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 0.65rem;
+    }
+    .refs-case-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+    .refs-case-excerpt {
+      font-size: 13px;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--gray-text);
+      flex: 1;
+    }
+    .refs-case-meta {
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--gray-mid);
+      margin-top: 0.35rem;
+    }
+    .refs-case:hover .refs-case-title { text-decoration: underline; text-underline-offset: 3px; }
+
+    @media (max-width: 1100px) {
+      .refs-tombstones { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .refs-cases-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 800px) {
+      .refs-hero { padding: 3.5rem 1.75rem 3rem; }
+      .refs-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .refs-feature { max-width: 100%; margin: 0; aspect-ratio: 1 / 1; max-height: none; justify-self: stretch; }
+      .refs-cases { padding: 3.5rem 1.75rem 3rem; }
+      .refs-cases-grid { grid-template-columns: 1fr; }
+      .refs-deals { padding: 3.5rem 1.75rem 4rem; }
+      .refs-deals-toolbar { gap: 0.65rem; }
+      .refs-select-field,
+      .refs-select { min-width: 0; width: 100%; flex: 1 1 calc(50% - 0.5rem); }
+      .refs-tombstones { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.55rem; }
+      .refs-tombstone { min-height: 210px; }
+      .refs-overlay-detail { grid-template-columns: 1fr; }
+      .refs-overlay-visual {
+        min-height: auto;
+        padding: 5rem 1.75rem 2rem;
+        border-right: none;
+        border-bottom: 0.5px solid var(--border);
+      }
+      .refs-overlay-content {
+        padding: 2rem 1.75rem 3rem;
+        max-height: none;
+      }
+    }
+
+  </style>
+  <link rel="stylesheet" href="/site-footer.css?v=4" />
+
+</head>
+<body class="page-refs">
+
+  <nav>
+    <a href="/it/" class="logo"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+    <ul class="nav-links">
+      <li><a href="/it/per-investitori/">Per investitori</a></li>
+      <li><a href="/it/per-imprenditori/">Per imprenditori</a></li>
+      <li><a href="/it/referenze/" aria-current="page">Referenze</a></li>
+
+      <li><a href="/it/chi-siamo/">Chi siamo</a></li>
+      <li><a href="/it/contatto/">Contatto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang" role="navigation" aria-label="Language">
+        <a href="/en/references/" class="nav-lang-link" hreflang="en" lang="en">EN</a>
+        <span class="nav-lang-sep">/</span>
+        <a href="/de/referenzen/" class="nav-lang-link" hreflang="de" lang="de">DE</a>
+        <span class="nav-lang-sep">/</span>
+        <a href="/it/referenze/" class="nav-lang-link is-active" hreflang="it" lang="it" aria-current="true">IT</a>
+      </div>
+      <a class="nav-login" href="https://dev.finstant.ai/" target="_blank" rel="noopener noreferrer">Accedi</a>
+    </div>
+  </nav>
+
+  <section class="refs-hero">
+    <div class="refs-hero-grid">
+      <div class="refs-hero-copy">
+        <h1 class="refs-hero-title reveal">Creiamo valore unendo le persone.</h1>
+        <p class="refs-hero-body reveal">Il dealmaking è un people business e abbiamo accesso a entrambi i lati del small/mid market. Così possiamo posizionare le aziende per una transazione che massimizza il valore o generare opportunità off-market in modo sistematico.</p>
+      </div>
+      <a class="refs-feature reveal reveal-delay-1" href="#case-studies">
+        <img src="/industry-professional.png" alt="Atmosfera di business services" width="960" height="600" decoding="async">
+        <div class="refs-feature-copy">
+          <div class="refs-feature-label">Case study</div>
+          <div class="refs-feature-title">Unire le persone. Creare valore.</div>
+          <span class="refs-feature-link">Scopri di più →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="refs-cases" id="case-studies">
+    <div class="refs-cases-inner">
+      <h2 class="refs-cases-title reveal">Approfondimenti e case study</h2>
+      <div class="refs-filters reveal" role="group" aria-label="Filtra i case study" data-filter-group="cases">
+      <button type="button" class="refs-filter is-active" data-filter="all">Tutte</button>
+      <button type="button" class="refs-filter" data-filter="topic:origination">Deal origination</button>
+      <button type="button" class="refs-filter" data-filter="topic:sell-side">Sell-side</button>
+      <button type="button" class="refs-filter" data-filter="topic:buy-and-build">Buy-and-build</button>
+      </div>
+      <div class="refs-cases-grid">
+      <a class="refs-case reveal" href="#" data-topic="origination">
+        <div class="refs-case-media">
+          <img src="/industry-software.png" alt="" width="800" height="500" decoding="async">
+        </div>
+        <div class="refs-case-body">
+          <div class="refs-case-title">Costruire un motore di origination off-market</div>
+          <p class="refs-case-excerpt">Come la mappatura settoriale sistematica e il contatto diretto con gli imprenditori creano una pipeline proprietaria prima delle aste.</p>
+          <div class="refs-case-meta">Segnaposto · 6 min di lettura</div>
+        </div>
+      </a>
+      <a class="refs-case reveal" href="#" data-topic="sell-side">
+        <div class="refs-case-media">
+          <img src="/industry-it.png" alt="" width="800" height="500" decoding="async">
+        </div>
+        <div class="refs-case-body">
+          <div class="refs-case-title">Preparare una vendita mid-market per massimizzare il valore</div>
+          <p class="refs-case-excerpt">Cosa allineare tra founder e board prima del processo — equity story, universo acquirenti e timing.</p>
+          <div class="refs-case-meta">Segnaposto · 5 min di lettura</div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="refs-deals" id="transactions">
+    <div class="refs-deals-inner">
+      <h2 class="refs-deals-title reveal">Le nostre transazioni recenti</h2>
+      <p class="refs-deals-hint reveal">Cliccate su una transazione per saperne di più.</p>
+      <div class="refs-deals-toolbar reveal" data-filter-group="deals" aria-label="Filtra le transazioni">
+      <label class="refs-select-field">
+        <span class="refs-select-label">Settore</span>
+        <select class="refs-select" data-dim="sector" aria-label="Settore">
+        <option value="all">Tutte</option>
+        <option value="software">Software</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="industrial">Industrial</option>
+        <option value="business-services">Business Services</option>
+        </select>
+      </label>
+      <label class="refs-select-field">
+        <span class="refs-select-label">Anno</span>
+        <select class="refs-select" data-dim="year" aria-label="Anno">
+        <option value="all">Tutte</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2023">2023</option>
+        <option value="2021">2021</option>
+        </select>
+      </label>
+      <label class="refs-select-field">
+        <span class="refs-select-label">Tipo di deal</span>
+        <select class="refs-select" data-dim="type" aria-label="Tipo di deal">
+        <option value="all">Tutte</option>
+        <option value="carve-out">Carve-Out</option>
+        <option value="succession">Succession</option>
+        <option value="turnaround">Turnaround</option>
+        <option value="buy-and-build">Buy-and-Build</option>
+        <option value="buyout">Buyout</option>
+        </select>
+      </label>
+      </div>
+      <div class="refs-tombstones" role="list">
+      <button type="button" class="refs-tombstone reveal" data-deal="tecvia" data-sector="software" data-type="carve-out" data-year="2023" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/tecvia.png" alt="tecvia" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="Unigestion" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Software</span>
+            <span class="refs-badge refs-badge--type">Carve-Out</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="refs-tombstone reveal" data-deal="dovida" data-sector="healthcare" data-type="succession" data-year="2021" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/dovida.png" alt="Dovida" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="Unigestion" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Healthcare</span>
+            <span class="refs-badge refs-badge--type">Succession</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="refs-tombstone reveal" data-deal="gustav-wolf" data-sector="industrial" data-type="turnaround" data-year="2021" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/gustav-wolf.png" alt="Gustav Wolf" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/cmp.png" alt="CMP" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Industrial</span>
+            <span class="refs-badge refs-badge--type">Turnaround</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="refs-tombstone reveal" data-deal="ortivity" data-sector="healthcare" data-type="buy-and-build" data-year="2025" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/ortivity.png" alt="Ortivity" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="Unigestion" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Healthcare</span>
+            <span class="refs-badge refs-badge--type">Buy-and-Build</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="refs-tombstone reveal" data-deal="sicit" data-sector="industrial" data-type="buyout" data-year="2025" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/sicit.png" alt="SICIT" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/schroders-capital.png" alt="Schroders Capital" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Industrial</span>
+            <span class="refs-badge refs-badge--type">Buyout</span>
+          </span>
+        </span>
+      </button>
+      <button type="button" class="refs-tombstone reveal" data-deal="sabseg" data-sector="business-services" data-type="buy-and-build" data-year="2026" aria-haspopup="dialog">
+        <span class="refs-tombstone-face">
+          <span class="refs-tombstone-logos">
+            <span class="refs-logo-slot">
+              <img class="refs-logo refs-logo--target" src="/logos/sabseg.png" alt="SABSEG Group" width="180" height="48" decoding="async" />
+            </span>
+            <span class="refs-tombstone-rule" aria-hidden="true"></span>
+            <span class="refs-tombstone-acquired">Acquired by</span>
+            <span class="refs-logo-slot refs-logo-slot--buyer">
+              <img class="refs-logo refs-logo--buyer" src="/logos/schroders-capital.png" alt="Schroders Capital" width="180" height="40" decoding="async" />
+            </span>
+          </span>
+          <span class="refs-tombstone-badges">
+            <span class="refs-badge refs-badge--sector">Business Services</span>
+            <span class="refs-badge refs-badge--type">Buy-and-Build</span>
+          </span>
+        </span>
+      </button>
+      </div>
+      <p class="refs-footnote reveal">* Transazioni selezionate dalle piattaforme precedenti dei partner, prima di Finstant Advisory.</p>
+    </div>
+  </section>
+
+  <div class="refs-overlay" id="refs-overlay" hidden role="dialog" aria-modal="true" aria-label="Le nostre transazioni recenti">
+    <button type="button" class="refs-overlay-close" aria-label="Chiudi">×</button>
+    <article class="refs-overlay-detail" data-deal="tecvia" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/tecvia.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Software</span>
+          <span class="refs-badge refs-badge--type">Carve-Out</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-tecvia">tecvia</h2>
+        <p class="refs-overlay-sub">Acquired by Unigestion</p>
+        <div class="refs-overlay-meta"><span>2023</span><span>Carve-Out</span><span>Software</span></div>
+        <p class="refs-overlay-body">Nel giugno 2023 Unigestion Private Equity ha acquisito, tramite carve-out, il business di formazione e training per la mobilità di Springer Nature, consolidando gli asset nel nuovo gruppo TecVia — fornitore pan-europeo leader di contenuti e software per autoscuole e formazione di conducenti professionali, con sede a Monaco.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Carve-out al 100% dell’unità mobility education & training di Springer Nature</li>
+          <li>Presenza in Germania, Francia, Spagna, Austria e Svizzera</li>
+          <li>Brand tra cui Verlag Heinrich Vogel, Codes Rousseau ed Etrasa</li>
+          <li>Offerta end-to-end: ERP, software didattico, contenuti e simulatori</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://www.momentum-partner.de/en/2023/06/20/momentum-advises-unigestion-on-the-acquisition-of-springer-fachmedien-muenchen-and-the-entire-business-for-mobility-education-and-training-from-springer-nature-resulting-in-the-formation-of-tecvia-g-2/" target="_blank" rel="noopener noreferrer">Momentum Partners — Formazione del gruppo TecVia</a></li>
+          <li><a href="https://www.luther-lawfirm.com/fileadmin/user_upload/20230621_Luther_PM_Unigestion_e.pdf" target="_blank" rel="noopener noreferrer">Luther — comunicato stampa (PDF)</a></li>
+          <li><a href="https://www.alantra.com/ib-transaction/unigestion-debt-advisory-springer-nature/" target="_blank" rel="noopener noreferrer">Alantra — advisory sul finanziamento dell’acquisizione</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="refs-overlay-detail" data-deal="dovida" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/dovida.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Healthcare</span>
+          <span class="refs-badge refs-badge--type">Succession</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-dovida">Dovida</h2>
+        <p class="refs-overlay-sub">Acquired by Unigestion</p>
+        <div class="refs-overlay-meta"><span>2021</span><span>Succession</span><span>Healthcare</span></div>
+        <p class="refs-overlay-body">Nel 2021 Unigestion Private Equity ha guidato un investimento in Home Instead Holding (oggi Dovida), provider internazionale di assistenza domiciliare non medica con sede a Rheinfelden, insieme al fondatore Paul Fritz e al family office svizzero Verium. La piattaforma aiuta anziani e altri clienti a vivere a casa in modo indipendente in Europa e Australasia.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Fondata in Svizzera nel 2007 (ex Home Instead)</li>
+          <li>Circa 12.000 caregiver nella rete</li>
+          <li>Presenza in Svizzera, Irlanda, Australia, Paesi Bassi e altri mercati</li>
+          <li>Servizi tra cui companion care, aiuto domestico, assistenza notturna e demenza</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://www.privateequitywire.co.uk/unigestions-private-equity-team-leads-buyout-european-home-care-provider-home/" target="_blank" rel="noopener noreferrer">Private Equity Wire — Unigestion guida il buyout di Home Instead</a></li>
+          <li><a href="https://www.unigestion.com/insights/unigestion-private-equity-agrees-to-sell-its-stake-in-home-care-provider-dovida/" target="_blank" rel="noopener noreferrer">Unigestion — profilo aziendale e contesto dell’investimento</a></li>
+          <li><a href="https://www.ardian.com/news-insights/press-releases/ardian-support-future-growth-strategy-international-home-care-provider" target="_blank" rel="noopener noreferrer">Ardian — comunicato Dovida (dati aziendali)</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="refs-overlay-detail" data-deal="gustav-wolf" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/gustav-wolf.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/cmp.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Industrial</span>
+          <span class="refs-badge refs-badge--type">Turnaround</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-gustav-wolf">Gustav Wolf</h2>
+        <p class="refs-overlay-sub">Acquired by CMP</p>
+        <div class="refs-overlay-meta"><span>2021</span><span>Turnaround</span><span>Industrial</span></div>
+        <p class="refs-overlay-body">Nel dicembre 2021 CMP Capital Management-Partners (tramite German Opportunity Fund III) ha acquisito il 100% di Gustav Wolf GmbH, produttore di funi di acciaio per ascensori e gru fondato nel 1887 con sede a Gütersloh. L’investimento ha sostenuto il riposizionamento operativo e ulteriore capitale per la crescita della quota di mercato in Europa.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Acquisizione del 100% da parte di CMP / GOF III (dic. 2021)</li>
+          <li>Circa 500 dipendenti in impianti in DE, HU, PL, CN e USA</li>
+          <li>Fatturato annuo superiore a 80 mln di EUR al momento dell’annuncio</li>
+          <li>Nona investimento del German Opportunity Fund III di CMP</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://www.gustav-wolf.com/medium/m554/Press-release-10.12.2021.pdf" target="_blank" rel="noopener noreferrer">Gustav Wolf / CMP — comunicato stampa (PDF)</a></li>
+          <li><a href="https://www.lift-journal.com/news/cmp-takes-over-gustav-wolf-group" target="_blank" rel="noopener noreferrer">Lift-Journal — CMP acquisisce Gustav Wolf</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="refs-overlay-detail" data-deal="ortivity" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/ortivity.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/unigestion.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Healthcare</span>
+          <span class="refs-badge refs-badge--type">Buy-and-Build</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-ortivity">Ortivity</h2>
+        <p class="refs-overlay-sub">Acquired by Unigestion</p>
+        <div class="refs-overlay-meta"><span>2025</span><span>Buy-and-Build</span><span>Healthcare</span></div>
+        <p class="refs-overlay-body">Nel 2025 Unigestion Private Equity è entrata come partner di capitale accanto ad Apheon in Ortivity, principale piattaforma tedesca di cura ortopedica ambulatoriale. Un aumento di capitale di circa 200 mln di EUR ha finanziato l’espansione dei cluster con modello di partnership guidato dai medici; Apheon resta lead investor, Unigestion acquisisce una quota di minoranza significativa.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Fondata nel 2022 da medici di riferimento insieme ad Apheon</li>
+          <li>Oltre 100 centri medici in cluster regionali in Germania</li>
+          <li>Aumento di capitale di circa 200 mln di EUR; Unigestion partner di minoranza</li>
+          <li>Modello di partnership medica con circa metà della proprietà in mano ai medici</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://www.apheon.com/apheon-news/apheon-brings-onboard-unigestion-as-partner-to-continue-development-of-ortivity/" target="_blank" rel="noopener noreferrer">Apheon — Unigestion entra in Ortivity</a></li>
+          <li><a href="https://www.taylorwessing.com/en/insights-and-events/news/media-centre/press-releases/2025/08/taylor-wessing-advises-ortivity-on-capital-investment-by-unigestion" target="_blank" rel="noopener noreferrer">Taylor Wessing — investimento di capitale di Unigestion</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="refs-overlay-detail" data-deal="sicit" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/sicit.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/schroders-capital.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Industrial</span>
+          <span class="refs-badge refs-badge--type">Buyout</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-sicit">SICIT</h2>
+        <p class="refs-overlay-sub">Acquired by Schroders Capital</p>
+        <div class="refs-overlay-meta"><span>2025</span><span>Buyout</span><span>Industrial</span></div>
+        <p class="refs-overlay-body">Nel maggio 2025 Renaissance Partners e TPG Rise Climate hanno firmato un accordo vincolante per acquisire congiuntamente il controllo di SICIT Group S.p.A., leader globale con sede a Chiampo (Vicenza) nella produzione di biostimolanti da residui dell’industria conciaria con modello circolare. Schroders Capital ha partecipato come co-investitore rilevante insieme a LGT Capital Partners; Intesa Holding mantiene una quota di minoranza.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Partnership di co-controllo: Renaissance Partners e TPG Rise Climate</li>
+          <li>Schroders Capital e LGT Capital Partners tra i principali co-investitori</li>
+          <li>Modello circolare: sottoprodotti di conceria in input agricoli e prodotti correlati</li>
+          <li>Business B2B orientato all’export verso clienti agrochimici globali</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://www.tpg.com/news-and-insights/renaissance-partners-and-tpg-rise-climate-enter-into-a-binding-agreement-to-jointly-acquire-control-of-sicit" target="_blank" rel="noopener noreferrer">TPG — accordo vincolante per il controllo di SICIT</a></li>
+          <li><a href="https://www.businesswire.com/news/home/20250514047120/en/Renaissance-Partners-and-TPG-Rise-Climate-Enter-Into-a-Binding-Agreement-to-Jointly-Acquire-Control-of-SICIT" target="_blank" rel="noopener noreferrer">Business Wire — annuncio dell’acquisizione congiunta</a></li>
+          <li><a href="https://www.oaklins.com/it/en/deals/111368/" target="_blank" rel="noopener noreferrer">Oaklins — overview della transazione SICIT</a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="refs-overlay-detail" data-deal="sabseg" hidden>
+      <div class="refs-overlay-visual">
+        <span class="refs-logo-slot">
+          <img class="refs-logo refs-logo--target" src="/logos/sabseg.png" alt="" width="220" height="52" decoding="async" />
+        </span>
+        <div class="refs-tombstone-rule" aria-hidden="true"></div>
+        <div class="refs-tombstone-acquired">Acquired by</div>
+        <span class="refs-logo-slot refs-logo-slot--buyer">
+          <img class="refs-logo refs-logo--buyer" src="/logos/schroders-capital.png" alt="" width="220" height="48" decoding="async" />
+        </span>
+        <div class="refs-overlay-badges">
+          <span class="refs-badge refs-badge--sector">Business Services</span>
+          <span class="refs-badge refs-badge--type">Buy-and-Build</span>
+        </div>
+      </div>
+      <div class="refs-overlay-content">
+        <h2 class="refs-overlay-title" id="refs-detail-title-sabseg">SABSEG Group</h2>
+        <p class="refs-overlay-sub">Acquired by Schroders Capital</p>
+        <div class="refs-overlay-meta"><span>2026</span><span>Buy-and-Build</span><span>Business Services</span></div>
+        <p class="refs-overlay-body">Schroders Capital ha rafforzato la propria partecipazione di minoranza in SABSEG Group insieme all’azionista di maggioranza Miura Partners, nel quadro di una ricapitalizzazione della base azionaria a supporto della strategia buy-and-build nell’Europa meridionale nel brokeraggio assicurativo specializzato per PMI e mid-market.</p>
+        <div class="refs-overlay-facts-label">Dati chiave</div>
+        <ul class="refs-overlay-facts">
+          <li>Piattaforma di brokeraggio assicurativo specializzato in Spagna, Portogallo e Italia</li>
+          <li>Rete di circa 2.000 agenti e oltre 60 uffici; circa 350.000 clienti</li>
+          <li>Oltre 800 mln di EUR di premi lordi (GWP) nel 2025</li>
+          <li>Piano di crescita verso 2 mld di EUR di GWP entro il 2030 con >350 mln di EUR di capitale</li>
+        </ul>
+        <div class="refs-overlay-sources-label">Fonti</div>
+        <ul class="refs-overlay-sources">
+          <li><a href="https://miura.partners/en/uncategorized/sabseg-attracts-over-e350-million-to-accelerate-its-growth-plan/" target="_blank" rel="noopener noreferrer">Miura Partners — SABSEG attira oltre 350 mln di EUR</a></li>
+          <li><a href="https://capital-riesgo.es/en/articles/schroders-takes-minority-stake-in-sabseg-as-miura-reinvests-and-retains-control/" target="_blank" rel="noopener noreferrer">Capital-Riesgo — quota di minoranza Schroders in SABSEG</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div>
+        <a class="site-footer-logo" href="/it/"><img src="/image.png" alt="Finstant Advisory" width="160" height="40" decoding="async" /></a>
+        <p class="site-footer-blurb">Finstant Advisory è una boutique M&amp;A indipendente per private equity e imprese a conduzione familiare in DACH, Italia ed Europa.</p>
+        <div class="site-footer-address">Langgrütstrasse 61<br>8047 Zürich<br>Schweiz</div>
+        <div class="site-footer-contact">
+          <a href="mailto:contact@finstantadvisory.com">contact@finstantadvisory.com</a>
+          <a href="tel:+41764970496">+41 76 497 04 96</a>
+        </div>
+        <a class="site-footer-social" href="https://www.linkedin.com/company/finstantadvisory" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5h4.37v2.11h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.77h-4.56v-7.78c0-1.86-.03-4.25-2.59-4.25-2.59 0-2.99 2.02-2.99 4.11V24H8.34V8.5z"/></svg>
+        </a>
+      </div>
+      <div>
+        <div class="site-footer-heading">Navigazione</div>
+        <ul class="site-footer-list">
+          <li><a href="/it/">Home</a></li>
+          <li><a href="/it/per-investitori/">Per investitori</a></li>
+          <li><a href="/it/per-imprenditori/">Per imprenditori</a></li>
+          <li><a href="/it/referenze/">Referenze</a></li>
+          <li><a href="/it/chi-siamo/">Chi siamo</a></li>
+          <li><a href="/it/contatto/">Contatto</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer-heading">Servizi</div>
+        <ul class="site-footer-list">
+          <li><a href="/it/buy-side-origination/">Origination off-market</a></li>
+          <li><a href="/it/sell-side-advisory/">Advisory M&amp;A nella vendita</a></li>
+          <li><a href="/it/per-imprenditori/">Successione aziendale</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer-bar">
+      <div>Copyright ©2026 FINSTANT ADVISORY</div>
+      <div class="site-footer-legal">
+        <a href="/it/privacy/">Informativa sulla privacy</a><span class="site-footer-dot">·</span>
+        <a href="/it/impressum/">Note legali</a><span class="site-footer-dot">·</span>
+        <button type="button" class="js-cookie-settings" data-cookie-settings>Impostazioni cookie</button>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+
+    (function () {
+      function wireCaseFilters() {
+        const root = document.querySelector('[data-filter-group="cases"]');
+        if (!root) return;
+        const filters = root.querySelectorAll('.refs-filter');
+        const items = document.querySelectorAll('.refs-case');
+        if (!filters.length || !items.length) return;
+        filters.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            filters.forEach((b) => b.classList.remove('is-active'));
+            btn.classList.add('is-active');
+            const value = btn.getAttribute('data-filter') || 'all';
+            items.forEach((item) => {
+              if (value === 'all') {
+                item.hidden = false;
+                return;
+              }
+              const [kind, key] = value.split(':');
+              item.hidden = !(kind === 'topic' && item.getAttribute('data-topic') === key);
+            });
+          });
+        });
+      }
+
+      function wireDealFilters() {
+        const root = document.querySelector('[data-filter-group="deals"]');
+        if (!root) return;
+        const items = document.querySelectorAll('.refs-tombstone');
+        const selects = root.querySelectorAll('.refs-select');
+        if (!items.length || !selects.length) return;
+
+        function apply() {
+          const state = { sector: 'all', year: 'all', type: 'all' };
+          selects.forEach((sel) => {
+            const dim = sel.getAttribute('data-dim');
+            if (dim) state[dim] = sel.value || 'all';
+          });
+          items.forEach((item) => {
+            const sectorOk = state.sector === 'all' || item.getAttribute('data-sector') === state.sector;
+            const yearOk = state.year === 'all' || item.getAttribute('data-year') === state.year;
+            const typeOk = state.type === 'all' || item.getAttribute('data-type') === state.type;
+            item.hidden = !(sectorOk && yearOk && typeOk);
+          });
+        }
+
+        selects.forEach((sel) => sel.addEventListener('change', apply));
+      }
+
+      wireDealFilters();
+      wireCaseFilters();
+    })();
+
+    (function () {
+      const overlay = document.getElementById('refs-overlay');
+      const closeBtn = overlay && overlay.querySelector('.refs-overlay-close');
+      const picks = document.querySelectorAll('.refs-tombstone');
+      const details = overlay ? overlay.querySelectorAll('.refs-overlay-detail') : [];
+      if (!overlay || !picks.length || !details.length) return;
+
+      let isOpen = false;
+      let activeId = null;
+
+      function showPanel(dealId) {
+        details.forEach((panel) => {
+          const show = panel.dataset.deal === dealId;
+          panel.hidden = !show;
+          if (show) {
+            overlay.setAttribute('aria-labelledby', 'refs-detail-title-' + dealId);
+          }
+        });
+      }
+
+      function setPickState(dealId) {
+        picks.forEach((btn) => {
+          const on = btn.dataset.deal === dealId;
+          btn.classList.toggle('is-selected', on);
+        });
+      }
+
+      function openOverlay(dealId) {
+        activeId = dealId;
+        showPanel(dealId);
+        setPickState(dealId);
+        overlay.hidden = false;
+        requestAnimationFrame(() => overlay.classList.add('is-open'));
+        document.body.classList.add('refs-overlay-open');
+        isOpen = true;
+        if (closeBtn) closeBtn.focus();
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove('is-open');
+        document.body.classList.remove('refs-overlay-open');
+        picks.forEach((btn) => btn.classList.remove('is-selected'));
+        const restore = activeId;
+        activeId = null;
+        isOpen = false;
+        window.setTimeout(() => {
+          if (!isOpen) {
+            overlay.hidden = true;
+            details.forEach((panel) => { panel.hidden = true; });
+            const btn = restore && document.querySelector('.refs-tombstone[data-deal="' + restore + '"]');
+            if (btn) btn.focus();
+          }
+        }, 360);
+      }
+
+      picks.forEach((btn) => {
+        btn.addEventListener('click', () => openOverlay(btn.dataset.deal));
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
+      document.addEventListener('keydown', (e) => {
+        if (!isOpen) return;
+        if (e.key === 'Escape') closeOverlay();
+      });
+    })();
+  </script>
+  <script src="/cookie-consent.js" defer></script>
+  <script src="/site-nav.js" defer></script>
+  <script src="/site-reveal.js" defer></script>
+
+</body>
+</html>

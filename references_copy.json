@@ -1,0 +1,533 @@
+{
+  "deals": [
+    {
+      "id": "tecvia",
+      "target": "tecvia",
+      "buyer": "Unigestion",
+      "target_logo": "/logos/tecvia.png",
+      "buyer_logo": "/logos/unigestion.png",
+      "sector": "software",
+      "type": "carve-out",
+      "en": {
+        "body": "In June 2023, Unigestion Private Equity acquired Springer Nature’s mobility education and training business via a carve-out, consolidating the assets into the newly formed TecVia Group — a leading pan-European provider of content and software for driving schools and commercial driver training, headquartered in Munich.",
+        "highlights": [
+          "100% carve-out of Springer Nature’s mobility education & training unit",
+          "Operations across Germany, France, Spain, Austria and Switzerland",
+          "Brands include Verlag Heinrich Vogel, Codes Rousseau and Etrasa",
+          "Full-stack offering: ERP, teaching software, content and driving simulators"
+        ]
+      },
+      "de": {
+        "body": "Im Juni 2023 erwarb Unigestion Private Equity im Rahmen eines Carve-outs das Mobility-Education- und Training-Geschäft von Springer Nature und bündelte die Assets in der neu gegründeten TecVia Group — einem führenden pan-europäischen Anbieter von Content- und Software-Lösungen für Fahrschulen und Nutzfahrzeug-Ausbildung mit Sitz in München.",
+        "highlights": [
+          "100%-Carve-out der Mobility-Education- & Training-Einheit von Springer Nature",
+          "Standorte in Deutschland, Frankreich, Spanien, Österreich und der Schweiz",
+          "Marken u. a. Verlag Heinrich Vogel, Codes Rousseau und Etrasa",
+          "Leistungsangebot: ERP, Lehrsoftware, Content und Fahrsimulatoren"
+        ]
+      },
+      "it": {
+        "body": "Nel giugno 2023 Unigestion Private Equity ha acquisito, tramite carve-out, il business di formazione e training per la mobilità di Springer Nature, consolidando gli asset nel nuovo gruppo TecVia — fornitore pan-europeo leader di contenuti e software per autoscuole e formazione di conducenti professionali, con sede a Monaco.",
+        "highlights": [
+          "Carve-out al 100% dell’unità mobility education & training di Springer Nature",
+          "Presenza in Germania, Francia, Spagna, Austria e Svizzera",
+          "Brand tra cui Verlag Heinrich Vogel, Codes Rousseau ed Etrasa",
+          "Offerta end-to-end: ERP, software didattico, contenuti e simulatori"
+        ]
+      },
+      "year": "2023",
+      "sources": [
+        {
+          "url": "https://www.momentum-partner.de/en/2023/06/20/momentum-advises-unigestion-on-the-acquisition-of-springer-fachmedien-muenchen-and-the-entire-business-for-mobility-education-and-training-from-springer-nature-resulting-in-the-formation-of-tecvia-g-2/",
+          "en": "Momentum Partners — formation of TecVia Group",
+          "de": "Momentum Partners — Bildung der TecVia Group",
+          "it": "Momentum Partners — Formazione del gruppo TecVia"
+        },
+        {
+          "url": "https://www.luther-lawfirm.com/fileadmin/user_upload/20230621_Luther_PM_Unigestion_e.pdf",
+          "en": "Luther — press release (PDF)",
+          "de": "Luther — Pressemitteilung (PDF)",
+          "it": "Luther — comunicato stampa (PDF)"
+        },
+        {
+          "url": "https://www.alantra.com/ib-transaction/unigestion-debt-advisory-springer-nature/",
+          "en": "Alantra — acquisition financing advisory",
+          "de": "Alantra — Beratung zur Akquisitionsfinanzierung",
+          "it": "Alantra — advisory sul finanziamento dell’acquisizione"
+        }
+      ]
+    },
+    {
+      "id": "dovida",
+      "target": "Dovida",
+      "buyer": "Unigestion",
+      "target_logo": "/logos/dovida.png",
+      "buyer_logo": "/logos/unigestion.png",
+      "sector": "healthcare",
+      "type": "succession",
+      "en": {
+        "body": "In 2021, Unigestion Private Equity led an investment in Home Instead Holding (today Dovida), a Rheinfelden-based international provider of non-medical home care, alongside founder Paul Fritz and Swiss family office Verium. The platform supports seniors and other clients in living independently at home across Europe and Australasia.",
+        "highlights": [
+          "Founded in Switzerland in 2007 (formerly Home Instead)",
+          "Approx. 12,000 caregivers across the network",
+          "Presence in Switzerland, Ireland, Australia, the Netherlands and further markets",
+          "Services include companion care, home help, overnight and dementia care"
+        ]
+      },
+      "de": {
+        "body": "2021 führte Unigestion Private Equity eine Investition in Home Instead Holding (heute Dovida) an — einen in Rheinfelden ansässigen internationalen Anbieter nicht-medizinischer häuslicher Pflege — gemeinsam mit Gründer Paul Fritz und dem Schweizer Family Office Verium. Die Plattform unterstützt Senioren und weitere Klienten dabei, möglichst lange selbstbestimmt zu Hause zu leben.",
+        "highlights": [
+          "Gegründet 2007 in der Schweiz (ehemals Home Instead)",
+          "Rund 12.000 Mitarbeitende im Pflegenetzwerk",
+          "Präsenz in der Schweiz, Irland, Australien, den Niederlanden und weiteren Märkten",
+          "Leistungen u. a. Begleitung, Haushaltshilfe, Nachtbetreuung und Demenzpflege"
+        ]
+      },
+      "it": {
+        "body": "Nel 2021 Unigestion Private Equity ha guidato un investimento in Home Instead Holding (oggi Dovida), provider internazionale di assistenza domiciliare non medica con sede a Rheinfelden, insieme al fondatore Paul Fritz e al family office svizzero Verium. La piattaforma aiuta anziani e altri clienti a vivere a casa in modo indipendente in Europa e Australasia.",
+        "highlights": [
+          "Fondata in Svizzera nel 2007 (ex Home Instead)",
+          "Circa 12.000 caregiver nella rete",
+          "Presenza in Svizzera, Irlanda, Australia, Paesi Bassi e altri mercati",
+          "Servizi tra cui companion care, aiuto domestico, assistenza notturna e demenza"
+        ]
+      },
+      "year": "2021",
+      "sources": [
+        {
+          "url": "https://www.privateequitywire.co.uk/unigestions-private-equity-team-leads-buyout-european-home-care-provider-home/",
+          "en": "Private Equity Wire — Unigestion leads Home Instead buyout",
+          "de": "Private Equity Wire — Unigestion führt Buyout von Home Instead",
+          "it": "Private Equity Wire — Unigestion guida il buyout di Home Instead"
+        },
+        {
+          "url": "https://www.unigestion.com/insights/unigestion-private-equity-agrees-to-sell-its-stake-in-home-care-provider-dovida/",
+          "en": "Unigestion — company profile & investment background",
+          "de": "Unigestion — Unternehmensprofil & Investitionshintergrund",
+          "it": "Unigestion — profilo aziendale e contesto dell’investimento"
+        },
+        {
+          "url": "https://www.ardian.com/news-insights/press-releases/ardian-support-future-growth-strategy-international-home-care-provider",
+          "en": "Ardian — Dovida press release (company facts)",
+          "de": "Ardian — Pressemitteilung Dovida (Unternehmensdaten)",
+          "it": "Ardian — comunicato Dovida (dati aziendali)"
+        }
+      ]
+    },
+    {
+      "id": "gustav-wolf",
+      "target": "Gustav Wolf",
+      "buyer": "CMP",
+      "target_logo": "/logos/gustav-wolf.png",
+      "buyer_logo": "/logos/cmp.png",
+      "sector": "industrial",
+      "type": "turnaround",
+      "en": {
+        "body": "In December 2021, CMP Capital Management-Partners (via German Opportunity Fund III) acquired 100% of Gustav Wolf GmbH, a Gütersloh-based manufacturer of steel wire ropes for elevators and cranes founded in 1887. The investment supported an operational repositioning and further capital for European market-share growth.",
+        "highlights": [
+          "100% share acquisition by CMP / GOF III (Dec 2021)",
+          "Approx. 500 employees across plants in DE, HU, PL, CN and the US",
+          "Annual turnover of more than EUR 80 million at announcement",
+          "Ninth investment of CMP’s German Opportunity Fund III"
+        ]
+      },
+      "de": {
+        "body": "Im Dezember 2021 übernahm CMP Capital Management-Partners (über den German Opportunity Fund III) 100% der Anteile an der Gustav Wolf GmbH, einem 1887 gegründeten Hersteller von Stahldrahtseilen für Aufzüge und Krane mit Sitz in Gütersloh. Die Investition diente der operativen Neuaufstellung und weiterer Kapitalbereitstellung für Marktanteilsgewinne in Europa.",
+        "highlights": [
+          "100%-Anteilserwerb durch CMP / GOF III (Dez. 2021)",
+          "Rund 500 Mitarbeitende an Standorten in DE, HU, PL, CN und den USA",
+          "Jahresumsatz von mehr als 80 Mio. EUR zum Zeitpunkt der Ankündigung",
+          "Neunte Investition des German Opportunity Fund III von CMP"
+        ]
+      },
+      "it": {
+        "body": "Nel dicembre 2021 CMP Capital Management-Partners (tramite German Opportunity Fund III) ha acquisito il 100% di Gustav Wolf GmbH, produttore di funi di acciaio per ascensori e gru fondato nel 1887 con sede a Gütersloh. L’investimento ha sostenuto il riposizionamento operativo e ulteriore capitale per la crescita della quota di mercato in Europa.",
+        "highlights": [
+          "Acquisizione del 100% da parte di CMP / GOF III (dic. 2021)",
+          "Circa 500 dipendenti in impianti in DE, HU, PL, CN e USA",
+          "Fatturato annuo superiore a 80 mln di EUR al momento dell’annuncio",
+          "Nona investimento del German Opportunity Fund III di CMP"
+        ]
+      },
+      "year": "2021",
+      "sources": [
+        {
+          "url": "https://www.gustav-wolf.com/medium/m554/Press-release-10.12.2021.pdf",
+          "en": "Gustav Wolf / CMP — press release (PDF)",
+          "de": "Gustav Wolf / CMP — Pressemitteilung (PDF)",
+          "it": "Gustav Wolf / CMP — comunicato stampa (PDF)"
+        },
+        {
+          "url": "https://www.lift-journal.com/news/cmp-takes-over-gustav-wolf-group",
+          "en": "Lift-Journal — CMP takes over Gustav Wolf",
+          "de": "Lift-Journal — CMP übernimmt Gustav Wolf",
+          "it": "Lift-Journal — CMP acquisisce Gustav Wolf"
+        }
+      ]
+    },
+    {
+      "id": "ortivity",
+      "target": "Ortivity",
+      "buyer": "Unigestion",
+      "target_logo": "/logos/ortivity.png",
+      "buyer_logo": "/logos/unigestion.png",
+      "sector": "healthcare",
+      "type": "buy-and-build",
+      "en": {
+        "body": "In 2025, Unigestion Private Equity joined Apheon as a capital partner in Ortivity, Germany’s leading outpatient orthopaedic care platform. An approximately EUR 200 million capital injection financed continued cluster expansion under a physician-led partnership model, with Apheon remaining lead investor and Unigestion taking a significant minority stake.",
+        "highlights": [
+          "Founded in 2022 by leading physicians together with Apheon",
+          "More than 100 medical centres across regional clusters in Germany",
+          "Approx. EUR 200m capital injection; Unigestion as significant minority partner",
+          "Physician partnership model with roughly half of ownership held by physicians"
+        ]
+      },
+      "de": {
+        "body": "2025 stieg Unigestion Private Equity als Kapitalpartner neben Apheon bei Ortivity ein — Deutschlands führender Plattform für ambulante Orthopädie. Eine Kapitalzufuhr von rund 200 Mio. EUR finanzierte den weiteren Cluster-Ausbau unter einem arztgeführten Partnerschaftsmodell; Apheon bleibt Lead-Investor, Unigestion hält eine signifikante Minderheitsbeteiligung.",
+        "highlights": [
+          "2022 von führenden Ärzten gemeinsam mit Apheon gegründet",
+          "Mehr als 100 medizinische Zentren in regionalen Clustern in Deutschland",
+          "Kapitalzufuhr von rund 200 Mio. EUR; Unigestion als signifikanter Minderheitsinvestor",
+          "Arztpartnerschaftsmodell mit rund der Hälfte der Anteile in Ärztehand"
+        ]
+      },
+      "it": {
+        "body": "Nel 2025 Unigestion Private Equity è entrata come partner di capitale accanto ad Apheon in Ortivity, principale piattaforma tedesca di cura ortopedica ambulatoriale. Un aumento di capitale di circa 200 mln di EUR ha finanziato l’espansione dei cluster con modello di partnership guidato dai medici; Apheon resta lead investor, Unigestion acquisisce una quota di minoranza significativa.",
+        "highlights": [
+          "Fondata nel 2022 da medici di riferimento insieme ad Apheon",
+          "Oltre 100 centri medici in cluster regionali in Germania",
+          "Aumento di capitale di circa 200 mln di EUR; Unigestion partner di minoranza",
+          "Modello di partnership medica con circa metà della proprietà in mano ai medici"
+        ]
+      },
+      "year": "2025",
+      "sources": [
+        {
+          "url": "https://www.apheon.com/apheon-news/apheon-brings-onboard-unigestion-as-partner-to-continue-development-of-ortivity/",
+          "en": "Apheon — Unigestion joins Ortivity",
+          "de": "Apheon — Unigestion steigt bei Ortivity ein",
+          "it": "Apheon — Unigestion entra in Ortivity"
+        },
+        {
+          "url": "https://www.taylorwessing.com/en/insights-and-events/news/media-centre/press-releases/2025/08/taylor-wessing-advises-ortivity-on-capital-investment-by-unigestion",
+          "en": "Taylor Wessing — capital investment by Unigestion",
+          "de": "Taylor Wessing — Kapitalbeteiligung durch Unigestion",
+          "it": "Taylor Wessing — investimento di capitale di Unigestion"
+        }
+      ]
+    },
+    {
+      "id": "sicit",
+      "target": "SICIT",
+      "buyer": "Schroders Capital",
+      "target_logo": "/logos/sicit.png",
+      "buyer_logo": "/logos/schroders-capital.png",
+      "sector": "industrial",
+      "type": "buyout",
+      "en": {
+        "body": "In May 2025, Renaissance Partners and TPG Rise Climate signed a binding agreement to jointly acquire control of SICIT Group S.p.A., a Chiampo (Vicenza)-based global leader in biostimulants produced from leather-industry residues under a circular model. Schroders Capital participated as a major co-investor alongside LGT Capital Partners, with Intesa Holding retaining a minority stake.",
+        "highlights": [
+          "Co-control partnership: Renaissance Partners and TPG Rise Climate",
+          "Schroders Capital and LGT Capital Partners as major co-investors",
+          "Circular model converting tannery by-products into agri-inputs and related products",
+          "Export-led B2B franchise serving agrochemical customers worldwide"
+        ]
+      },
+      "de": {
+        "body": "Im Mai 2025 unterzeichneten Renaissance Partners und TPG Rise Climate eine bindende Vereinbarung zum gemeinsamen Erwerb der Kontrolle an der SICIT Group S.p.A., einem in Chiampo (Vicenza) ansässigen globalen Marktführer für Biostimulanzien aus Gerberei-Nebenprodukten in einem zirkulären Modell. Schroders Capital beteiligte sich als wesentlicher Co-Investor neben LGT Capital Partners; Intesa Holding behält eine Minderheitsbeteiligung.",
+        "highlights": [
+          "Co-Control-Partnerschaft: Renaissance Partners und TPG Rise Climate",
+          "Schroders Capital und LGT Capital Partners als wesentliche Co-Investoren",
+          "Zirkuläres Modell: Gerberei-Nebenprodukte zu Agrar-Inputs und verwandten Produkten",
+          "Exportstarkes B2B-Geschäft mit agrochemischen Kunden weltweit"
+        ]
+      },
+      "it": {
+        "body": "Nel maggio 2025 Renaissance Partners e TPG Rise Climate hanno firmato un accordo vincolante per acquisire congiuntamente il controllo di SICIT Group S.p.A., leader globale con sede a Chiampo (Vicenza) nella produzione di biostimolanti da residui dell’industria conciaria con modello circolare. Schroders Capital ha partecipato come co-investitore rilevante insieme a LGT Capital Partners; Intesa Holding mantiene una quota di minoranza.",
+        "highlights": [
+          "Partnership di co-controllo: Renaissance Partners e TPG Rise Climate",
+          "Schroders Capital e LGT Capital Partners tra i principali co-investitori",
+          "Modello circolare: sottoprodotti di conceria in input agricoli e prodotti correlati",
+          "Business B2B orientato all’export verso clienti agrochimici globali"
+        ]
+      },
+      "year": "2025",
+      "sources": [
+        {
+          "url": "https://www.tpg.com/news-and-insights/renaissance-partners-and-tpg-rise-climate-enter-into-a-binding-agreement-to-jointly-acquire-control-of-sicit",
+          "en": "TPG — binding agreement to acquire control of SICIT",
+          "de": "TPG — bindende Vereinbarung zum Erwerb der Kontrolle an SICIT",
+          "it": "TPG — accordo vincolante per il controllo di SICIT"
+        },
+        {
+          "url": "https://www.businesswire.com/news/home/20250514047120/en/Renaissance-Partners-and-TPG-Rise-Climate-Enter-Into-a-Binding-Agreement-to-Jointly-Acquire-Control-of-SICIT",
+          "en": "Business Wire — joint acquisition announcement",
+          "de": "Business Wire — Ankündigung der gemeinsamen Übernahme",
+          "it": "Business Wire — annuncio dell’acquisizione congiunta"
+        },
+        {
+          "url": "https://www.oaklins.com/it/en/deals/111368/",
+          "en": "Oaklins — SICIT transaction overview",
+          "de": "Oaklins — Transaktionsüberblick SICIT",
+          "it": "Oaklins — overview della transazione SICIT"
+        }
+      ]
+    },
+    {
+      "id": "sabseg",
+      "target": "SABSEG Group",
+      "buyer": "Schroders Capital",
+      "target_logo": "/logos/sabseg.png",
+      "buyer_logo": "/logos/schroders-capital.png",
+      "sector": "business-services",
+      "type": "buy-and-build",
+      "en": {
+        "body": "Schroders Capital deepened its minority investment in SABSEG Group alongside majority shareholder Miura Partners as part of a shareholder recapitalisation supporting the platform’s Southern European buy-and-build strategy in specialised insurance brokerage for SMEs and the middle market.",
+        "highlights": [
+          "Specialised insurance brokerage platform across Spain, Portugal and Italy",
+          "Network of ~2,000 agents and 60+ offices; ~350,000 clients",
+          "More than EUR 800m gross written premiums in 2025",
+          "Growth plan targeting EUR 2bn GWP by 2030 with >EUR 350m committed capital"
+        ]
+      },
+      "de": {
+        "body": "Schroders Capital verstärkte seine Minderheitsbeteiligung an der SABSEG Group gemeinsam mit Mehrheitsaktionär Miura Partners im Rahmen einer Rekapitalisierung der Aktionärsbasis — zur Unterstützung der Buy-and-Build-Strategie in Südeuropa im spezialisierten Versicherungsbrokerage für KMU und Mid-Market.",
+        "highlights": [
+          "Spezialisierte Versicherungsbroker-Plattform in Spanien, Portugal und Italien",
+          "Netzwerk mit rund 2.000 Agenten und über 60 Büros; ca. 350.000 Kunden",
+          "Mehr als 800 Mio. EUR Bruttobeiträge (GWP) im Jahr 2025",
+          "Wachstumsplan mit Ziel 2 Mrd. EUR GWP bis 2030 und >350 Mio. EUR Kapitalzusage"
+        ]
+      },
+      "it": {
+        "body": "Schroders Capital ha rafforzato la propria partecipazione di minoranza in SABSEG Group insieme all’azionista di maggioranza Miura Partners, nel quadro di una ricapitalizzazione della base azionaria a supporto della strategia buy-and-build nell’Europa meridionale nel brokeraggio assicurativo specializzato per PMI e mid-market.",
+        "highlights": [
+          "Piattaforma di brokeraggio assicurativo specializzato in Spagna, Portogallo e Italia",
+          "Rete di circa 2.000 agenti e oltre 60 uffici; circa 350.000 clienti",
+          "Oltre 800 mln di EUR di premi lordi (GWP) nel 2025",
+          "Piano di crescita verso 2 mld di EUR di GWP entro il 2030 con >350 mln di EUR di capitale"
+        ]
+      },
+      "year": "2026",
+      "sources": [
+        {
+          "url": "https://miura.partners/en/uncategorized/sabseg-attracts-over-e350-million-to-accelerate-its-growth-plan/",
+          "en": "Miura Partners — SABSEG attracts over EUR 350m",
+          "de": "Miura Partners — SABSEG sichert über 350 Mio. EUR",
+          "it": "Miura Partners — SABSEG attira oltre 350 mln di EUR"
+        },
+        {
+          "url": "https://capital-riesgo.es/en/articles/schroders-takes-minority-stake-in-sabseg-as-miura-reinvests-and-retains-control/",
+          "en": "Capital-Riesgo — Schroders minority stake in SABSEG",
+          "de": "Capital-Riesgo — Minderheitsbeteiligung von Schroders an SABSEG",
+          "it": "Capital-Riesgo — quota di minoranza Schroders in SABSEG"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "off-market-origination",
+      "topic": "origination",
+      "image": "/industry-software.png",
+      "href": "#",
+      "en": {
+        "title": "Building an off-market origination engine",
+        "excerpt": "How systematic sector mapping and direct owner outreach create a proprietary pipeline before targets enter an auction.",
+        "meta": "Placeholder · 6 min read"
+      },
+      "de": {
+        "title": "Eine Off-Market-Origination-Engine aufbauen",
+        "excerpt": "Wie systematische Sektorkartierung und direkte Inhaberansprache eine proprietäre Pipeline schaffen — bevor Ziele in eine Auktion gehen.",
+        "meta": "Platzhalter · 6 Min. Lesezeit"
+      },
+      "it": {
+        "title": "Costruire un motore di origination off-market",
+        "excerpt": "Come la mappatura settoriale sistematica e il contatto diretto con gli imprenditori creano una pipeline proprietaria prima delle aste.",
+        "meta": "Segnaposto · 6 min di lettura"
+      }
+    },
+    {
+      "id": "sell-side-mandate",
+      "topic": "sell-side",
+      "image": "/industry-it.png",
+      "href": "#",
+      "en": {
+        "title": "Preparing a mid-market sale for value maximization",
+        "excerpt": "What founders and boards should align on before a process starts — equity story, buyer universe, and timing.",
+        "meta": "Placeholder · 5 min read"
+      },
+      "de": {
+        "title": "Einen Mid-Market-Verkauf wertmaximierend vorbereiten",
+        "excerpt": "Worauf sich Gründer und Boards vor Prozessstart einigen sollten — Equity Story, Käuferuniversum und Timing.",
+        "meta": "Platzhalter · 5 Min. Lesezeit"
+      },
+      "it": {
+        "title": "Preparare una vendita mid-market per massimizzare il valore",
+        "excerpt": "Cosa allineare tra founder e board prima del processo — equity story, universo acquirenti e timing.",
+        "meta": "Segnaposto · 5 min di lettura"
+      }
+    }
+  ],
+  "ui": {
+    "de": {
+      "title": "Referenzen — Finstant Advisory",
+      "description": "Transaktionen und Referenzen von Finstant Advisory — Zugang zu beiden Seiten des Mid-Markets.",
+      "nav_label": "Referenzen",
+      "path": "/de/referenzen/",
+      "dir": "de/referenzen",
+      "canonical": "https://www.finstantadvisory.com/de/referenzen/",
+      "home": "/de/",
+      "about": "/de/ueber-uns/",
+      "about_label": "Über uns",
+      "contact": "/de/kontakt/",
+      "contact_label": "Kontakt",
+      "hero_title": "Wir schaffen Werte, indem wir Menschen verbinden.",
+      "hero_body": "Dealmaking ist ein People Business und wir haben Zugang zu beiden Seiten des Small-/Mid-Markets. So können wir Unternehmen für eine wertmaximierende Transaktion positionieren oder Off-Market-Opportunities systematisch generieren.",
+      "feature_label": "Fallstudie",
+      "feature_title": "Menschen verbinden. Wert schaffen.",
+      "feature_link": "Mehr erfahren",
+      "feature_href": "#case-studies",
+      "feature_image": "/industry-professional.png",
+      "feature_alt": "Atmosphäre einer Business-Services-Umgebung",
+      "cases_title": "Einblicke & Fallstudien",
+      "cases_filter_aria": "Fallstudien filtern",
+      "cases_topics": {
+        "origination": "Deal Origination",
+        "sell-side": "Sell-side",
+        "buy-and-build": "Buy-and-Build"
+      },
+      "deals_title": "Unsere jüngsten Transaktionen",
+      "deals_hint": "Klicken Sie auf eine Transaktion, um mehr zu erfahren.",
+      "acquired_by": "Acquired by",
+      "overlay_close": "Schliessen",
+      "filter_all": "Alle",
+      "filter_aria": "Transaktionen filtern",
+      "filter_industry": "Branche",
+      "filter_year": "Jahr",
+      "filter_type": "Deal-Typ",
+      "sectors": {
+        "software": "Software",
+        "healthcare": "Healthcare",
+        "industrial": "Industrial",
+        "business-services": "Business Services"
+      },
+      "types": {
+        "carve-out": "Carve-Out",
+        "succession": "Succession",
+        "turnaround": "Turnaround",
+        "buy-and-build": "Buy-and-Build",
+        "buyout": "Buyout"
+      },
+      "footnote": "* Ausgewählte Transaktionen aus den früheren Plattformen der Partner — vor Finstant Advisory.",
+      "sources_label": "Quellen",
+      "facts_label": "Kennzahlen & Fakten"
+    },
+    "en": {
+      "title": "References — Finstant Advisory",
+      "description": "Transactions and references from Finstant Advisory — access to both sides of the mid-market.",
+      "nav_label": "References",
+      "path": "/en/references/",
+      "dir": "en/references",
+      "canonical": "https://www.finstantadvisory.com/en/references/",
+      "home": "/en/",
+      "about": "/en/about/",
+      "about_label": "About us",
+      "contact": "/en/contact/",
+      "contact_label": "Contact",
+      "hero_title": "We create value by connecting people.",
+      "hero_body": "Dealmaking is a people business and we have access to both sides of the small/mid market. This way we are able to position companies for a value-maximizing transaction or generate off-market opportunities systematically.",
+      "feature_label": "Case study",
+      "feature_title": "Connecting people. Creating value.",
+      "feature_link": "Learn more",
+      "feature_href": "#case-studies",
+      "feature_image": "/industry-professional.png",
+      "feature_alt": "Business services atmosphere",
+      "cases_title": "Insights & case studies",
+      "cases_filter_aria": "Filter case studies",
+      "cases_topics": {
+        "origination": "Deal origination",
+        "sell-side": "Sell-side",
+        "buy-and-build": "Buy-and-build"
+      },
+      "deals_title": "Our recent transactions",
+      "deals_hint": "Click a transaction to learn more.",
+      "acquired_by": "Acquired by",
+      "overlay_close": "Close",
+      "filter_all": "All",
+      "filter_aria": "Filter transactions",
+      "filter_industry": "Industry",
+      "filter_year": "Year",
+      "filter_type": "Deal type",
+      "sectors": {
+        "software": "Software",
+        "healthcare": "Healthcare",
+        "industrial": "Industrial",
+        "business-services": "Business Services"
+      },
+      "types": {
+        "carve-out": "Carve-Out",
+        "succession": "Succession",
+        "turnaround": "Turnaround",
+        "buy-and-build": "Buy-and-Build",
+        "buyout": "Buyout"
+      },
+      "footnote": "* Selected transactions from the partners’ prior platforms, before Finstant Advisory.",
+      "sources_label": "Sources",
+      "facts_label": "Key facts"
+    },
+    "it": {
+      "title": "Referenze — Finstant Advisory",
+      "description": "Transazioni e referenze di Finstant Advisory — accesso a entrambi i lati del mid-market.",
+      "nav_label": "Referenze",
+      "path": "/it/referenze/",
+      "dir": "it/referenze",
+      "canonical": "https://www.finstantadvisory.com/it/referenze/",
+      "home": "/it/",
+      "about": "/it/chi-siamo/",
+      "about_label": "Chi siamo",
+      "contact": "/it/contatto/",
+      "contact_label": "Contatto",
+      "hero_title": "Creiamo valore unendo le persone.",
+      "hero_body": "Il dealmaking è un people business e abbiamo accesso a entrambi i lati del small/mid market. Così possiamo posizionare le aziende per una transazione che massimizza il valore o generare opportunità off-market in modo sistematico.",
+      "feature_label": "Case study",
+      "feature_title": "Unire le persone. Creare valore.",
+      "feature_link": "Scopri di più",
+      "feature_href": "#case-studies",
+      "feature_image": "/industry-professional.png",
+      "feature_alt": "Atmosfera di business services",
+      "cases_title": "Approfondimenti e case study",
+      "cases_filter_aria": "Filtra i case study",
+      "cases_topics": {
+        "origination": "Deal origination",
+        "sell-side": "Sell-side",
+        "buy-and-build": "Buy-and-build"
+      },
+      "deals_title": "Le nostre transazioni recenti",
+      "deals_hint": "Cliccate su una transazione per saperne di più.",
+      "acquired_by": "Acquired by",
+      "overlay_close": "Chiudi",
+      "filter_all": "Tutte",
+      "filter_aria": "Filtra le transazioni",
+      "filter_industry": "Settore",
+      "filter_year": "Anno",
+      "filter_type": "Tipo di deal",
+      "sectors": {
+        "software": "Software",
+        "healthcare": "Healthcare",
+        "industrial": "Industrial",
+        "business-services": "Business Services"
+      },
+      "types": {
+        "carve-out": "Carve-Out",
+        "succession": "Succession",
+        "turnaround": "Turnaround",
+        "buy-and-build": "Buy-and-Build",
+        "buyout": "Buyout"
+      },
+      "footnote": "* Transazioni selezionate dalle piattaforme precedenti dei partner, prima di Finstant Advisory.",
+      "sources_label": "Fonti",
+      "facts_label": "Dati chiave"
+    }
+  }
+}
